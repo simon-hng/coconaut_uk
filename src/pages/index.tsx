@@ -1,6 +1,6 @@
 import * as React from "react";
 import Hero from "../components/Hero";
-import Nutrition from "../components/Nutrition";
+import Nutrition from "../components/Nutrition/Nutrition";
 import ShopTeaser from "../components/ShopTeaser";
 import { ThemeProvider } from "styled-components";
 
