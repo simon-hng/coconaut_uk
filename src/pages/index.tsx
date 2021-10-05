@@ -1,10 +1,11 @@
 import * as React from "react";
 import Hero from "../components/Hero";
-import About from "../components/About";
+import Nutrition from "../components/Nutrition";
+import ShopTeaser from "../components/ShopTeaser";
 import { ThemeProvider } from "styled-components";
 
-import '../styles/reset.css';
-import '../styles/global.css';
+import "../styles/reset.css";
+import "../styles/global.css";
 
 const mainTheme = {
   background: "#fff",
@@ -17,7 +18,8 @@ const Index = () => {
     <main>
       <ThemeProvider theme={mainTheme}>
         <Hero />
-        <About />
+        <Nutrition />
+        <ShopTeaser />
       </ThemeProvider>
     </main>
   );

@@ -27,8 +27,6 @@ const Visual = (
   </>
 );
 
-const About = () => {
-  return <SectionTwoCol visual={Visual} text={Text} />;
-};
+const Nutrition = () => <SectionTwoCol visual={Visual} text={Text} />;
 
-export default About;
+export default Nutrition;
