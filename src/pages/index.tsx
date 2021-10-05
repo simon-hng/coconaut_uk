@@ -1,8 +1,10 @@
 import * as React from "react";
-import { Reset, Styles } from "../components/global/Styles";
 import Hero from "../components/Hero";
 import About from "../components/About";
 import { ThemeProvider } from "styled-components";
+
+import '../styles/reset.css';
+import '../styles/global.css';
 
 const mainTheme = {
   background: "#fff",
@@ -13,9 +15,7 @@ const mainTheme = {
 const Index = () => {
   return (
     <main>
-      <Reset />
       <ThemeProvider theme={mainTheme}>
-        <Styles />
         <Hero />
         <About />
       </ThemeProvider>
