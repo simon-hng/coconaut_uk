@@ -17,7 +17,11 @@ const Text = (
 
 const Visual = (
   <>
-    <StaticImage src="../images/Coconut_and_can_01.png" alt="coconut and can" />
+    <StaticImage
+      layout="fullWidth"
+      src="../images/Coconut_and_can_01.png"
+      alt="coconut and can"
+    />
     <h3>Whats in it?</h3>
     {/* TODO: komische zahlen */}
   </>

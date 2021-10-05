@@ -8,7 +8,7 @@ interface HeadlineProps {
 }
 
 const Main = styled.h2`
-	padding: 0.8em 0;
+  padding-bottom: 0.8em;
   color: ${(props) => props.theme.accent};
 `;
 const Sub = styled.span`
