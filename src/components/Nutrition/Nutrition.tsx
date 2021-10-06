@@ -21,7 +21,7 @@ const FactsList = styled.ul`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-`
+`;
 
 const Text = (
   <>
@@ -39,15 +39,15 @@ const Visual = (
   <>
     <StaticImage
       layout="fullWidth"
-      src="../images/Coconut_and_can_01.png"
+      src="../../images/Coconut_and_can_01.png"
       alt="coconut and can"
     />
 
     <h3>Whats in it?</h3>
 
     <FactsList>
-      {NutritionalFacts.map((fact) => (
-        <NutritionalFact {...fact} />
+      {NutritionalFacts.map((fact, index) => (
+        <NutritionalFact {...fact} delay={index * 0.4} />
       ))}
     </FactsList>
   </>

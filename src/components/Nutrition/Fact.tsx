@@ -6,6 +6,7 @@ interface FactProps {
   name: String;
   value: number;
   unit: String;
+  delay: number;
 }
 
 const Main = styled.li`
@@ -43,6 +44,7 @@ const Fact = (props: FactProps) => {
     <Main>
       <p>{props.name}</p>
       <Value
+        delay={props.delay}
         decimals={countDecimals(props.value)}
         end={props.value}
         duration={2}
