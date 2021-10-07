@@ -12,7 +12,7 @@ const Main = styled.h2`
   color: ${(props) => props.theme.accent};
 `;
 const Sub = styled.span`
-  color: ${(props) => darken(0.2, props.theme.accent)};
+  color: ${(props) => props.theme.accentDark};
 `;
 
 const Headline = (props: HeadlineProps) => (

@@ -10,7 +10,9 @@ import "../styles/global.css";
 const mainTheme = {
   background: "#fff",
   foreground: "#000",
+  accentLight: "#53C1A6",
   accent: "#39B54A",
+  accentDark: "#195200",
 };
 
 const Index = () => {
