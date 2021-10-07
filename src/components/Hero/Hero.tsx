@@ -18,6 +18,7 @@ const Wrapper = styled.div`
 const Caption = styled.h1`
   margin-top: 10vh;
   text-align: center;
+  font-family: "HermesBold";
   color: ${(props) => props.theme.accent};
 `;
 

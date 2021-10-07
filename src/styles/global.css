@@ -1,13 +1,19 @@
 /* TODO: no licence for commencial use yet */
 @font-face {
-  font-family: "Hermes";
+  font-family: "HermesThin";
   src: url(../assets/HermesThin.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "HermesBold";
+  src: url(../assets/HermesBold.ttf) format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 body {
   font-size: 62.5%; /* =10px */
-  font-family: "Hermes";
+  font-family: "HermesThin";
 }
 h1,
 h2,
