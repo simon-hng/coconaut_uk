@@ -4,35 +4,34 @@ import styled from "styled-components";
 import Layout from "./Layout";
 
 interface SectionProps {
-  visual: JSX.Element;
-  text: JSX.Element;
-  visualFirst?: boolean;
+  left: JSX.Element;
+  right: JSX.Element;
 }
 
-const Main = styled.section`
+const Wrapper = styled.section`
   display: flex;
-  padding: 3rem;
-  flex-direction: ${(props) =>
-    props.visualFirst ? "column" : "column-reverse"};
+  padding: 3rem 0;
+  flex-direction: column;
 
   @media (min-width: 900px) {
-    flex-direction: ${(props) => (props.visualFirst ? "row" : "row-reverse")};
+    flex-direction: row;
   }
+`;
 
-  div {
-    padding: 3rem;
-    @media (min-width: 900px) {
-      width: 50%;
-    }
+const Content = styled.div`
+  padding: 0 3rem;
+
+  @media (min-width: 900px) {
+    width: 50%;
   }
 `;
 
 const SectionTwoCol = (props: SectionProps) => (
   <Layout>
-    <Main visualFirst={props.visualFirst}>
-      <div>{props.visual}</div>
-      <div>{props.text}</div>
-    </Main>
+    <Wrapper>
+      <Content>{props.left}</Content>
+      <Content>{props.right}</Content>
+    </Wrapper>
   </Layout>
 );
 
