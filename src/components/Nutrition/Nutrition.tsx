@@ -5,6 +5,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import SectionTwoCol from "../global/SectionTwoCol";
 import Headline from "../global/Headline";
 import NutritionalFact from "./Fact";
+import Button from "../global/Button";
 
 const NutritionalFacts = [
   { name: "Energy", value: 95, unit: "kJ" },
@@ -50,9 +51,11 @@ const Visual = (
         <NutritionalFact {...fact} delay={index * 0.4} />
       ))}
     </FactsList>
+
+    <Button to="">Shop now!</Button>
   </>
 );
 
-const Nutrition = () => <SectionTwoCol visual={Visual} text={Text} />;
+const Nutrition = () => <SectionTwoCol left={Text} right={Visual} />;
 
 export default Nutrition;
