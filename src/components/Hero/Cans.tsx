@@ -5,7 +5,6 @@ import styled from "styled-components";
 
 const Main = styled.div`
   display: flex;
-  height: 100%;
   align-items: center;
   justify-content: center;
   max-width: 100vw;
@@ -17,7 +16,6 @@ const Main = styled.div`
 
 const Can = styled(motion.div)`
   position: absolute;
-  top: -200px;
   left: -100px;
 
   @media (min-width: 900px) {

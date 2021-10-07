@@ -1,21 +1,30 @@
 /* TODO: no licence for commencial use yet */
 @font-face {
-	font-family: "Hermes";
-	src: url(../assets/HermesThin.ttf) format('truetype');
-	font-weight: normal;
-	font-style: normal;
+  font-family: "Hermes";
+  src: url(../assets/HermesThin.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 body {
   font-size: 62.5%; /* =10px */
   font-family: "Hermes";
 }
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: bold;
+  padding-bottom: 0.8em;
+}
+h1 {
+  font-size: 4.5rem;
+}
 h2 {
   font-size: 4rem;
-  padding-bottom: 0.8em;
 }
 h3 {
   font-size: 2.5rem;
-  padding-bottom: 0.8em;
 }
 p {
   font-size: 1.4rem;
