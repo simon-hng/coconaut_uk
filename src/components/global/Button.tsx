@@ -24,8 +24,12 @@ const Inner = styled(Link)`
   background-repeat: no-repeat;
   text-decoration: none;
   font-weight: bold;
-	font-size: 1.4rem;
+  font-size: 1.4rem;
   color: #fff;
+
+  :hover {
+    transform: scale(2);
+  }
 `;
 
 const Button = (props: ButtonProps) => {
