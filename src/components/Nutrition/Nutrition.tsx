@@ -6,6 +6,7 @@ import SectionTwoCol from "../global/SectionTwoCol";
 import Headline from "../global/Headline";
 import NutritionalFact from "./Fact";
 import Button from "../global/Button";
+import Subheadline from "@components/global/Subheadline";
 
 const NutritionalFacts = [
   { name: "Energy", value: 95, unit: "kJ" },
@@ -24,38 +25,38 @@ const FactsList = styled.ul`
   flex-wrap: wrap;
 `;
 
-const Text = (
-  <>
-    <Headline main="100 percent" sub="young coconuts" />
-    <p>
-      Coconaut is an energising drink with a rare combination. It refreshes,
-      activates and regenerates. It contains 100% pure young coconut water from
-      premium young vietnamese coconuts. No additives. No extra sugar, just the
-      full load of coconut power. Want to know more?​
-    </p>
-  </>
+const Nutrition = () => (
+  <SectionTwoCol
+    left={
+      <>
+        <Headline main="100 percent" sub="young coconuts" />
+        <p>
+          Coconaut is an energising drink with a rare combination. It refreshes,
+          activates and regenerates. It contains 100% pure young coconut water
+          from premium young vietnamese coconuts. No additives. No extra sugar,
+          just the full load of coconut power. Want to know more?​
+        </p>
+
+        <Button to="">Shop now!</Button>
+      </>
+    }
+    right={
+      <>
+        <StaticImage
+          src="../../images/Coconut_and_can_01.png"
+          alt="coconut and can"
+        />
+
+        <Subheadline>Whats in it?</Subheadline>
+
+        <FactsList>
+          {NutritionalFacts.map((fact, index) => (
+            <NutritionalFact {...fact} delay={index * 0.4} />
+          ))}
+        </FactsList>
+      </>
+    }
+  />
 );
-
-const Visual = (
-  <>
-    <StaticImage
-      layout="fullWidth"
-      src="../../images/Coconut_and_can_01.png"
-      alt="coconut and can"
-    />
-
-    <h3>Whats in it?</h3>
-
-    <FactsList>
-      {NutritionalFacts.map((fact, index) => (
-        <NutritionalFact {...fact} delay={index * 0.4} />
-      ))}
-    </FactsList>
-
-    <Button to="">Shop now!</Button>
-  </>
-);
-
-const Nutrition = () => <SectionTwoCol left={Text} right={Visual} />;
 
 export default Nutrition;

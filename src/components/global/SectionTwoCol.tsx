@@ -10,7 +10,7 @@ interface SectionProps {
 
 const Wrapper = styled.section`
   display: flex;
-  padding: 3rem 0;
+  padding: 5rem 0;
   flex-direction: column;
 
   @media (min-width: 900px) {
