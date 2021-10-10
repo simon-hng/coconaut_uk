@@ -16,10 +16,10 @@ const Main = styled.div`
 
 const Can = styled(motion.div)`
   position: absolute;
-  left: -100px;
+  left: -110px;
 
   @media (min-width: 900px) {
-    left: -50px;
+    left: -30px;
   }
 `;
 
@@ -28,16 +28,17 @@ const CanFirst = styled(Can)`
 
   @media (min-width: 900px) {
     display: inline;
-    transform: rotate(-25deg) translate(-150px, -50px);
+    transform: rotate(-35deg) translate(-150px, -50px);
   }
 `;
 
-const CanSecond = styled(Can)`
-  transform: rotate(10deg);
-`;
-
 const CanImage = () => (
-  <StaticImage src="../../images/hero/Can.png" alt="Coconaut can" layout="fixed" />
+  <StaticImage
+    src="../../images/hero/Can.png"
+    alt="Coconaut can"
+    layout="fixed"
+    width={260}
+  />
 );
 
 const CansVariants = {
@@ -61,9 +62,9 @@ const Cans = () => (
       </motion.div>
 
       <motion.div variants={CanVariants}>
-        <CanSecond>
+        <Can>
           <CanImage />
-        </CanSecond>
+        </Can>
       </motion.div>
     </motion.div>
   </Main>
