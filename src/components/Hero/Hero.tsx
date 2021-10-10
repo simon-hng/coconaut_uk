@@ -1,18 +1,21 @@
 import * as React from "react";
 import styled from "styled-components";
-import { StaticImage } from "gatsby-plugin-image";
-import { motion } from "framer-motion";
 
-import BackgroundImage from "../../images/hero/Coconaut_Skyline@1694x-100.jpg";
+import BackgroundImage from "@images/hero/Coconaut_Skyline@1694x-100.jpg";
+import Clouds from "./Clouds";
 import Cans from "./Cans";
 
-const Wrapper = styled.div`
+const Main = styled.div`
   height: 90vh;
   background-image: url(${BackgroundImage});
   background-repeat: no-repeat;
   background-position-y: bottom;
   background-position-x: -20px;
-  background-size: 1980px;
+
+  @media (min-width: 900px) {
+    background-size: 100%;
+    background-position-x: 0;
+  }
 `;
 
 const Caption = styled.h1`
@@ -22,13 +25,12 @@ const Caption = styled.h1`
   color: ${(props) => props.theme.accentLight};
 `;
 
-const Hero = () => {
-  return (
-    <Wrapper>
-      <Caption>GoHigher!</Caption>
-      <Cans />
-    </Wrapper>
-  );
-};
+const Hero = () => (
+  <Main>
+    <Caption>GoHigher!</Caption>
+    <Clouds />
+    <Cans />
+  </Main>
+);
 
 export default Hero;

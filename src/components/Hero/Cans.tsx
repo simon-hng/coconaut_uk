@@ -37,7 +37,7 @@ const CanSecond = styled(Can)`
 `;
 
 const CanImage = () => (
-  <StaticImage src="../images/hero/Can.png" alt="Coconaut can" layout="fixed" />
+  <StaticImage src="../../images/hero/Can.png" alt="Coconaut can" layout="fixed" />
 );
 
 const CansVariants = {
