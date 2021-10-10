@@ -8,9 +8,8 @@ interface SectionProps {
   right: JSX.Element;
 }
 
-const Wrapper = styled.section`
+const Main = styled.section`
   display: flex;
-  padding: 5rem 0;
   flex-direction: column;
 
   @media (min-width: 900px) {
@@ -28,10 +27,10 @@ const Content = styled.div`
 
 const SectionTwoCol = (props: SectionProps) => (
   <Layout>
-    <Wrapper>
+    <Main>
       <Content>{props.left}</Content>
       <Content>{props.right}</Content>
-    </Wrapper>
+    </Main>
   </Layout>
 );
 
