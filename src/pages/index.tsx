@@ -1,8 +1,10 @@
 import * as React from "react";
-import Hero from "../components/Hero/Hero";
-import Nutrition from "../components/Nutrition/Nutrition";
-import ShopTeaser from "../components/ShopTeaser";
 import { ThemeProvider } from "styled-components";
+
+import Hero from "@components/Hero/Hero";
+import Nutrition from "@components/Nutrition/Nutrition";
+import ShopTeaser from "@components/ShopTeaser";
+import Events from "@components/Events";
 
 import "../styles/reset.css";
 import "../styles/global.css";
@@ -22,6 +24,7 @@ const Index = () => {
         <Hero />
         <Nutrition />
         <ShopTeaser />
+        <Events />
       </ThemeProvider>
     </main>
   );
