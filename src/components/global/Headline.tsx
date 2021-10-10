@@ -5,10 +5,16 @@ import { darken } from "polished";
 interface HeadlineProps {
   main: String;
   sub?: String;
+  centered?: boolean;
 }
 
-const Main = styled.h2`
+interface MainProps {
+  centered: boolean;
+}
+
+const Main = styled.h2<MainProps>`
   padding-bottom: 0.8em;
+  text-align: ${(props) => (props.centered ? "center" : "left")};
   color: ${(props) => props.theme.accent};
 `;
 const Sub = styled.span`
@@ -16,10 +22,13 @@ const Sub = styled.span`
 `;
 
 const Headline = (props: HeadlineProps) => (
-  <Main>
+  <Main centered={props.centered}>
     {props.main}
-    <br />
-    {props.sub && <Sub>{props.sub}</Sub>}
+    {props.sub && (
+      <>
+        <br /> <Sub>{props.sub}</Sub>
+      </>
+    )}
   </Main>
 );
 
