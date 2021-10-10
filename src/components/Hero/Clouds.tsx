@@ -30,7 +30,7 @@ const Main = styled.div`
 `;
 
 const CloudsVariants = {
-  animation: { transition: { staggerChildren: 0.5 } },
+  animation: { transition: { staggerChildren: 0.3 } },
 };
 
 const CloudVariants = (
@@ -68,14 +68,14 @@ const Clouds = () => {
     <Main>
       <motion.div variants={CloudsVariants} animate="animation">
         <motion.div
-          variants={CloudVariants(windowWidth, 100, 200, 12)}
+          variants={CloudVariants(windowWidth, 100, 200, 15)}
           initial={false}
         >
           <SingleCloudImage />
         </motion.div>
 
         <motion.div
-          variants={CloudVariants(windowWidth, 500, 300, 20)}
+          variants={CloudVariants(windowWidth, 500, 300, 24)}
           initial={false}
         >
           <DoubleCloudImage />

@@ -16,6 +16,7 @@ const Main = styled.div`
 
 const Can = styled(motion.div)`
   position: absolute;
+  top: 50px;
   left: -110px;
 
   @media (min-width: 900px) {
