@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
-import BackgroundImage from "../../images/ButtonBackground.svg";
+import BackgroundImage from "@images/ButtonBackground.svg";
 
 interface ButtonProps {
   to: string;
@@ -18,7 +18,7 @@ const Wrapper = styled.div`
 `;
 
 const Inner = styled(Link)`
-  padding: 1em;
+  padding: 2em;
   background-image: url(${BackgroundImage});
   background-size: 100% 100%;
   background-repeat: no-repeat;
