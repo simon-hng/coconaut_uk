@@ -2,11 +2,16 @@ import * as React from "react";
 import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
 
-import SectionTwoCol from "../global/SectionTwoCol";
-import Headline from "../global/Headline";
+import {
+  SectionTwoCol,
+  Headline,
+  Button,
+  Subheadline,
+  Typography,
+  CenteredOnMobile,
+} from "@components/global/index";
+
 import NutritionalFact from "./Fact";
-import Button from "../global/Button";
-import Subheadline from "@components/global/Subheadline";
 
 const NutritionalFacts = [
   { name: "Energy", value: 95, unit: "kJ" },
@@ -30,22 +35,24 @@ const Nutrition = () => (
     left={
       <>
         <Headline main="100 percent" sub="young coconuts" />
-        <p>
+        <Typography>
           Coconaut is an energising drink with a rare combination. It refreshes,
           activates and regenerates. It contains 100% pure young coconut water
           from premium young vietnamese coconuts. No additives. No extra sugar,
           just the full load of coconut power. Want to know more?​
-        </p>
+        </Typography>
 
         <Button to="">Shop now!</Button>
       </>
     }
     right={
       <>
-        <StaticImage
-          src="../../images/Coconut_and_can_01.png"
-          alt="coconut and can"
-        />
+        <CenteredOnMobile>
+          <StaticImage
+            src="../../images/Coconut_and_can_01.png"
+            alt="coconut and can"
+          />
+        </CenteredOnMobile>
 
         <Subheadline>Whats in it?</Subheadline>
 
