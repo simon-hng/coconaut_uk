@@ -26,6 +26,7 @@ module.exports = {
       }
     },
     `gatsby-transformer-sharp`, // Needed for dynamic images
-    `gatsby-plugin-tsconfig-paths`
+    `gatsby-plugin-tsconfig-paths`,
+    `gatsby-plugin-anchor-links`
   ],
 };
