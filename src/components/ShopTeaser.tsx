@@ -8,7 +8,7 @@ import {
   Subheadline,
   Button,
   CenteredOnMobile,
-} from "@components/global/index";
+} from "@components/global";
 
 export const query = () => {};
 

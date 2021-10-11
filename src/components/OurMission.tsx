@@ -7,7 +7,7 @@ import {
   Headline,
   Typography,
   CenteredOnMobile,
-} from "@components/global/index";
+} from "@components/global";
 
 const OurMission = () => (
   <SectionTwoCol

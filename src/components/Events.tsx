@@ -1,5 +1,5 @@
 import * as React from "react";
-import Headline from "./global/Headline";
+import { Headline } from "@components/global";
 
 const Events = (): JSX.Element => {
   return (
