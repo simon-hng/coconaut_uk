@@ -2,7 +2,7 @@ import * as React from "react";
 import { motion } from "framer-motion";
 import styled from "styled-components";
 import Can from "./Can";
-import Coconuts from "./Coconuts";
+import Coconut from "./Coconut";
 
 const Main = styled.div`
   display: flex;
@@ -15,22 +15,43 @@ const AnimationContainer = styled(motion.div)`
   position: relative;
 `;
 
-const CanSecond = styled(motion.div)`
+const CanMain = styled.div`
   position: absolute;
   top: 50px;
   left: -110px;
+  transform: rotate(-7deg);
 
   @media (min-width: 900px) {
     left: -30px;
+    transform: rotate(0);
+    z-index: 10;
   }
 `;
 
-const CanFirst = styled(CanSecond)`
+const CanSub = styled(CanMain)`
   display: none;
 
   @media (min-width: 900px) {
     display: inline;
     transform: rotate(-35deg) translate(-150px, -50px);
+  }
+`;
+
+const CoconutLeft = styled.div`
+  position: absolute;
+  top: 480px;
+  left: -130px;
+
+  @media (min-width: 900px) {
+    left: -200px;
+  }
+`;
+
+const CoconutRight = styled(CoconutLeft)`
+  left: 30px;
+
+  @media (min-width: 900px) {
+    left: 130px;
   }
 `;
 
@@ -41,15 +62,21 @@ const CansVariants = {
 const Cans = () => (
   <Main>
     <AnimationContainer variants={CansVariants} animate="animation">
-      <CanFirst>
+      <CanSub>
         <Can />
-      </CanFirst>
+      </CanSub>
 
-      <CanSecond>
+      <CanMain>
         <Can />
-      </CanSecond>
+      </CanMain>
 
-      <Coconuts />
+      <CoconutLeft>
+        <Coconut isLeft />
+      </CoconutLeft>
+
+      <CoconutRight>
+        <Coconut />
+      </CoconutRight>
     </AnimationContainer>
   </Main>
 );
