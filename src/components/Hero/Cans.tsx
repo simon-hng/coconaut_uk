@@ -2,16 +2,17 @@ import * as React from "react";
 import { motion } from "framer-motion";
 import { StaticImage } from "gatsby-plugin-image";
 import styled from "styled-components";
+import Coconuts from "./Coconuts";
 
 const Main = styled.div`
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: center;
-  max-width: 100vw;
+`;
 
-  > div {
-    position: relative;
-  }
+const CanContainer = styled(motion.div)`
+  position: relative;
 `;
 
 const Can = styled(motion.div)`
@@ -55,7 +56,7 @@ const CanVariants = {
 
 const Cans = () => (
   <Main>
-    <motion.div variants={CansVariants} animate="animation">
+    <CanContainer variants={CansVariants} animate="animation">
       <motion.div variants={CanVariants}>
         <CanFirst>
           <CanImage />
@@ -67,7 +68,9 @@ const Cans = () => (
           <CanImage />
         </Can>
       </motion.div>
-    </motion.div>
+
+      <Coconuts />
+    </CanContainer>
   </Main>
 );
 
