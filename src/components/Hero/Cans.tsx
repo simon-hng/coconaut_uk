@@ -1,7 +1,7 @@
 import * as React from "react";
 import { motion } from "framer-motion";
-import { StaticImage } from "gatsby-plugin-image";
 import styled from "styled-components";
+import Can from "./Can";
 import Coconuts from "./Coconuts";
 
 const Main = styled.div`
@@ -11,11 +11,11 @@ const Main = styled.div`
   justify-content: center;
 `;
 
-const CanContainer = styled(motion.div)`
+const AnimationContainer = styled(motion.div)`
   position: relative;
 `;
 
-const Can = styled(motion.div)`
+const CanSecond = styled(motion.div)`
   position: absolute;
   top: 50px;
   left: -110px;
@@ -25,7 +25,7 @@ const Can = styled(motion.div)`
   }
 `;
 
-const CanFirst = styled(Can)`
+const CanFirst = styled(CanSecond)`
   display: none;
 
   @media (min-width: 900px) {
@@ -34,43 +34,23 @@ const CanFirst = styled(Can)`
   }
 `;
 
-const CanImage = () => (
-  <StaticImage
-    src="../../images/hero/Can.png"
-    alt="Coconaut can"
-    layout="fixed"
-    width={260}
-  />
-);
-
 const CansVariants = {
   animation: { transition: { staggerChildren: 0.5 } },
 };
 
-const CanVariants = {
-  animation: {
-    y: [0, 50, 0],
-    transition: { repeat: Infinity, duration: 5 },
-  },
-};
-
 const Cans = () => (
   <Main>
-    <CanContainer variants={CansVariants} animate="animation">
-      <motion.div variants={CanVariants}>
-        <CanFirst>
-          <CanImage />
-        </CanFirst>
-      </motion.div>
+    <AnimationContainer variants={CansVariants} animate="animation">
+      <CanFirst>
+        <Can />
+      </CanFirst>
 
-      <motion.div variants={CanVariants}>
-        <Can>
-          <CanImage />
-        </Can>
-      </motion.div>
+      <CanSecond>
+        <Can />
+      </CanSecond>
 
       <Coconuts />
-    </CanContainer>
+    </AnimationContainer>
   </Main>
 );
 
