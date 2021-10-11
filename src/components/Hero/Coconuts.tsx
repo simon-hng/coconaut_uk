@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 const CoconutsContainer = styled(motion.div)`
   position: absolute;
-  left: -140px; // Centering by moving to the left by width/2
+  left: -160px; // Centering by moving to the left by width/2
   top: 480px;
   width: 280px;
   display: flex;
@@ -13,7 +13,7 @@ const CoconutsContainer = styled(motion.div)`
   justify-content: space-between;
 
   @media (min-width: 900px) {
-    left: -250px;
+    left: -200px;
     width: 400px;
   }
 `;
