@@ -1,9 +1,13 @@
 import * as React from "react";
 
-import SectionTwoCol from "@components/global/SectionTwoCol";
-import Headline from "@components/global/Headline";
 import { StaticImage } from "gatsby-plugin-image";
-import Typography from "./global/Typography";
+
+import {
+  SectionTwoCol,
+  Headline,
+  Typography,
+  CenteredOnMobile,
+} from "@components/global/index";
 
 const OurMission = () => (
   <SectionTwoCol
@@ -26,10 +30,12 @@ const OurMission = () => (
       </>
     }
     right={
-      <StaticImage
-        src="../images/Coconaut_Illu_Still.png"
-        alt="Coconaut illustration"
-      />
+      <CenteredOnMobile>
+        <StaticImage
+          src="../images/Coconaut_Illu_Still.png"
+          alt="Coconaut illustration"
+        />
+      </CenteredOnMobile>
     }
   />
 );

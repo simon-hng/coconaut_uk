@@ -2,10 +2,13 @@ import * as React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 
-import SectionTwoCol from "@components/global/SectionTwoCol";
-import Headline from "@components/global/Headline";
-import Subheadline from "@components/global/Subheadline";
-import Button from "@components/global/Button";
+import {
+  SectionTwoCol,
+  Headline,
+  Subheadline,
+  Button,
+  CenteredOnMobile,
+} from "@components/global/index";
 
 export const query = () => {};
 
@@ -30,10 +33,12 @@ const ShopTeaser = () => {
   return (
     <SectionTwoCol
       left={
-        <GatsbyImage
-          alt={product.featuredImage.altText}
-          image={product.featuredImage.gatsbyImageData}
-        />
+        <CenteredOnMobile>
+          <GatsbyImage
+            alt={product.featuredImage.altText}
+            image={product.featuredImage.gatsbyImageData}
+          />
+        </CenteredOnMobile>
       }
       right={
         <>
