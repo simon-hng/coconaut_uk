@@ -1,4 +1,4 @@
-import { StaticImage } from "gatsby-plugin-image";
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
 import * as React from "react";
 import styled from "styled-components";
 
@@ -7,13 +7,14 @@ const Main = styled.article`
 `;
 
 interface CardProps {
-  src: "string";
+  image: IGatsbyImageData;
+  alt: string;
   children: React.ReactNode;
 }
 
 const Card = (props: CardProps): JSX.Element => (
   <Main>
-    <StaticImage src={props.src} />
+    <GatsbyImage image={props.image} alt={props.alt} />
     {props.children}
   </Main>
 );
