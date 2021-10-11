@@ -19,7 +19,7 @@ const Main = styled.div`
 `;
 
 const Caption = styled.h1`
-  margin-top: 10vh;
+  margin-top: 15vh;
   text-align: center;
   font-family: "HermesBold";
   color: ${(props) => props.theme.accentLight};

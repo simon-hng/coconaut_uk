@@ -5,19 +5,24 @@ import Can from "./Can";
 import Coconut from "./Coconut";
 
 const Main = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   display: flex;
-  position: relative;
   align-items: center;
   justify-content: center;
 `;
 
 const AnimationContainer = styled(motion.div)`
   position: relative;
+  top: 50px;
+  height: 600px;
 `;
 
 const CanMain = styled.div`
   position: absolute;
-  top: 50px;
   left: -110px;
   transform: rotate(-7deg);
 
@@ -39,7 +44,7 @@ const CanSub = styled(CanMain)`
 
 const CoconutLeft = styled.div`
   position: absolute;
-  top: 480px;
+  top: 430px;
   left: -130px;
 
   @media (min-width: 900px) {

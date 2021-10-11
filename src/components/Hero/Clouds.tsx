@@ -4,19 +4,22 @@ import { motion } from "framer-motion";
 import { StaticImage } from "gatsby-plugin-image";
 import { useState } from "react";
 
+// TODO: the clouds can be refactored into a separate component
+const SingleCloudWidth = 100;
 const SingleCloudImage = () => (
   <StaticImage
     src="../../images/hero/coconaut_single_cloud@1694x.png"
     alt="single cloud"
-    width={100}
+    width={SingleCloudWidth}
   />
 );
 
+const DoubleCloudWidth = 250;
 const DoubleCloudImage = () => (
   <StaticImage
     src="../../images/hero/Coconaut_double_cloud@1694x.png"
     alt="double cloud"
-    width={500}
+    width={DoubleCloudWidth}
   />
 );
 
@@ -68,14 +71,14 @@ const Clouds = () => {
     <Main>
       <motion.div variants={CloudsVariants} animate="animation">
         <motion.div
-          variants={CloudVariants(windowWidth, 100, 200, 15)}
+          variants={CloudVariants(windowWidth, SingleCloudWidth, 230, 15)}
           initial={false}
         >
           <SingleCloudImage />
         </motion.div>
 
         <motion.div
-          variants={CloudVariants(windowWidth, 500, 300, 24)}
+          variants={CloudVariants(windowWidth, DoubleCloudWidth, 300, 24)}
           initial={false}
         >
           <DoubleCloudImage />
