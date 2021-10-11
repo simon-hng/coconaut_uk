@@ -1,8 +1,8 @@
 import * as React from "react";
 import { ThemeProvider } from "styled-components";
 
-import Hero from "@components/Hero/Hero";
-import Nutrition from "@components/Nutrition/Nutrition";
+import Hero from "@components/Hero";
+import Nutrition from "@components/Nutrition";
 import ShopTeaser from "@components/ShopTeaser";
 import Events from "@components/Events";
 import OurMission from "@components/OurMission";
