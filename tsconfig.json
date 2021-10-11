@@ -8,6 +8,7 @@
     "paths": {
       "@pages/*": ["pages/*"],
       "@components/*": ["components/*"],
+      "@context/*": ["context/*"],
       "@images/*": ["images/*"],
       "@styles/*": ["styles/*"]
     }

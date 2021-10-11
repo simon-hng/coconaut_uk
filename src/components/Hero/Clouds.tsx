@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import { StaticImage } from "gatsby-plugin-image";
 import { useState } from "react";
+import { WindowWidthContext } from "@context/WindowWidth";
 
 // TODO: the clouds can be refactored into a separate component
 const SingleCloudWidth = 100;
@@ -54,18 +55,7 @@ const CloudVariants = (
 });
 
 const Clouds = () => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-  React.useEffect(() => {
-    window.addEventListener(
-      "resize",
-      () => {
-        setWindowWidth(window.innerWidth);
-        console.log(window.innerWidth);
-      },
-      false
-    );
-  }, []);
+  const windowWidth = React.useContext(WindowWidthContext);
 
   return (
     <Main>

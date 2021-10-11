@@ -1,14 +1,12 @@
 import * as React from "react";
 import { ThemeProvider } from "styled-components";
 
+import Header from "@components/Header";
 import Hero from "@components/Hero";
 import Nutrition from "@components/Nutrition";
 import ShopTeaser from "@components/ShopTeaser";
 import Events from "@components/Events";
 import OurMission from "@components/OurMission";
-
-import "../styles/reset.css";
-import "../styles/global.css";
 
 const mainTheme = {
   background: "#fff",
@@ -22,6 +20,7 @@ const Index = () => {
   return (
     <main>
       <ThemeProvider theme={mainTheme}>
+        <Header />
         <Hero />
         <Nutrition />
         <ShopTeaser />
