@@ -1,4 +1,5 @@
 export { default as Button } from "./Button";
+export { default as Card } from "./Card";
 export { default as CenteredOnMobile } from "./CenteredOnMobile";
 export { default as Headline } from "./Headline";
 export { default as Layout } from "./Layout";
