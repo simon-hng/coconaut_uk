@@ -71,7 +71,7 @@ const Clouds = () => {
     <Main>
       <motion.div variants={CloudsVariants} animate="animation">
         <motion.div
-          variants={CloudVariants(windowWidth, SingleCloudWidth, 230, 15)}
+          variants={CloudVariants(windowWidth, SingleCloudWidth, 300, 15)}
           initial={false}
         >
           <SingleCloudImage />

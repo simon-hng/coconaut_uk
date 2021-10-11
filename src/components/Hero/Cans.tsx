@@ -17,7 +17,7 @@ const Main = styled.div`
 
 const AnimationContainer = styled(motion.div)`
   position: relative;
-  top: 50px;
+  top: 100px;
   height: 600px;
 `;
 
