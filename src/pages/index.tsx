@@ -5,6 +5,7 @@ import Hero from "@components/Hero/Hero";
 import Nutrition from "@components/Nutrition/Nutrition";
 import ShopTeaser from "@components/ShopTeaser";
 import Events from "@components/Events";
+import OurMission from "@components/OurMission";
 
 import "../styles/reset.css";
 import "../styles/global.css";
@@ -25,6 +26,7 @@ const Index = () => {
         <Nutrition />
         <ShopTeaser />
         <Events />
+        <OurMission />
       </ThemeProvider>
     </main>
   );
