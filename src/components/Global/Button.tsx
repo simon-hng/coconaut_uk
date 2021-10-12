@@ -4,38 +4,30 @@ import { Link } from 'gatsby';
 import BackgroundImage from '@images/ButtonBackground.svg';
 
 interface ButtonProps {
-  to: string;
+  onClick?: () => {};
+  to?: string;
   children: React.ReactNode;
 }
 
-const Button = styled.div`
-  padding: 3rem 0;
-  text-align: center;
-
-  @media (min-width: 900px) {
-    text-align: left;
-  }
-`;
-
-const StyledLink = styled(Link)`
-  padding: 2em;
+const Button = styled.button`
+  margin: 5rem 0;
+  padding: 1.4rem 2rem;
+  background: none;
   background-image: url(${BackgroundImage});
   background-size: 100% 100%;
-  background-repeat: no-repeat;
+  width: fit-content;
+  border: none;
   text-decoration: none;
   font-weight: bold;
   font-size: 1.4rem;
   color: #fff;
-
-  :hover {
-    transform: scale(2);
-  }
+  cursor: pointer;
 `;
 
 export default (props: ButtonProps) => {
   return (
-    <Button>
-      <StyledLink to={props.to}>{props.children}</StyledLink>
-    </Button>
+    <Link to={props.to}>
+      <Button onClick={props.onClick}>{props.children}</Button>
+    </Link>
   );
 };

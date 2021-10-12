@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-import { Card, Headline } from '@components/global';
+import { Card, Headline } from '@components/Global';
 import BackgroundImage from '@images/hero/Coconaut_Skyline@1694x-100.jpg';
 
 const Background = styled.section`

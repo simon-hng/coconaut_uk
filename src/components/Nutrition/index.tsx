@@ -9,7 +9,7 @@ import {
   Subheadline,
   Typography,
   CenteredOnMobile,
-} from '@components/global';
+} from '@components/Global';
 
 import NutritionalFact from './Fact';
 

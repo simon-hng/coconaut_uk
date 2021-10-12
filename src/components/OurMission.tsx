@@ -7,7 +7,7 @@ import {
   Headline,
   Typography,
   CenteredOnMobile,
-} from '@components/global';
+} from '@components/Global';
 
 export default () => (
   <SectionTwoCol
