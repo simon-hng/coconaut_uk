@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-import { useCycle } from "framer-motion";
+import { motion, useCycle } from "framer-motion";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
 
@@ -22,7 +22,7 @@ const InnerHeader = styled.div`
   justify-content: space-between;
 `;
 
-const MenuButtons = styled.div`
+const MenuButtons = styled(motion.div)`
   display: flex;
   align-items: center;
   z-index: 10;

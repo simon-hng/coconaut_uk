@@ -1,16 +1,32 @@
 import * as React from "react";
+import { motion } from "framer-motion";
 import styled from "styled-components";
-import MenuLink, { MenuLinkInner } from "./MenuLink";
+import MenuLink from "./MenuLink";
 
-const Main = styled.nav`
+const Main = styled(motion.nav)`
   position: absolute;
   top: 0;
-  right: 0;
-  padding: 10rem 0 0 4rem;
-  width: 30rem;
+  padding-top: 10rem;
+  width: 500px;
   height: 100vh;
   background-color: ${(prop) => prop.theme.accent};
 `;
+
+const MenuVariants = {
+  open: {
+    right: 0,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+  closed: {
+    right: -500,
+    transition: {
+      staggerChildren: 0.1,
+      staggerDirection: -1,
+    },
+  },
+};
 
 const menuLinks = [
   { name: "About", to: "" },
@@ -23,15 +39,13 @@ const menuLinks = [
 
 const Menu = (prop: { isOpen: boolean }) => {
   return (
-    prop.isOpen && (
-      <Main>
-        <ul>
-          {menuLinks.map((link) => (
-            <MenuLink to={link.to} name={link.name} />
-          ))}
-        </ul>
-      </Main>
-    )
+    <Main variants={MenuVariants} animate={prop.isOpen ? "open" : "closed"}>
+      <motion.ul>
+        {menuLinks.map((link) => (
+          <MenuLink to={link.to} name={link.name} />
+        ))}
+      </motion.ul>
+    </Main>
   );
 };
 
