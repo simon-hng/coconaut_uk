@@ -5,7 +5,7 @@ import BackgroundImage from '@images/ButtonBackground.svg';
 import { motion } from 'framer-motion';
 
 interface ButtonProps {
-  onClick?: () => {};
+  onClick?: () => void;
   to?: string;
   children: React.ReactNode;
   margin?: string;

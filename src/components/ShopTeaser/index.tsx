@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import styled from 'styled-components';
 
 import {
   SectionTwoCol,
@@ -11,13 +10,7 @@ import {
   CenteredOnMobile,
   Typography,
 } from '@components/Global';
-import Quantity from './Shop/Quantity';
-
-const BuyingSection = styled.div`
-  display: flex;
-  width: 20rem;
-  justify-content: space-between;
-`;
+import Buying from './Buying';
 
 export default () => {
   const teaserProduct = useStaticQuery(
@@ -62,10 +55,7 @@ export default () => {
           </Typography>
           <Typography bold>Quantity</Typography>
 
-          <BuyingSection>
-            <Quantity />
-            <Button padding='0.8rem 2rem'>Add</Button>
-          </BuyingSection>
+          <Buying />
 
           <Button margin='5rem 0' to='/shop'>
             Go to shop!
