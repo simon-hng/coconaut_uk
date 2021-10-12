@@ -8,8 +8,12 @@ interface LogoProps {
 
 export default (props: LogoProps): JSX.Element => {
   return props.windowWidth < 900 ? (
-    <StaticImage src='../../images/logoMobile.svg' />
+    <StaticImage src='../../images/logoMobile.svg' width={120} layout='fixed' />
   ) : (
-    <StaticImage src='../../images/logoDesktop.svg' width={200} />
+    <StaticImage
+      src='../../images/logoDesktop.svg'
+      width={200}
+      layout='fixed'
+    />
   );
 };
