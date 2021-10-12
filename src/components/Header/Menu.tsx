@@ -21,7 +21,7 @@ const MenuVariants = (windowWidth: number) => ({
   open: {
     right: 0,
     transition: {
-      staggerChildren: 0.1,
+      staggerChildren: 0.05,
       delayChildren: 0.2,
       type: 'tween',
     },
@@ -53,6 +53,7 @@ export default (prop: { isOpen: boolean }) => {
       <Menu
         variants={MenuVariants(WindowWidth)}
         animate={prop.isOpen ? 'open' : 'closed'}
+        initial={false}
       >
         <motion.ul>
           {menuLinks.map((link) => (
