@@ -1,7 +1,7 @@
-import * as React from "react";
-import { motion } from "framer-motion";
-import styled from "styled-components";
-import MenuLink from "./MenuLink";
+import * as React from 'react';
+import { motion } from 'framer-motion';
+import styled from 'styled-components';
+import MenuLink from './MenuLink';
 
 const Menu = styled(motion.nav)`
   position: absolute;
@@ -29,17 +29,17 @@ const MenuVariants = {
 };
 
 const menuLinks = [
-  { name: "About", to: "" },
-  { name: "Nutrition facts", to: "/#nutritionfacts" },
-  { name: "Shop", to: "" },
-  { name: "Events", to: "" },
-  { name: "Business", to: "" },
-  { name: "Sustainability", to: "" },
+  { name: 'About', to: '' },
+  { name: 'Nutrition facts', to: '/#nutritionfacts' },
+  { name: 'Shop', to: '' },
+  { name: 'Events', to: '' },
+  { name: 'Business', to: '' },
+  { name: 'Sustainability', to: '' },
 ];
 
 export default (prop: { isOpen: boolean }) => {
   return (
-    <Menu variants={MenuVariants} animate={prop.isOpen ? "open" : "closed"}>
+    <Menu variants={MenuVariants} animate={prop.isOpen ? 'open' : 'closed'}>
       <motion.ul>
         {menuLinks.map((link) => (
           <MenuLink to={link.to} name={link.name} />

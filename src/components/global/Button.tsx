@@ -1,7 +1,7 @@
-import * as React from "react";
-import styled from "styled-components";
-import { Link } from "gatsby";
-import BackgroundImage from "@images/ButtonBackground.svg";
+import * as React from 'react';
+import styled from 'styled-components';
+import { Link } from 'gatsby';
+import BackgroundImage from '@images/ButtonBackground.svg';
 
 interface ButtonProps {
   to: string;

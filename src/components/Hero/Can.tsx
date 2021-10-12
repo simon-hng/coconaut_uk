@@ -1,12 +1,12 @@
-import * as React from "react";
-import { motion } from "framer-motion";
-import { StaticImage } from "gatsby-plugin-image";
+import * as React from 'react';
+import { motion } from 'framer-motion';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const CanImage = () => (
   <StaticImage
-    src="../../images/hero/Can.png"
-    alt="Coconaut can"
-    layout="fixed"
+    src='../../images/hero/Can.png'
+    alt='Coconaut can'
+    layout='fixed'
     width={260}
   />
 );

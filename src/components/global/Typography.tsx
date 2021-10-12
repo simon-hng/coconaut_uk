@@ -1,8 +1,8 @@
-import * as React from "react";
-import styled from "styled-components";
+import * as React from 'react';
+import styled from 'styled-components';
 
 interface TypographyProps {
-  align?: "left" | "center" | "right";
+  align?: 'left' | 'center' | 'right';
   bold?: boolean;
   underline?: boolean;
   children: React.ReactNode;
@@ -10,5 +10,5 @@ interface TypographyProps {
 
 export default styled.p<TypographyProps>`
   ${(props) =>
-    props.bold && "font-weight: bold"}// TODO: implement features as needed
+    props.bold && 'font-weight: bold'}// TODO: implement features as needed
 `;

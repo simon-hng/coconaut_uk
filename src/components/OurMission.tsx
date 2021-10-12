@@ -1,19 +1,19 @@
-import * as React from "react";
+import * as React from 'react';
 
-import { StaticImage } from "gatsby-plugin-image";
+import { StaticImage } from 'gatsby-plugin-image';
 
 import {
   SectionTwoCol,
   Headline,
   Typography,
   CenteredOnMobile,
-} from "@components/global";
+} from '@components/global';
 
 export default () => (
   <SectionTwoCol
     left={
       <>
-        <Headline main="Our Mission" sub="Lorem Dolor sit Amet" />
+        <Headline main='Our Mission' sub='Lorem Dolor sit Amet' />
         <Typography bold>
           Coconauts mission: a new coconut water that is better than anything
           the big companies have to offer. No sooner said than done.
@@ -32,8 +32,8 @@ export default () => (
     right={
       <CenteredOnMobile>
         <StaticImage
-          src="../images/Coconaut_Illu_Still.png"
-          alt="Coconaut illustration"
+          src='../images/Coconaut_Illu_Still.png'
+          alt='Coconaut illustration'
         />
       </CenteredOnMobile>
     }

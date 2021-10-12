@@ -1,6 +1,6 @@
-import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
-import * as React from "react";
-import styled from "styled-components";
+import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
+import * as React from 'react';
+import styled from 'styled-components';
 
 const Card = styled.article`
   //TODO: appropiate styling when data is available

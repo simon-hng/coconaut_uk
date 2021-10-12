@@ -1,6 +1,6 @@
-import * as React from "react";
-import { graphql, useStaticQuery } from "gatsby";
-import { GatsbyImage } from "gatsby-plugin-image";
+import * as React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 import {
   SectionTwoCol,
@@ -8,7 +8,7 @@ import {
   Subheadline,
   Button,
   CenteredOnMobile,
-} from "@components/global";
+} from '@components/global';
 
 export const query = () => {};
 
@@ -42,11 +42,11 @@ export default () => {
       }
       right={
         <>
-          <Headline main="Coconaut" />
+          <Headline main='Coconaut' />
           <Subheadline>100% pure young coconaut Water</Subheadline>
           <p>{product.description}</p>
 
-          <Button to="">Go to shop!</Button>
+          <Button to=''>Go to shop!</Button>
         </>
       }
     />

@@ -1,8 +1,8 @@
-import * as React from "react";
-import styled from "styled-components";
+import * as React from 'react';
+import styled from 'styled-components';
 
-import { Card, Headline } from "@components/global";
-import BackgroundImage from "@images/hero/Coconaut_Skyline@1694x-100.jpg";
+import { Card, Headline } from '@components/global';
+import BackgroundImage from '@images/hero/Coconaut_Skyline@1694x-100.jpg';
 
 const Background = styled.section`
   width: 100vh;
@@ -14,7 +14,7 @@ export default (): JSX.Element => {
   const data = {};
   return (
     <>
-      <Headline main="Join Our Events" centered />
+      <Headline main='Join Our Events' centered />
       <Background>
         {data && (
           <ul>

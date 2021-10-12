@@ -1,6 +1,6 @@
-import * as React from "react";
-import { motion, Variants } from "framer-motion";
-import { StaticImage } from "gatsby-plugin-image";
+import * as React from 'react';
+import { motion, Variants } from 'framer-motion';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const CoconutVariant: Variants = {
   animation: {
@@ -8,7 +8,7 @@ const CoconutVariant: Variants = {
     transition: {
       repeat: Infinity,
       duration: 1,
-      repeatType: "reverse",
+      repeatType: 'reverse',
       times: [0, 0.6, 0.8, 1],
     },
   },
@@ -22,19 +22,19 @@ export default (props: CoconutProps) => {
   return props.isLeft ? (
     <motion.div variants={CoconutVariant}>
       <StaticImage
-        src={"../../images/hero/Coconaut_coconut_02.png"}
-        alt="coconut left"
+        src={'../../images/hero/Coconaut_coconut_02.png'}
+        alt='coconut left'
         width={120}
-        layout="fixed"
+        layout='fixed'
       />
     </motion.div>
   ) : (
     <motion.div variants={CoconutVariant}>
       <StaticImage
-        src={"../../images/hero/Coconaut_coconut_01.png"}
-        alt="coconut right"
+        src={'../../images/hero/Coconaut_coconut_01.png'}
+        alt='coconut right'
         width={100}
-        layout="fixed"
+        layout='fixed'
       />
     </motion.div>
   );

@@ -1,5 +1,5 @@
-import * as React from "react";
-import styled from "styled-components";
+import * as React from 'react';
+import styled from 'styled-components';
 
 interface HeadlineProps {
   main: String;
@@ -13,7 +13,7 @@ interface MainProps {
 
 const Headline = styled.h2<MainProps>`
   padding-bottom: 0.8em;
-  text-align: ${(props) => (props.centered ? "center" : "left")};
+  text-align: ${(props) => (props.centered ? 'center' : 'left')};
   color: ${(props) => props.theme.accent};
 `;
 const Sub = styled.span`

@@ -1,16 +1,16 @@
-import * as React from "react";
-import styled from "styled-components";
-import { motion } from "framer-motion";
-import { StaticImage } from "gatsby-plugin-image";
-import { useState } from "react";
-import { WindowWidthContext } from "@context/WindowWidth";
+import * as React from 'react';
+import styled from 'styled-components';
+import { motion } from 'framer-motion';
+import { StaticImage } from 'gatsby-plugin-image';
+import { useState } from 'react';
+import { WindowWidthContext } from '@context/WindowWidth';
 
 // TODO: the clouds can be refactored into a separate component
 const SingleCloudWidth = 100;
 const SingleCloudImage = () => (
   <StaticImage
-    src="../../images/hero/coconaut_single_cloud@1694x.png"
-    alt="single cloud"
+    src='../../images/hero/coconaut_single_cloud@1694x.png'
+    alt='single cloud'
     width={SingleCloudWidth}
   />
 );
@@ -18,8 +18,8 @@ const SingleCloudImage = () => (
 const DoubleCloudWidth = 250;
 const DoubleCloudImage = () => (
   <StaticImage
-    src="../../images/hero/Coconaut_double_cloud@1694x.png"
-    alt="double cloud"
+    src='../../images/hero/Coconaut_double_cloud@1694x.png'
+    alt='double cloud'
     width={DoubleCloudWidth}
   />
 );
@@ -49,7 +49,7 @@ const CloudVariants = (
     transition: {
       repeat: Infinity,
       duration: duration,
-      ease: "linear",
+      ease: 'linear',
     },
   },
 });
@@ -59,7 +59,7 @@ export default () => {
 
   return (
     <Clouds>
-      <motion.div variants={CloudsVariants} animate="animation">
+      <motion.div variants={CloudsVariants} animate='animation'>
         <motion.div
           variants={CloudVariants(windowWidth, SingleCloudWidth, 300, 15)}
           initial={false}

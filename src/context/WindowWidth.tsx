@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 
 export const WindowWidthContext = React.createContext(window.innerWidth);
 
@@ -7,7 +7,7 @@ export const WindowWidthProvider = ({ children }): JSX.Element => {
 
   React.useEffect(() => {
     window.addEventListener(
-      "resize",
+      'resize',
       () => {
         setWindowWidth(window.innerWidth);
         console.log(window.innerWidth);

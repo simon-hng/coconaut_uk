@@ -1,12 +1,12 @@
-import * as React from "react";
-import styled from "styled-components";
-import { motion, useCycle } from "framer-motion";
-import { StaticImage } from "gatsby-plugin-image";
-import { Link } from "gatsby";
+import * as React from 'react';
+import styled from 'styled-components';
+import { motion, useCycle } from 'framer-motion';
+import { StaticImage } from 'gatsby-plugin-image';
+import { Link } from 'gatsby';
 
-import { WindowWidthContext } from "@context/WindowWidth";
-import Logo from "./Logo";
-import Menu from "./Menu";
+import { WindowWidthContext } from '@context/WindowWidth';
+import Logo from './Logo';
+import Menu from './Menu';
 
 const Header = styled.header`
   position: fixed;
@@ -43,12 +43,12 @@ export default () => {
         <Logo windowWidth={windowWidth} />
 
         <MenuButtons>
-          <Link to="">
-            <StaticImage src="../../images/einkaufswagen.svg" height={40} />
+          <Link to=''>
+            <StaticImage src='../../images/einkaufswagen.svg' height={40} />
           </Link>
 
           <a onClick={() => toggleMenu()}>
-            <StaticImage src="../../images/menubutton.svg" height={30} />
+            <StaticImage src='../../images/menubutton.svg' height={30} />
           </a>
         </MenuButtons>
       </InnerHeader>

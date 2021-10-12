@@ -1,8 +1,8 @@
-import * as React from "react";
-import { motion } from "framer-motion";
-import styled from "styled-components";
-import Can from "./Can";
-import Coconut from "./Coconut";
+import * as React from 'react';
+import { motion } from 'framer-motion';
+import styled from 'styled-components';
+import Can from './Can';
+import Coconut from './Coconut';
 
 const Cans = styled.div`
   position: absolute;
@@ -66,7 +66,7 @@ const CansVariants = {
 
 export default () => (
   <Cans>
-    <AnimationContainer variants={CansVariants} animate="animation">
+    <AnimationContainer variants={CansVariants} animate='animation'>
       <CanSub>
         <Can />
       </CanSub>
