@@ -8,7 +8,7 @@ interface ButtonProps {
   children: React.ReactNode;
 }
 
-const Wrapper = styled.div`
+const Button = styled.div`
   padding: 3rem 0;
   text-align: center;
 
@@ -17,7 +17,7 @@ const Wrapper = styled.div`
   }
 `;
 
-const Inner = styled(Link)`
+const StyledLink = styled(Link)`
   padding: 2em;
   background-image: url(${BackgroundImage});
   background-size: 100% 100%;
@@ -32,12 +32,10 @@ const Inner = styled(Link)`
   }
 `;
 
-const Button = (props: ButtonProps) => {
+export default (props: ButtonProps) => {
   return (
-    <Wrapper>
-      <Inner to={props.to}>{props.children}</Inner>
-    </Wrapper>
+    <Button>
+      <StyledLink to={props.to}>{props.children}</StyledLink>
+    </Button>
   );
 };
-
-export default Button;

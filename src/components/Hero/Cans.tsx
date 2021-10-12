@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Can from "./Can";
 import Coconut from "./Coconut";
 
-const Main = styled.div`
+const Cans = styled.div`
   position: absolute;
   top: 0;
   left: 0;
@@ -64,8 +64,8 @@ const CansVariants = {
   animation: { transition: { staggerChildren: 0.5 } },
 };
 
-const Cans = () => (
-  <Main>
+export default () => (
+  <Cans>
     <AnimationContainer variants={CansVariants} animate="animation">
       <CanSub>
         <Can />
@@ -83,7 +83,5 @@ const Cans = () => (
         <Coconut />
       </CoconutRight>
     </AnimationContainer>
-  </Main>
+  </Cans>
 );
-
-export default Cans;

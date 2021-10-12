@@ -8,9 +8,7 @@ interface TypographyProps {
   children: React.ReactNode;
 }
 
-const Typography = styled.p<TypographyProps>`
-  ${(props) => props.bold && "font-weight: bold"}
-	// TODO: implement features as needed
+export default styled.p<TypographyProps>`
+  ${(props) =>
+    props.bold && "font-weight: bold"}// TODO: implement features as needed
 `;
-
-export default Typography;

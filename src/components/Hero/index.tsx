@@ -5,7 +5,7 @@ import BackgroundImage from "@images/hero/Coconaut_Skyline@1694x-100.jpg";
 import Clouds from "./Clouds";
 import Cans from "./Cans";
 
-const Main = styled.div`
+const Hero = styled.div`
   height: 90vh;
   background-image: url(${BackgroundImage});
   background-repeat: no-repeat;
@@ -25,12 +25,10 @@ const Caption = styled.h1`
   color: ${(props) => props.theme.accentLight};
 `;
 
-const Hero = () => (
-  <Main>
+export default () => (
+  <Hero>
     <Caption>GoHigher!</Caption>
     <Clouds />
     <Cans />
-  </Main>
+  </Hero>
 );
-
-export default Hero;

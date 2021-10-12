@@ -30,7 +30,7 @@ const FactsList = styled.ul`
   flex-wrap: wrap;
 `;
 
-const Nutrition = () => (
+export default () => (
   <SectionTwoCol
     left={
       <>
@@ -65,5 +65,3 @@ const Nutrition = () => (
     }
   />
 );
-
-export default Nutrition;

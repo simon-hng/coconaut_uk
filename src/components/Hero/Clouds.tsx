@@ -24,7 +24,7 @@ const DoubleCloudImage = () => (
   />
 );
 
-const Main = styled.div`
+const Clouds = styled.div`
   position: absolute;
   top: 0;
   left: 0;
@@ -54,11 +54,11 @@ const CloudVariants = (
   },
 });
 
-const Clouds = () => {
+export default () => {
   const windowWidth = React.useContext(WindowWidthContext);
 
   return (
-    <Main>
+    <Clouds>
       <motion.div variants={CloudsVariants} animate="animation">
         <motion.div
           variants={CloudVariants(windowWidth, SingleCloudWidth, 300, 15)}
@@ -74,8 +74,6 @@ const Clouds = () => {
           <DoubleCloudImage />
         </motion.div>
       </motion.div>
-    </Main>
+    </Clouds>
   );
 };
-
-export default Clouds;

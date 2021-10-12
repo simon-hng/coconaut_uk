@@ -9,7 +9,7 @@ const Background = styled.section`
   background-image: url(${BackgroundImage});
 `;
 
-const Events = (): JSX.Element => {
+export default (): JSX.Element => {
   //TODO: get instagram data
   const data = {};
   return (
@@ -32,5 +32,3 @@ const Events = (): JSX.Element => {
     </>
   );
 };
-
-export default Events;

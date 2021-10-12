@@ -8,7 +8,7 @@ interface SectionProps {
   right: JSX.Element;
 }
 
-const Main = styled.section`
+const SectionTwoCol = styled.section`
   display: flex;
   flex-direction: column;
 
@@ -25,13 +25,11 @@ const Content = styled.div`
   }
 `;
 
-const SectionTwoCol = (props: SectionProps) => (
+export default (props: SectionProps) => (
   <Layout>
-    <Main>
+    <SectionTwoCol>
       <Content>{props.left}</Content>
       <Content>{props.right}</Content>
-    </Main>
+    </SectionTwoCol>
   </Layout>
 );
-
-export default SectionTwoCol;

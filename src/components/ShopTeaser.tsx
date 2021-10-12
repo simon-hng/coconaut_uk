@@ -12,7 +12,7 @@ import {
 
 export const query = () => {};
 
-const ShopTeaser = () => {
+export default () => {
   const productStill = useStaticQuery(
     graphql`
       query MyQuery {
@@ -52,5 +52,3 @@ const ShopTeaser = () => {
     />
   );
 };
-
-export default ShopTeaser;

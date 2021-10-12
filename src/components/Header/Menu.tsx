@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 import MenuLink from "./MenuLink";
 
-const Main = styled(motion.nav)`
+const Menu = styled(motion.nav)`
   position: absolute;
   top: 0;
   padding-top: 10rem;
@@ -37,16 +37,14 @@ const menuLinks = [
   { name: "Sustainability", to: "" },
 ];
 
-const Menu = (prop: { isOpen: boolean }) => {
+export default (prop: { isOpen: boolean }) => {
   return (
-    <Main variants={MenuVariants} animate={prop.isOpen ? "open" : "closed"}>
+    <Menu variants={MenuVariants} animate={prop.isOpen ? "open" : "closed"}>
       <motion.ul>
         {menuLinks.map((link) => (
           <MenuLink to={link.to} name={link.name} />
         ))}
       </motion.ul>
-    </Main>
+    </Menu>
   );
 };
-
-export default Menu;

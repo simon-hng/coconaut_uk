@@ -8,7 +8,7 @@ import { WindowWidthContext } from "@context/WindowWidth";
 import Logo from "./Logo";
 import Menu from "./Menu";
 
-const Main = styled.header`
+const Header = styled.header`
   position: fixed;
   z-index: 9999;
   top: 0;
@@ -33,12 +33,12 @@ const MenuButtons = styled(motion.div)`
   }
 `;
 
-const Header = styled(() => {
+export default () => {
   const [menuIsOpen, toggleMenu] = useCycle(false, true);
   const windowWidth = React.useContext(WindowWidthContext);
 
   return (
-    <Main>
+    <Header>
       <InnerHeader>
         <Logo windowWidth={windowWidth} />
 
@@ -54,8 +54,6 @@ const Header = styled(() => {
       </InnerHeader>
 
       <Menu isOpen={menuIsOpen} />
-    </Main>
+    </Header>
   );
-})``;
-
-export default Header;
+};

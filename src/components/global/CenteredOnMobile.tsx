@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const CenteredOnMobile = styled.div`
+export default styled.div`
   display: flex;
   justify-content: center;
 
@@ -8,5 +8,3 @@ const CenteredOnMobile = styled.div`
     justify-content: left;
   }
 `;
-
-export default CenteredOnMobile;

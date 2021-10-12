@@ -18,7 +18,7 @@ interface CoconutProps {
   isLeft?: boolean;
 }
 
-const Coconut = (props: CoconutProps) => {
+export default (props: CoconutProps) => {
   return props.isLeft ? (
     <motion.div variants={CoconutVariant}>
       <StaticImage
@@ -39,5 +39,3 @@ const Coconut = (props: CoconutProps) => {
     </motion.div>
   );
 };
-
-export default Coconut;
