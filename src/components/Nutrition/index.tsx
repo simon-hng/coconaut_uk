@@ -42,7 +42,9 @@ export default () => (
           just the full load of coconut power. Want to know more?​
         </Typography>
 
-        <Button to=''>Shop now!</Button>
+        <Button margin='5rem 0' to=''>
+          Shop now!
+        </Button>
       </>
     }
     right={

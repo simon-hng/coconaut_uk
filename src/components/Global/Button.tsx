@@ -8,11 +8,18 @@ interface ButtonProps {
   onClick?: () => {};
   to?: string;
   children: React.ReactNode;
+  margin?: string;
+  padding?: string;
 }
 
-const Button = styled(motion.button)`
-  margin: 5rem 0;
-  padding: 1.4rem 2rem;
+const Button = styled(motion.button).attrs(
+  (props: { margin: string; padding: string }) => ({
+    margin: props.margin || '0',
+    padding: props.padding || '1.4rem 2rem',
+  })
+)`
+  margin: ${(props) => props.margin};
+  padding: ${(props) => props.padding};
   background: none;
   background-image: url(${BackgroundImage});
   background-size: 100% 100%;
@@ -27,11 +34,11 @@ const Button = styled(motion.button)`
 
 const Content = (props: ButtonProps) => (
   <Button
-    onClick={props.onClick}
     whileHover={{
       scale: 1.1,
     }}
     transition={{ duration: 0.5 }}
+    {...props}
   >
     {props.children}
   </Button>
