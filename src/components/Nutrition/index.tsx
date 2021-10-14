@@ -1,7 +1,3 @@
-import * as React from 'react';
-import styled from 'styled-components';
-import { StaticImage } from 'gatsby-plugin-image';
-
 import {
   SectionTwoCol,
   Headline,
@@ -10,8 +6,10 @@ import {
   Typography,
   CenteredOnMobile,
 } from '@components/Global';
-
 import { Fact } from './Fact';
+import * as React from 'react';
+import { StaticImage } from 'gatsby-plugin-image';
+import styled from 'styled-components';
 
 const NutritionalFacts = [
   { name: 'Energy', value: 95, unit: 'kJ' },

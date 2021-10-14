@@ -1,8 +1,7 @@
-import * as React from 'react';
-import styled from 'styled-components';
-
 import { Headline } from '@components/Global';
 import BackgroundImage from '@images/hero/Coconaut_Skyline@1694x-100.jpg';
+import * as React from 'react';
+import styled from 'styled-components';
 
 const Background = styled.section`
   width: 100vh;

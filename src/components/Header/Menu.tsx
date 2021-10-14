@@ -1,8 +1,8 @@
+import { WindowWidthContext } from '@context/WindowWidth';
+import { MenuLink } from './MenuLink';
 import * as React from 'react';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
-import { MenuLink } from './MenuLink';
-import { WindowWidthContext } from '@context/WindowWidth';
 
 const MenuStyle = styled(motion.nav)`
   position: absolute;

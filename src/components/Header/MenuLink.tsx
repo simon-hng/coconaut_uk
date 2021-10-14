@@ -1,7 +1,7 @@
 import * as React from 'react';
+import { motion } from 'framer-motion';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
 
 const MenuLinkStyle = styled(motion.li)`
   padding: 1.5rem 5rem;

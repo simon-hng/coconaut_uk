@@ -1,8 +1,8 @@
-import * as React from 'react';
-import styled from 'styled-components';
-import { Link } from 'gatsby';
 import BackgroundImage from '@images/ButtonBackground.svg';
+import * as React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'gatsby';
+import styled from 'styled-components';
 
 interface ButtonProps {
   onClick?: () => void;

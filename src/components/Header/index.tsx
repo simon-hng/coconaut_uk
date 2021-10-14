@@ -1,12 +1,11 @@
-import * as React from 'react';
-import styled from 'styled-components';
-import { motion, useCycle } from 'framer-motion';
-import { StaticImage } from 'gatsby-plugin-image';
-import { Link } from 'gatsby';
-
 import { WindowWidthContext } from '@context/WindowWidth';
 import { Logo } from './Logo';
 import { Menu } from './Menu';
+import * as React from 'react';
+import { motion, useCycle } from 'framer-motion';
+import { Link } from 'gatsby';
+import { StaticImage } from 'gatsby-plugin-image';
+import styled from 'styled-components';
 
 const HeaderStyle = styled.header`
   position: fixed;

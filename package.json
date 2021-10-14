@@ -16,6 +16,7 @@
     "format": "prettier-eslint --write \"{,!(node_modules)/**/}*.{js,jsx,ts,tsx}\""
   },
   "dependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^2.0.4",
     "babel-eslint": "^10.1.0",
     "babel-plugin-styled-components": "^1.13.2",
     "dotenv": "^10.0.0",
