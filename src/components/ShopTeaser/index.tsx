@@ -37,6 +37,7 @@ export const ShopTeaser = () => {
 
   const product = data.shopifyProduct;
   const variant = product.variants[0];
+  const [quantity, setQuantity] = React.useState(1);
 
   return (
     <SectionTwoCol
@@ -54,10 +55,14 @@ export const ShopTeaser = () => {
           <Subheadline>100% pure young coconaut Water</Subheadline>
           <Typography bold>{product.description}</Typography>
           <Typography fontSize={4} bold padding='3rem 0'>
-            {variant.price}£
+            {variant.price * quantity} £
           </Typography>
           <Typography bold>Quantity</Typography>
-          <Buying variantId={variant.storefrontId} />
+          <Buying
+            variantId={variant.storefrontId}
+            quantity={quantity}
+            setQuantity={setQuantity}
+          />
           <Button margin='5rem 0' to='/shop'>
             Go to shop!
           </Button>

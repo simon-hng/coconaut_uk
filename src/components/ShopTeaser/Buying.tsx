@@ -10,17 +10,16 @@ const BuyingStyle = styled.div`
   justify-content: space-between;
 `;
 
-export const Buying = (props: { variantId: string }) => {
-  const [quantity, setQuantity] = React.useState(1);
+export const Buying = (props: { variantId: string; quantity; setQuantity }) => {
   const { addVariantToCart } = React.useContext(StoreContext);
 
   const addHandler = () => {
-    addVariantToCart(props.variantId, quantity);
+    addVariantToCart(props.variantId, props.quantity);
   };
 
   return (
     <BuyingStyle>
-      <Quantity value={quantity} setValue={setQuantity} />
+      <Quantity value={props.quantity} setValue={props.setQuantity} />
       <Button padding='0.8rem 2rem' onClick={() => addHandler()}>
         Add
       </Button>
