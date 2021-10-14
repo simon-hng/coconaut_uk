@@ -38,7 +38,7 @@ const MenuVariants = (windowWidth: number) => ({
 
 const menuLinks = [
   { name: 'About', to: '' },
-  { name: 'Nutrition facts', to: '/#nutritionfacts' },
+  { name: 'Nutrition facts', to: '/#nutrition' },
   { name: 'Shop', to: '' },
   { name: 'Events', to: '' },
   { name: 'Business', to: '' },

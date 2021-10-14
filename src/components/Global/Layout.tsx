@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Layout = styled.div`
+export const SectionWrapper = styled.div`
   margin: auto;
   padding: 5rem 0;
   max-width: 1700px;

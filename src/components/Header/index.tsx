@@ -1,12 +1,11 @@
-import * as React from 'react';
-import styled from 'styled-components';
-import { motion, useCycle } from 'framer-motion';
-import { StaticImage } from 'gatsby-plugin-image';
-import { Link } from 'gatsby';
-
-import { WindowWidthContext } from '@context/WindowWidth';
 import { Logo } from './Logo';
 import { Menu } from './Menu';
+import { WindowWidthContext } from '@context/WindowWidth';
+import { motion, useCycle } from 'framer-motion';
+import { Link } from 'gatsby';
+import { StaticImage } from 'gatsby-plugin-image';
+import * as React from 'react';
+import styled from 'styled-components';
 
 const HeaderStyle = styled.header`
   position: fixed;
@@ -43,7 +42,7 @@ export const Header = () => {
         <Logo windowWidth={windowWidth} />
 
         <MenuButtons>
-          <Link to=''>
+          <Link to='/cart'>
             <StaticImage src='../../images/einkaufswagen.svg' height={40} />
           </Link>
 

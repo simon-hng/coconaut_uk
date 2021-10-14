@@ -1,9 +1,9 @@
+import { SectionWrapper } from './Layout';
 import * as React from 'react';
 import styled from 'styled-components';
 
-import { Layout } from './Layout';
-
 interface SectionProps {
+  id?: string;
   left: React.ReactElement;
   right: React.ReactElement;
 }
@@ -26,10 +26,10 @@ const Content = styled.div`
 `;
 
 export const SectionTwoCol = (props: SectionProps) => (
-  <Layout>
+  <SectionWrapper id={props.id}>
     <SectionTwoColStyle>
       <Content>{props.left}</Content>
       <Content>{props.right}</Content>
     </SectionTwoColStyle>
-  </Layout>
+  </SectionWrapper>
 );
