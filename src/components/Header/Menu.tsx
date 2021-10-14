@@ -1,8 +1,8 @@
-import * as React from 'react';
-import { motion } from 'framer-motion';
-import styled from 'styled-components';
 import { MenuLink } from './MenuLink';
 import { WindowWidthContext } from '@context/WindowWidth';
+import { motion } from 'framer-motion';
+import * as React from 'react';
+import styled from 'styled-components';
 
 const MenuStyle = styled(motion.nav)`
   position: absolute;
@@ -17,7 +17,7 @@ const MenuStyle = styled(motion.nav)`
   }
 `;
 
-const MenuVariants = (windowWidth: number) => ({
+const menuVariants = (windowWidth: number) => ({
   open: {
     right: 0,
     transition: {
@@ -51,15 +51,15 @@ export const Menu = (prop: { isOpen: boolean }) => {
   return (
     <div>
       <MenuStyle
-        variants={MenuVariants(WindowWidth)}
+        variants={menuVariants(WindowWidth)}
         animate={prop.isOpen ? 'open' : 'closed'}
         initial={false}
       >
-        <motion.ul>
+        <ul>
           {menuLinks.map((link, i) => (
             <MenuLink key={i} to={link.to} name={link.name} />
           ))}
-        </motion.ul>
+        </ul>
       </MenuStyle>
     </div>
   );
