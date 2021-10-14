@@ -1,4 +1,4 @@
-import { SectionWrapper } from './Layout';
+import { SectionWrapper } from './SectionWrapper';
 import * as React from 'react';
 import styled from 'styled-components';
 
