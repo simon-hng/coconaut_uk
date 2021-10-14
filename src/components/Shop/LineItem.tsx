@@ -1,7 +1,6 @@
 import * as React from 'react';
 
 export const LineItem = (props: { item }) => {
-  console.log(props.item);
   return (
     <div>
       <table>

@@ -23,11 +23,8 @@ export const ShopTeaser = () => {
             gatsbyImageData
           }
           variants {
-            id
             availableForSale
-            productId
             price
-            shopifyId
             storefrontId
           }
         }
@@ -51,7 +48,7 @@ export const ShopTeaser = () => {
       }
       right={
         <>
-          <Headline main='Coconaut' />
+          <Headline>Coconaut</Headline>
           <Subheadline>100% pure young coconaut Water</Subheadline>
           <Typography bold>{product.description}</Typography>
           <Typography fontSize={4} bold padding='3rem 0'>

@@ -2,7 +2,7 @@ import * as React from 'react';
 import styled from 'styled-components';
 
 interface HeadlineProps {
-  main: String;
+  children: React.ReactNode;
   sub?: String;
   centered?: boolean;
 }
@@ -22,7 +22,7 @@ const Sub = styled.span`
 
 export const Headline = (props: HeadlineProps) => (
   <HeadlineStyle centered={props.centered}>
-    {props.main}
+    {props.children}
     {props.sub && (
       <>
         <br /> <Sub>{props.sub}</Sub>

@@ -10,7 +10,6 @@ export const WindowWidthProvider = (props: { children: React.ReactNode }) => {
       'resize',
       () => {
         setWindowWidth(window.innerWidth);
-        console.log(window.innerWidth);
       },
       false
     );

@@ -108,9 +108,6 @@ export const StoreProvider = (props: { children: React.ReactNode }) => {
         setLoading(false);
         setDidJustAddToCart(true);
         setTimeout(() => setDidJustAddToCart(false), 3000);
-      })
-      .catch((err) => {
-        console.log(`${err}\n${variantId}`);
       });
   };
 
