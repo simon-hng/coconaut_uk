@@ -1,5 +1,5 @@
-import * as React from 'react';
 import { Button, Typography } from '@components/Global';
+import * as React from 'react';
 import styled from 'styled-components';
 
 const QuantityStyle = styled.div`
@@ -16,18 +16,46 @@ export const StyledButton = (props: any) => (
   </Button>
 );
 
+const StyledInput = styled.input`
+  border: none;
+  width: 2rem;
+  text-align: center;
+  font-size: 1.4rem;
+
+  & ::-webkit-inner-spin-button,
+  .no-spin::-webkit-outer-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0 !important;
+  }
+  -moz-appearance: textfield;
+`;
+
 export const Quantity = (props: {
   value: number;
   setValue: React.Dispatch<React.SetStateAction<number>>;
 }) => {
   const { value, setValue } = props;
+
+  const handleDecrease = () => setValue(Math.max(1, value - 1));
+
+  const handleChange = (e) => {
+    const newValue = Number.parseInt(e.target.value);
+    const updatedValue = Number.isInteger(newValue) ? Math.max(newValue, 1) : 1;
+    setValue(updatedValue);
+  };
+
+  const handleIncrease = () => setValue(value + 1);
+
   return (
     <QuantityStyle>
-      <StyledButton onClick={() => setValue(Math.max(1, value - 1))}>
-        -
-      </StyledButton>
-      <Typography bold>{value}</Typography>
-      <StyledButton onClick={() => setValue(value + 1)}>+</StyledButton>
+      <StyledButton onClick={handleDecrease}>-</StyledButton>
+      <StyledInput
+        onChange={handleChange}
+        type='number'
+        min={1}
+        value={value}
+      />
+      <StyledButton onClick={handleIncrease}>+</StyledButton>
     </QuantityStyle>
   );
 };

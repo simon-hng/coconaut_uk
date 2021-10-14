@@ -1,8 +1,8 @@
-import * as React from 'react';
 import { Button } from '@components/Global';
 import { Quantity } from '@components/Shop/Quantity';
-import styled from 'styled-components';
 import { StoreContext } from '@context/StoreContext';
+import * as React from 'react';
+import styled from 'styled-components';
 
 const BuyingStyle = styled.div`
   display: flex;
@@ -10,7 +10,7 @@ const BuyingStyle = styled.div`
   justify-content: space-between;
 `;
 
-export const Buying = (props: { variantId: number }) => {
+export const Buying = (props: { variantId: string }) => {
   const [quantity, setQuantity] = React.useState(1);
   const { addVariantToCart } = React.useContext(StoreContext);
 

@@ -1,7 +1,4 @@
-import * as React from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
-import { GatsbyImage } from 'gatsby-plugin-image';
-
+import { Buying } from './Buying';
 import {
   SectionTwoCol,
   Headline,
@@ -10,12 +7,14 @@ import {
   CenteredOnMobile,
   Typography,
 } from '@components/Global';
-import { Buying } from './Buying';
+import { useStaticQuery, graphql } from 'gatsby';
+import { GatsbyImage } from 'gatsby-plugin-image';
+import * as React from 'react';
 
 export const ShopTeaser = () => {
-  const teaserProduct = useStaticQuery(
+  const data = useStaticQuery(
     graphql`
-      query MyQuery {
+      {
         shopifyProduct(id: { eq: "90bc0096-8909-5670-9165-e52a2cfaa015" }) {
           title
           description
@@ -23,17 +22,21 @@ export const ShopTeaser = () => {
             altText
             gatsbyImageData
           }
-          priceRangeV2 {
-            maxVariantPrice {
-              amount
-            }
+          variants {
+            id
+            availableForSale
+            productId
+            price
+            shopifyId
+            storefrontId
           }
         }
       }
     `
   );
 
-  const product = teaserProduct.shopifyProduct;
+  const product = data.shopifyProduct;
+  const variant = product.variants[0];
 
   return (
     <SectionTwoCol
@@ -51,13 +54,10 @@ export const ShopTeaser = () => {
           <Subheadline>100% pure young coconaut Water</Subheadline>
           <Typography bold>{product.description}</Typography>
           <Typography fontSize={4} bold padding='3rem 0'>
-            {product.priceRangeV2.maxVariantPrice.amount}£
+            {variant.price}£
           </Typography>
           <Typography bold>Quantity</Typography>
-
-          {/* TODO: insert right variantId */}
-          <Buying variantId={1} />
-
+          <Buying variantId={variant.storefrontId} />
           <Button margin='5rem 0' to='/shop'>
             Go to shop!
           </Button>

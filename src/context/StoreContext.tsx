@@ -15,7 +15,7 @@ interface StoreContextInterface {
   isOpen: boolean;
   loading: boolean;
   didJustAddToCart: boolean;
-  addVariantToCart: (variantId: any, quantity: any) => void;
+  addVariantToCart: (variantId: string, quantity: number) => void;
   removeLineItem: (checkoutID: any, lineItemID: any) => void;
   updateLineItem: (checkoutID: any, lineItemID: any, quantity: any) => void;
 }
@@ -89,7 +89,7 @@ export const StoreProvider = (props: { children: React.ReactNode }) => {
     initializeCheckout();
   }, []);
 
-  const addVariantToCart = (variantId: any, quantity: string) => {
+  const addVariantToCart = (variantId: string, quantity: number) => {
     setLoading(true);
 
     const checkoutID = checkout.id;
@@ -97,7 +97,7 @@ export const StoreProvider = (props: { children: React.ReactNode }) => {
     const lineItemsToUpdate: ShopifyBuy.LineItemToAdd[] = [
       {
         variantId,
-        quantity: parseInt(quantity, 10),
+        quantity,
       },
     ];
 
@@ -108,6 +108,9 @@ export const StoreProvider = (props: { children: React.ReactNode }) => {
         setLoading(false);
         setDidJustAddToCart(true);
         setTimeout(() => setDidJustAddToCart(false), 3000);
+      })
+      .catch((err) => {
+        console.log(`${err}\n${variantId}`);
       });
   };
 
