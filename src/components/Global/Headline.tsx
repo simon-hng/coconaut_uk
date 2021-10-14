@@ -11,7 +11,7 @@ interface MainProps {
   centered: boolean;
 }
 
-const Headline = styled.h2<MainProps>`
+const HeadlineStyle = styled.h2<MainProps>`
   padding-bottom: 0.8em;
   text-align: ${(props) => (props.centered ? 'center' : 'left')};
   color: ${(props) => props.theme.accent};
@@ -20,13 +20,13 @@ const Sub = styled.span`
   color: ${(props) => props.theme.accentDark};
 `;
 
-export default (props: HeadlineProps) => (
-  <Headline centered={props.centered}>
+export const Headline = (props: HeadlineProps) => (
+  <HeadlineStyle centered={props.centered}>
     {props.main}
     {props.sub && (
       <>
         <br /> <Sub>{props.sub}</Sub>
       </>
     )}
-  </Headline>
+  </HeadlineStyle>
 );

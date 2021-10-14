@@ -1,14 +1,14 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-import Layout from './Layout';
+import { Layout } from './Layout';
 
 interface SectionProps {
-  left: JSX.Element;
-  right: JSX.Element;
+  left: React.ReactElement;
+  right: React.ReactElement;
 }
 
-const SectionTwoCol = styled.section`
+const SectionTwoColStyle = styled.section`
   display: flex;
   flex-direction: column;
 
@@ -25,11 +25,11 @@ const Content = styled.div`
   }
 `;
 
-export default (props: SectionProps) => (
+export const SectionTwoCol = (props: SectionProps) => (
   <Layout>
-    <SectionTwoCol>
+    <SectionTwoColStyle>
       <Content>{props.left}</Content>
       <Content>{props.right}</Content>
-    </SectionTwoCol>
+    </SectionTwoColStyle>
   </Layout>
 );

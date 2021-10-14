@@ -10,9 +10,9 @@ import {
   CenteredOnMobile,
   Typography,
 } from '@components/Global';
-import Buying from './Buying';
+import { Buying } from './Buying';
 
-export default () => {
+export const ShopTeaser = () => {
   const teaserProduct = useStaticQuery(
     graphql`
       query MyQuery {
@@ -55,7 +55,8 @@ export default () => {
           </Typography>
           <Typography bold>Quantity</Typography>
 
-          <Buying />
+          {/* TODO: insert right variantId */}
+          <Buying variantId={1} />
 
           <Button margin='5rem 0' to='/shop'>
             Go to shop!

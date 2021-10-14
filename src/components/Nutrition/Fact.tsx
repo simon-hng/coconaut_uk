@@ -9,7 +9,7 @@ interface FactProps {
   delay: number;
 }
 
-const Fact = styled.li`
+const FactStyle = styled.li`
   margin: 0 1rem 1rem 0;
   min-width: 6rem;
 `;
@@ -39,9 +39,9 @@ const countDecimals = (value: number) => {
   return 0;
 };
 
-export default (props: FactProps) => {
+export const Fact = (props: FactProps) => {
   return (
-    <Fact>
+    <FactStyle>
       <p>{props.name}</p>
       <Value
         delay={props.delay}
@@ -50,6 +50,6 @@ export default (props: FactProps) => {
         duration={2}
       />
       <Unit>{props.unit}</Unit>
-    </Fact>
+    </FactStyle>
   );
 };

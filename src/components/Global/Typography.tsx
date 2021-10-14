@@ -10,7 +10,7 @@ interface TypographyProps {
   padding?: string;
 }
 
-export default styled.p.attrs((props: TypographyProps) => ({
+export const Typography = styled.p.attrs((props: TypographyProps) => ({
   bold: props.bold || false,
   fontSize: `${props.fontSize || 1.4}rem`,
   align: props.align || 'left',

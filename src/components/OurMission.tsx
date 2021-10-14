@@ -9,7 +9,7 @@ import {
   CenteredOnMobile,
 } from '@components/Global';
 
-export default () => (
+export const OurMission = () => (
   <SectionTwoCol
     left={
       <>

@@ -18,7 +18,7 @@ const CanVariants = {
   },
 };
 
-export default () => (
+export const Can = () => (
   <motion.div variants={CanVariants}>
     <CanImage />
   </motion.div>

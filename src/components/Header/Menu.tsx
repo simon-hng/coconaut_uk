@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
-import MenuLink from './MenuLink';
+import { MenuLink } from './MenuLink';
 import { WindowWidthContext } from '@context/WindowWidth';
 
-const Menu = styled(motion.nav)`
+const MenuStyle = styled(motion.nav)`
   position: absolute;
   top: 0;
   padding-top: 10rem;
@@ -45,22 +45,22 @@ const menuLinks = [
   { name: 'Sustainability', to: '' },
 ];
 
-export default (prop: { isOpen: boolean }) => {
+export const Menu = (prop: { isOpen: boolean }) => {
   const WindowWidth = React.useContext(WindowWidthContext);
 
   return (
     <div>
-      <Menu
+      <MenuStyle
         variants={MenuVariants(WindowWidth)}
         animate={prop.isOpen ? 'open' : 'closed'}
         initial={false}
       >
         <motion.ul>
-          {menuLinks.map((link) => (
-            <MenuLink to={link.to} name={link.name} />
+          {menuLinks.map((link, i) => (
+            <MenuLink key={i} to={link.to} name={link.name} />
           ))}
         </motion.ul>
-      </Menu>
+      </MenuStyle>
     </div>
   );
 };

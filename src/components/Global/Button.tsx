@@ -12,7 +12,7 @@ interface ButtonProps {
   padding?: string;
 }
 
-const Button = styled(motion.button).attrs(
+const ButtonStyle = styled(motion.button).attrs(
   (props: { margin: string; padding: string }) => ({
     margin: props.margin || '0',
     padding: props.padding || '1.4rem 2rem',
@@ -33,7 +33,7 @@ const Button = styled(motion.button).attrs(
 `;
 
 const Content = (props: ButtonProps) => (
-  <Button
+  <ButtonStyle
     whileHover={{
       scale: 1.1,
     }}
@@ -41,10 +41,10 @@ const Content = (props: ButtonProps) => (
     {...props}
   >
     {props.children}
-  </Button>
+  </ButtonStyle>
 );
 
-export default (props: ButtonProps) => {
+export const Button = (props: ButtonProps) => {
   return props.to ? (
     <Link to={props.to}>
       <Content {...props} />

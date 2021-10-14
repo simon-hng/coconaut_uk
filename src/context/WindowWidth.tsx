@@ -2,7 +2,7 @@ import * as React from 'react';
 
 export const WindowWidthContext = React.createContext(window.innerWidth);
 
-export const WindowWidthProvider = ({ children }): JSX.Element => {
+export const WindowWidthProvider = (props: { children: React.ReactNode }) => {
   const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
 
   React.useEffect(() => {
@@ -18,7 +18,7 @@ export const WindowWidthProvider = ({ children }): JSX.Element => {
 
   return (
     <WindowWidthContext.Provider value={windowWidth}>
-      {children}
+      {props.children}
     </WindowWidthContext.Provider>
   );
 };

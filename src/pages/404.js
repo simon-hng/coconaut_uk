@@ -37,6 +37,7 @@ const NotFoundPage = () => {
         </span>{' '}
         we couldn’t find what you were looking for.
         <br />
+        {/* eslint-disable-next-line no-undef */}
         {process.env.NODE_ENV === 'development' ? (
           <>
             <br />

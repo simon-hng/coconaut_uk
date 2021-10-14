@@ -5,10 +5,10 @@ import { StaticImage } from 'gatsby-plugin-image';
 import { Link } from 'gatsby';
 
 import { WindowWidthContext } from '@context/WindowWidth';
-import Logo from './Logo';
-import Menu from './Menu';
+import { Logo } from './Logo';
+import { Menu } from './Menu';
 
-const Header = styled.header`
+const HeaderStyle = styled.header`
   position: fixed;
   z-index: 9999;
   top: 0;
@@ -33,12 +33,12 @@ const MenuButtons = styled(motion.div)`
   }
 `;
 
-export default () => {
+export const Header = () => {
   const [menuIsOpen, toggleMenu] = useCycle(false, true);
   const windowWidth = React.useContext(WindowWidthContext);
 
   return (
-    <Header>
+    <HeaderStyle>
       <InnerHeader>
         <Logo windowWidth={windowWidth} />
 
@@ -54,6 +54,6 @@ export default () => {
       </InnerHeader>
 
       <Menu isOpen={menuIsOpen} />
-    </Header>
+    </HeaderStyle>
   );
 };

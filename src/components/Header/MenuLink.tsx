@@ -3,7 +3,7 @@ import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-const MenuLink = styled(motion.li)`
+const MenuLinkStyle = styled(motion.li)`
   padding: 1.5rem 5rem;
 `;
 
@@ -29,13 +29,13 @@ const MenuLinkVariants = {
   },
 };
 
-export default (props: { to: string; name: string }) => (
-  <MenuLink
+export const MenuLink = (props: { to: string; name: string }) => (
+  <MenuLinkStyle
     variants={MenuLinkVariants}
     whileHover={{ scale: 1.2 }}
     transition={{ duration: 0.5 }}
     style={{ originX: 0 }}
   >
     <MenuLinkInner to={props.to}>{props.name}</MenuLinkInner>
-  </MenuLink>
+  </MenuLinkStyle>
 );

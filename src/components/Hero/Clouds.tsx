@@ -2,7 +2,6 @@ import * as React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { StaticImage } from 'gatsby-plugin-image';
-import { useState } from 'react';
 import { WindowWidthContext } from '@context/WindowWidth';
 
 // TODO: the clouds can be refactored into a separate component
@@ -24,7 +23,7 @@ const DoubleCloudImage = () => (
   />
 );
 
-const Clouds = styled.div`
+const CloudsStyle = styled.div`
   position: absolute;
   top: 0;
   left: 0;
@@ -54,11 +53,11 @@ const CloudVariants = (
   },
 });
 
-export default () => {
+export const Clouds = () => {
   const windowWidth = React.useContext(WindowWidthContext);
 
   return (
-    <Clouds>
+    <CloudsStyle>
       <motion.div variants={CloudsVariants} animate='animation'>
         <motion.div
           variants={CloudVariants(windowWidth, SingleCloudWidth, 300, 15)}
@@ -74,6 +73,6 @@ export default () => {
           <DoubleCloudImage />
         </motion.div>
       </motion.div>
-    </Clouds>
+    </CloudsStyle>
   );
 };

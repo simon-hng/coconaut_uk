@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export default styled.div`
+export const Layout = styled.div`
   margin: auto;
   padding: 5rem 0;
   max-width: 1700px;

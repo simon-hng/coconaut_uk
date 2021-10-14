@@ -11,7 +11,7 @@ import {
   CenteredOnMobile,
 } from '@components/Global';
 
-import NutritionalFact from './Fact';
+import { Fact } from './Fact';
 
 const NutritionalFacts = [
   { name: 'Energy', value: 95, unit: 'kJ' },
@@ -30,7 +30,7 @@ const FactsList = styled.ul`
   flex-wrap: wrap;
 `;
 
-export default () => (
+export const Nutrition = () => (
   <SectionTwoCol
     left={
       <>
@@ -60,7 +60,7 @@ export default () => (
 
         <FactsList>
           {NutritionalFacts.map((fact, index) => (
-            <NutritionalFact {...fact} delay={index * 0.4} />
+            <Fact key={index} delay={index * 0.4} {...fact} />
           ))}
         </FactsList>
       </>

@@ -2,7 +2,7 @@ import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
 import * as React from 'react';
 import styled from 'styled-components';
 
-const Card = styled.article`
+const CardStyle = styled.article`
   //TODO: appropiate styling when data is available
 `;
 
@@ -12,9 +12,9 @@ interface CardProps {
   children: React.ReactNode;
 }
 
-export default (props: CardProps): JSX.Element => (
-  <Card>
+export const Card = (props: CardProps) => (
+  <CardStyle>
     <GatsbyImage image={props.image} alt={props.alt} />
     {props.children}
-  </Card>
+  </CardStyle>
 );

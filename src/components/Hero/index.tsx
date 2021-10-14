@@ -2,10 +2,10 @@ import * as React from 'react';
 import styled from 'styled-components';
 
 import BackgroundImage from '@images/hero/Coconaut_Skyline@1694x-100.jpg';
-import Clouds from './Clouds';
-import Cans from './Cans';
+import { Clouds } from './Clouds';
+import { Cans } from './Cans';
 
-const Hero = styled.div`
+const HeroStyle = styled.div`
   height: 90vh;
   background-image: url(${BackgroundImage});
   background-repeat: no-repeat;
@@ -25,10 +25,10 @@ const Caption = styled.h1`
   color: ${(props) => props.theme.accentLight};
 `;
 
-export default () => (
-  <Hero>
+export const Hero = () => (
+  <HeroStyle>
     <Caption>GoHigher!</Caption>
     <Clouds />
     <Cans />
-  </Hero>
+  </HeroStyle>
 );

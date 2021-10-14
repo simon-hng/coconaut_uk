@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
-import Can from './Can';
-import Coconut from './Coconut';
+import { Can } from './Can';
+import { Coconut } from './Coconut';
 
-const Cans = styled.div`
+const CansStyle = styled.div`
   position: absolute;
   top: 0;
   left: 0;
@@ -64,8 +64,8 @@ const CansVariants = {
   animation: { transition: { staggerChildren: 0.5 } },
 };
 
-export default () => (
-  <Cans>
+export const Cans = () => (
+  <CansStyle>
     <AnimationContainer variants={CansVariants} animate='animation'>
       <CanSub>
         <Can />
@@ -83,5 +83,5 @@ export default () => (
         <Coconut />
       </CoconutRight>
     </AnimationContainer>
-  </Cans>
+  </CansStyle>
 );

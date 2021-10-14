@@ -1,21 +1,23 @@
 import * as React from 'react';
-import * as Client from 'shopify-buy';
+import * as ShopifyBuy from 'shopify-buy';
 
-const client = Client.buildClient({
+const client = ShopifyBuy.buildClient({
+  // eslint-disable-next-line no-undef
   domain: process.env.GATSBY_SHOPIFY_STORE_URL,
+  // eslint-disable-next-line no-undef
   storefrontAccessToken: process.env.GATSBY_STOREFRONT_ACCESS_TOKEN,
 });
 
 interface StoreContextInterface {
   client: ShopifyBuy.Client;
-  checkout: Client.Cart;
-  cart: Client.LineItem[];
+  checkout: ShopifyBuy.Cart;
+  cart: ShopifyBuy.LineItem[];
   isOpen: boolean;
   loading: boolean;
   didJustAddToCart: boolean;
-  addVariantToCart: (variantId, quantity) => {};
-  removeLineItem: (checkoutID, lineItemID) => {};
-  updateLineItem: (checkoutID, lineItemID, quantity) => {};
+  addVariantToCart: (variantId: any, quantity: any) => void;
+  removeLineItem: (checkoutID: any, lineItemID: any) => void;
+  updateLineItem: (checkoutID: any, lineItemID: any, quantity: any) => void;
 }
 
 const defaultValues: StoreContextInterface = {
@@ -23,17 +25,23 @@ const defaultValues: StoreContextInterface = {
   isOpen: false,
   loading: false,
   didJustAddToCart: false,
-  addVariantToCart: (_variantId: any, _quantity: any): {} => {
-    throw new Error('Function not implemented.');
-  },
-  removeLineItem: (_checkoutID: any, _lineItemID: any): {} => {
-    throw new Error('Function not implemented.');
-  },
-  updateLineItem: (_checkoutID: any, _lineItemID: any, _quantity: any): {} => {
-    throw new Error('Function not implemented.');
-  },
   client: client,
   checkout: null,
+  addVariantToCart: function (variantId: any, quantity: any): void {
+    console.log(`variantId: ${variantId}, quantitiy: ${quantity}`);
+  },
+  removeLineItem: function (checkoutID: any, lineItemID: any): void {
+    console.log(`checkoutID: ${checkoutID}, lineItemId: ${lineItemID}`);
+  },
+  updateLineItem: function (
+    checkoutID: any,
+    lineItemID: any,
+    quantity: any
+  ): void {
+    console.log(
+      `checkoutID : ${checkoutID}, lineItemID: ${lineItemID}, quantity: ${quantity}`
+    );
+  },
 };
 
 export const StoreContext = React.createContext(defaultValues);
@@ -46,9 +54,9 @@ export const StoreProvider = (props: { children: React.ReactNode }) => {
   const [loading, setLoading] = React.useState(false);
   const [didJustAddToCart, setDidJustAddToCart] = React.useState(false);
 
-  const setCheckoutItem = (checkout: Client.Cart) => {
+  const setCheckoutItem = (checkout) => {
     if (isBrowser) {
-      localStorage.setItem(localStorageKey, checkout.id as string);
+      localStorage.setItem(localStorageKey, checkout.id);
     }
 
     setCheckout(checkout);
@@ -81,12 +89,12 @@ export const StoreProvider = (props: { children: React.ReactNode }) => {
     initializeCheckout();
   }, []);
 
-  const addVariantToCart = (variantId, quantity) => {
+  const addVariantToCart = (variantId: any, quantity: string) => {
     setLoading(true);
 
     const checkoutID = checkout.id;
 
-    const lineItemsToUpdate: Client.LineItemToAdd[] = [
+    const lineItemsToUpdate: ShopifyBuy.LineItemToAdd[] = [
       {
         variantId,
         quantity: parseInt(quantity, 10),
@@ -103,7 +111,7 @@ export const StoreProvider = (props: { children: React.ReactNode }) => {
       });
   };
 
-  const removeLineItem = (checkoutID, lineItemID) => {
+  const removeLineItem = (checkoutID: string | number, lineItemID: string) => {
     setLoading(true);
 
     return client.checkout
@@ -116,8 +124,8 @@ export const StoreProvider = (props: { children: React.ReactNode }) => {
 
   const updateLineItem = (
     checkoutID: string | number,
-    lineItemID,
-    quantity
+    lineItemID: any,
+    quantity: string
   ) => {
     setLoading(true);
 

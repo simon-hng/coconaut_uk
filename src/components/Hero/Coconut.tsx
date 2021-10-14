@@ -18,7 +18,7 @@ interface CoconutProps {
   isLeft?: boolean;
 }
 
-export default (props: CoconutProps) => {
+export const Coconut = (props: CoconutProps) => {
   return props.isLeft ? (
     <motion.div variants={CoconutVariant}>
       <StaticImage
