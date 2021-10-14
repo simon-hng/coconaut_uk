@@ -1,15 +1,14 @@
 import { motion } from 'framer-motion';
 import * as React from 'react';
-import { withTheme } from 'styled-components';
 
 const bar = {
   open: {
     stroke: '#fff',
-    strokeWidth: 4,
+    strokeWidth: 5,
   },
   closed: {
     stroke: '#747474',
-    strokeWidth: 4,
+    strokeWidth: 5,
   },
 };
 

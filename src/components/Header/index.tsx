@@ -1,6 +1,7 @@
 import { Logo } from './Logo';
 import { Menu } from './Menu';
 import { MenuButton } from './MenuButton';
+import { ShopButton } from './ShopButton';
 import { WindowWidthContext } from '@context/WindowWidth';
 import { motion, useCycle } from 'framer-motion';
 import { Link } from 'gatsby';
@@ -33,23 +34,6 @@ const MenuButtons = styled(motion.div)`
   }
 `;
 
-const menuButtonsVariants = {
-  open: {
-    transition: {
-      staggerChildren: 0.05,
-      delayChildren: 0.2,
-      type: 'tween',
-    },
-  },
-  closed: {
-    transition: {
-      staggerChildren: 0.1,
-      staggerDirection: -1,
-      type: 'tween',
-    },
-  },
-};
-
 export const Header = () => {
   const [menuIsOpen, toggleMenu] = useCycle(false, true);
   const windowWidth = React.useContext(WindowWidthContext);
@@ -63,14 +47,8 @@ export const Header = () => {
       <InnerHeader>
         <Logo windowWidth={windowWidth} />
 
-        <MenuButtons
-          animate={menuIsOpen ? 'open' : 'closed'}
-          variants={menuButtonsVariants}
-        >
-          <Link to='/cart'>
-            <StaticImage src='../../images/einkaufswagen.svg' height={40} />
-          </Link>
-
+        <MenuButtons animate={menuIsOpen ? 'open' : 'closed'}>
+          <ShopButton />
           <MenuButton menuHandler={menuHandler} />
         </MenuButtons>
       </InnerHeader>
