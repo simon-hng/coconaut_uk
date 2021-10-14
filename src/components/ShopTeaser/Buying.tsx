@@ -1,8 +1,8 @@
-import { StoreContext } from '@context/StoreContext';
+import * as React from 'react';
 import { Button } from '@components/Global';
 import { Quantity } from '@components/Shop/Quantity';
-import * as React from 'react';
 import styled from 'styled-components';
+import { StoreContext } from '@context/StoreContext';
 
 const BuyingStyle = styled.div`
   display: flex;

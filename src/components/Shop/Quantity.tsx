@@ -1,5 +1,5 @@
-import { Button, Typography } from '@components/Global';
 import * as React from 'react';
+import { Button, Typography } from '@components/Global';
 import styled from 'styled-components';
 
 const QuantityStyle = styled.div`

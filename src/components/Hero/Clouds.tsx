@@ -1,8 +1,8 @@
-import { WindowWidthContext } from '@context/WindowWidth';
 import * as React from 'react';
+import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { StaticImage } from 'gatsby-plugin-image';
-import styled from 'styled-components';
+import { WindowWidthContext } from '@context/WindowWidth';
 
 // TODO: the clouds can be refactored into a separate component
 const SingleCloudWidth = 100;

@@ -3,14 +3,5 @@
   "tabWidth": 2,
   "semi": true,
   "singleQuote": true,
-  "jsxSingleQuote": true,
-  "experimentalBabelParserPluginsList": ["jsx", "typescript"],
-  "importOrder": [
-    "@context/.*",
-    "@components/.*",
-    "@images/.*",
-    "./.*",
-    "react",
-    "(.*)"
-  ]
+  "jsxSingleQuote": true
 }

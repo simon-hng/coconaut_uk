@@ -1,11 +1,13 @@
+import * as React from 'react';
+
+import { StaticImage } from 'gatsby-plugin-image';
+
 import {
   SectionTwoCol,
   Headline,
   Typography,
   CenteredOnMobile,
 } from '@components/Global';
-import * as React from 'react';
-import { StaticImage } from 'gatsby-plugin-image';
 
 export const OurMission = () => (
   <SectionTwoCol

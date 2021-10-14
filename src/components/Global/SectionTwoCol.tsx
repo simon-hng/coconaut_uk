@@ -1,6 +1,7 @@
-import { Layout } from './Layout';
 import * as React from 'react';
 import styled from 'styled-components';
+
+import { Layout } from './Layout';
 
 interface SectionProps {
   left: React.ReactElement;

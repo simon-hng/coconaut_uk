@@ -1,8 +1,9 @@
-import BackgroundImage from '@images/hero/Coconaut_Skyline@1694x-100.jpg';
-import { Cans } from './Cans';
-import { Clouds } from './Clouds';
 import * as React from 'react';
 import styled from 'styled-components';
+
+import BackgroundImage from '@images/hero/Coconaut_Skyline@1694x-100.jpg';
+import { Clouds } from './Clouds';
+import { Cans } from './Cans';
 
 const HeroStyle = styled.div`
   height: 90vh;

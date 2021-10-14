@@ -1,8 +1,8 @@
-import { Can } from './Can';
-import { Coconut } from './Coconut';
 import * as React from 'react';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
+import { Can } from './Can';
+import { Coconut } from './Coconut';
 
 const CansStyle = styled.div`
   position: absolute;

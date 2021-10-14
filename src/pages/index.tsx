@@ -1,11 +1,12 @@
-import { Events } from '@components/Events';
+import * as React from 'react';
+import { ThemeProvider } from 'styled-components';
+
 import { Header } from '@components/Header';
 import { Hero } from '@components/Hero';
 import { Nutrition } from '@components/Nutrition';
-import { OurMission } from '@components/OurMission';
 import { ShopTeaser } from '@components/ShopTeaser';
-import * as React from 'react';
-import { ThemeProvider } from 'styled-components';
+import { Events } from '@components/Events';
+import { OurMission } from '@components/OurMission';
 
 const mainTheme = {
   background: '#fff',

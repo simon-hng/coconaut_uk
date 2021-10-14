@@ -1,3 +1,7 @@
+import * as React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
+import { GatsbyImage } from 'gatsby-plugin-image';
+
 import {
   SectionTwoCol,
   Headline,
@@ -7,9 +11,6 @@ import {
   Typography,
 } from '@components/Global';
 import { Buying } from './Buying';
-import * as React from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
-import { GatsbyImage } from 'gatsby-plugin-image';
 
 export const ShopTeaser = () => {
   const teaserProduct = useStaticQuery(
