@@ -17,6 +17,16 @@ const MenuStyle = styled(motion.nav)`
   }
 `;
 
+const Background = styled(motion.div)`
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: -1;
+`;
+
 const menuVariants = (windowWidth: number) => ({
   open: {
     right: 0,
@@ -36,6 +46,17 @@ const menuVariants = (windowWidth: number) => ({
   },
 });
 
+const backgroundVariants = {
+  open: {
+    opacity: 1,
+    display: 'flex',
+  },
+  closed: {
+    opacity: 0,
+    display: 'none',
+  },
+};
+
 const menuLinks = [
   { name: 'About', to: '' },
   { name: 'Nutrition facts', to: '/#nutrition' },
@@ -49,18 +70,15 @@ export const Menu = (prop: { isOpen: boolean }) => {
   const WindowWidth = React.useContext(WindowWidthContext);
 
   return (
-    <div>
-      <MenuStyle
-        variants={menuVariants(WindowWidth)}
-        animate={prop.isOpen ? 'open' : 'closed'}
-        initial={false}
-      >
+    <motion.div animate={prop.isOpen ? 'open' : 'closed'}>
+      <MenuStyle variants={menuVariants(WindowWidth)} initial={false}>
         <ul>
           {menuLinks.map((link, i) => (
             <MenuLink key={i} to={link.to} name={link.name} />
           ))}
         </ul>
       </MenuStyle>
-    </div>
+      <Background variants={backgroundVariants} />
+    </motion.div>
   );
 };
