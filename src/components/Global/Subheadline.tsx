@@ -1,9 +1,15 @@
 import styled from 'styled-components';
 
-export const Subheadline = styled.h3.attrs((props: { centered: boolean }) => ({
+interface subheadlineProps {
+  centered: boolean;
+  gutterBottom: boolean;
+}
+
+export const Subheadline = styled.h3.attrs((props: subheadlineProps) => ({
   centered: props.centered,
+  gutterBottom: props.gutterBottom,
 }))`
   text-align: ${(props) => (props.centered ? 'center' : 'left')};
-  padding-bottom: 0.5em;
+  padding-bottom: ${(props) => props.gutterBottom && '0.5em'};
   color: ${(props) => props.theme.accentDark};
 `;

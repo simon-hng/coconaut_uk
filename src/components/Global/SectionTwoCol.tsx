@@ -19,6 +19,15 @@ const Content = styled.div`
   }
 `;
 
+const Left = styled(Content)`
+  padding-bottom: 3rem;
+
+  @media (min-width: 900px) {
+    padding-bottom: 0;
+  }
+`;
+
+const Right = styled(Content)``;
 interface sectionTwoColProps {
   id?: string;
   left: React.ReactElement;
@@ -28,8 +37,8 @@ interface sectionTwoColProps {
 export const SectionTwoCol = (props: sectionTwoColProps) => (
   <SectionWrapper id={props.id}>
     <SectionTwoColStyle>
-      <Content>{props.left}</Content>
-      <Content>{props.right}</Content>
+      <Left>{props.left}</Left>
+      <Right>{props.right}</Right>
     </SectionTwoColStyle>
   </SectionWrapper>
 );

@@ -49,7 +49,7 @@ export const ShopTeaser = () => {
       right={
         <>
           <Headline>Coconaut</Headline>
-          <Subheadline>100% pure young coconaut Water</Subheadline>
+          <Subheadline gutterBottom>100% pure young coconaut Water</Subheadline>
           <Typography bold>{product.description}</Typography>
           <Typography fontSize={4} bold padding='3rem 0'>
             {variant.price * quantity} £
@@ -60,7 +60,7 @@ export const ShopTeaser = () => {
             quantity={quantity}
             setQuantity={setQuantity}
           />
-          <Button margin='5rem 0' to='/shop'>
+          <Button margin='5rem 0 0 0' to='/shop'>
             Go to shop!
           </Button>
         </>
