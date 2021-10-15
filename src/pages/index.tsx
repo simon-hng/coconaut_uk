@@ -4,6 +4,7 @@ import { Hero } from '@components/Hero';
 import { Nutrition } from '@components/Nutrition';
 import { OurMission } from '@components/OurMission';
 import { ShopTeaser } from '@components/ShopTeaser';
+import { Video } from '@components/Video';
 import * as React from 'react';
 
 const Index = () => {
@@ -15,6 +16,7 @@ const Index = () => {
       <ShopTeaser />
       <Events />
       <OurMission />
+      <Video />
     </main>
   );
 };

@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 
-export const SectionWrapper = styled.div`
+export const SectionWrapper = styled.div.attrs(
+  (props: { cover?: boolean }) => ({
+    cover: props.cover,
+  })
+)`
   margin: auto;
   padding: 5rem 0;
-  max-width: 1400px;
 
-  @media (min-width: 900px) {
-  }
+  ${(props) => !props.cover && 'max-width: 1400px;'}
 `;
