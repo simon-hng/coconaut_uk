@@ -14,7 +14,7 @@ export const Events = () => {
   const data = {};
   return (
     <>
-      <Headline main='Join Our Events' centered />
+      <Headline centered>Join Our Events</Headline>
       <Background>
         {data && (
           <ul>

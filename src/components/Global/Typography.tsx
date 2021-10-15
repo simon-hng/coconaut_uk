@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-interface TypographyProps {
+interface typographyProps {
   children: React.ReactNode;
   align?: 'left' | 'center' | 'right';
   bold?: boolean;
@@ -10,7 +10,7 @@ interface TypographyProps {
   padding?: string;
 }
 
-export const Typography = styled.p.attrs((props: TypographyProps) => ({
+export const Typography = styled.p.attrs((props: typographyProps) => ({
   bold: props.bold || false,
   fontSize: `${props.fontSize || 1.4}rem`,
   align: props.align || 'left',

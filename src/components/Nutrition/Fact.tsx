@@ -2,13 +2,6 @@ import * as React from 'react';
 import CountUp from 'react-countup';
 import styled from 'styled-components';
 
-interface FactProps {
-  name: String;
-  value: number;
-  unit: String;
-  delay: number;
-}
-
 const FactStyle = styled.li`
   margin: 0 1rem 1rem 0;
   min-width: 6rem;
@@ -39,17 +32,24 @@ const countDecimals = (value: number) => {
   return 0;
 };
 
-export const Fact = (props: FactProps) => {
+interface FactProps {
+  name: String;
+  value: number;
+  unit: String;
+  delay: number;
+}
+
+export const Fact = ({ name, delay, value, unit }: FactProps) => {
   return (
     <FactStyle>
-      <p>{props.name}</p>
+      <p>{name}</p>
       <Value
-        delay={props.delay}
-        decimals={countDecimals(props.value)}
-        end={props.value}
+        delay={delay}
+        decimals={countDecimals(value)}
+        end={value}
         duration={2}
       />
-      <Unit>{props.unit}</Unit>
+      <Unit>{unit}</Unit>
     </FactStyle>
   );
 };

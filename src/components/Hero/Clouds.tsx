@@ -5,21 +5,21 @@ import { StaticImage } from 'gatsby-plugin-image';
 import { WindowWidthContext } from '@context/WindowWidth';
 
 // TODO: the clouds can be refactored into a separate component
-const SingleCloudWidth = 100;
+const singleCloudWidth = 100;
 const SingleCloudImage = () => (
   <StaticImage
     src='../../images/hero/coconaut_single_cloud@1694x.png'
     alt='single cloud'
-    width={SingleCloudWidth}
+    width={singleCloudWidth}
   />
 );
 
-const DoubleCloudWidth = 250;
+const doubleCloudWidth = 250;
 const DoubleCloudImage = () => (
   <StaticImage
     src='../../images/hero/Coconaut_double_cloud@1694x.png'
     alt='double cloud'
-    width={DoubleCloudWidth}
+    width={doubleCloudWidth}
   />
 );
 
@@ -32,11 +32,11 @@ const CloudsStyle = styled.div`
   overflow-x: hidden;
 `;
 
-const CloudsVariants = {
+const cloudsVariants = {
   animation: { transition: { staggerChildren: 0.3 } },
 };
 
-const CloudVariants = (
+const cloudVariants = (
   windowWidth: number,
   cloudWidth: number,
   yOffset: number,
@@ -58,16 +58,16 @@ export const Clouds = () => {
 
   return (
     <CloudsStyle>
-      <motion.div variants={CloudsVariants} animate='animation'>
+      <motion.div variants={cloudsVariants} animate='animation'>
         <motion.div
-          variants={CloudVariants(windowWidth, SingleCloudWidth, 300, 15)}
+          variants={cloudVariants(windowWidth, singleCloudWidth, 300, 15)}
           initial={false}
         >
           <SingleCloudImage />
         </motion.div>
 
         <motion.div
-          variants={CloudVariants(windowWidth, DoubleCloudWidth, 300, 24)}
+          variants={cloudVariants(windowWidth, doubleCloudWidth, 300, 24)}
           initial={false}
         >
           <DoubleCloudImage />

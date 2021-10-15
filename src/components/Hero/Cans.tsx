@@ -60,13 +60,13 @@ const CoconutRight = styled(CoconutLeft)`
   }
 `;
 
-const CansVariants = {
+const cansVariants = {
   animation: { transition: { staggerChildren: 0.5 } },
 };
 
 export const Cans = () => (
   <CansStyle>
-    <AnimationContainer variants={CansVariants} animate='animation'>
+    <AnimationContainer variants={cansVariants} animate='animation'>
       <CanSub>
         <Can />
       </CanSub>

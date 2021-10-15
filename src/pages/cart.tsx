@@ -1,5 +1,5 @@
 import { Header } from '@components/Header';
-import { LineItem } from '@components/Shop/LineItem';
+import { LineProduct } from '@components/Shop/LineProduct';
 import { StoreContext } from '@context/StoreContext';
 import * as React from 'react';
 
@@ -8,11 +8,13 @@ const Cart = () => {
   return (
     <main>
       <Header />
-      <div>
-        {checkout.lineItems.map((lineItem) => (
-          <LineItem item={lineItem} />
-        ))}
-      </div>
+      {checkout && (
+        <div>
+          {checkout.lineItems.map((lineItem, i) => (
+            <LineProduct key={i} item={lineItem} />
+          ))}
+        </div>
+      )}
     </main>
   );
 };

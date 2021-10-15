@@ -10,7 +10,13 @@ const BuyingStyle = styled.div`
   justify-content: space-between;
 `;
 
-export const Buying = (props: { variantId: string; quantity; setQuantity }) => {
+interface buyingProps {
+  variantId: string;
+  quantity: number;
+  setQuantity: React.Dispatch<React.SetStateAction<number>>;
+}
+
+export const Buying = (props: buyingProps) => {
   const { addVariantToCart } = React.useContext(StoreContext);
 
   const addHandler = () => {

@@ -2,7 +2,7 @@ import * as React from 'react';
 import { motion, Variants } from 'framer-motion';
 import { StaticImage } from 'gatsby-plugin-image';
 
-const CoconutVariant: Variants = {
+const coconutVariant: Variants = {
   animation: {
     rotate: [0, 0, -15, 15],
     transition: {
@@ -14,13 +14,13 @@ const CoconutVariant: Variants = {
   },
 };
 
-interface CoconutProps {
+interface coconutProps {
   isLeft?: boolean;
 }
 
-export const Coconut = (props: CoconutProps) => {
+export const Coconut = (props: coconutProps) => {
   return props.isLeft ? (
-    <motion.div variants={CoconutVariant}>
+    <motion.div variants={coconutVariant}>
       <StaticImage
         src={'../../images/hero/Coconaut_coconut_02.png'}
         alt='coconut left'
@@ -29,7 +29,7 @@ export const Coconut = (props: CoconutProps) => {
       />
     </motion.div>
   ) : (
-    <motion.div variants={CoconutVariant}>
+    <motion.div variants={coconutVariant}>
       <StaticImage
         src={'../../images/hero/Coconaut_coconut_01.png'}
         alt='coconut right'

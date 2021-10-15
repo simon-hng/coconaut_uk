@@ -2,7 +2,11 @@ import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import * as React from 'react';
 
-export const Logo = ({ windowWidth }) => {
+interface logoProps {
+  windowWidth: number;
+}
+
+export const Logo = ({ windowWidth }: logoProps) => {
   const InnerLogo = () =>
     windowWidth < 900 ? (
       <StaticImage

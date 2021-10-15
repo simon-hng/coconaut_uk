@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 import BackgroundImage from '@images/ButtonBackground.svg';
 import { motion } from 'framer-motion';
 
-interface ButtonProps {
+interface buttonProps {
   onClick?: () => void;
   to?: string;
   children: React.ReactNode;
@@ -12,12 +12,15 @@ interface ButtonProps {
   padding?: string;
 }
 
-const ButtonStyle = styled(motion.button).attrs(
-  (props: { margin: string; padding: string }) => ({
-    margin: props.margin || '0',
-    padding: props.padding || '1.4rem 2rem',
-  })
-)`
+interface buttonStyleProps {
+  margin: string;
+  padding: string;
+}
+
+const ButtonStyle = styled(motion.button).attrs((props: buttonStyleProps) => ({
+  margin: props.margin || '0',
+  padding: props.padding || '1.4rem 2rem',
+}))`
   margin: ${(props) => props.margin};
   padding: ${(props) => props.padding};
   background: none;
@@ -32,7 +35,7 @@ const ButtonStyle = styled(motion.button).attrs(
   cursor: pointer;
 `;
 
-const Content = (props: ButtonProps) => (
+const Content = (props: buttonProps) => (
   <ButtonStyle
     whileHover={{
       scale: 1.1,
@@ -44,7 +47,7 @@ const Content = (props: ButtonProps) => (
   </ButtonStyle>
 );
 
-export const Button = (props: ButtonProps) => {
+export const Button = (props: buttonProps) => {
   return props.to ? (
     <Link to={props.to}>
       <Content {...props} />

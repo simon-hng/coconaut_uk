@@ -14,7 +14,7 @@ const MenuLinkInner = styled(AnchorLink)`
   font-weight: bold;
 `;
 
-const MenuLinkVariants = {
+const menuLinkVariants = {
   open: {
     opacity: 1,
     transition: {
@@ -29,13 +29,18 @@ const MenuLinkVariants = {
   },
 };
 
-export const MenuLink = (props: { to: string; name: string }) => (
+interface menuLinkProps {
+  to: string;
+  name: string;
+}
+
+export const MenuLink = ({ to, name }: menuLinkProps) => (
   <MenuLinkStyle
-    variants={MenuLinkVariants}
+    variants={menuLinkVariants}
     whileHover={{ scale: 1.2 }}
     transition={{ duration: 0.5 }}
     style={{ originX: 0 }}
   >
-    <MenuLinkInner to={props.to}>{props.name}</MenuLinkInner>
+    <MenuLinkInner to={to}>{name}</MenuLinkInner>
   </MenuLinkStyle>
 );

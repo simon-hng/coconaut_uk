@@ -4,8 +4,6 @@ import { MenuButton } from './MenuButton';
 import { ShopButton } from './ShopButton';
 import { WindowWidthContext } from '@context/WindowWidth';
 import { motion, useCycle } from 'framer-motion';
-import { Link } from 'gatsby';
-import { StaticImage } from 'gatsby-plugin-image';
 import * as React from 'react';
 import styled from 'styled-components';
 

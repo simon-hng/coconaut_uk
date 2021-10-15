@@ -11,7 +11,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 import * as React from 'react';
 import styled from 'styled-components';
 
-const NutritionalFacts = [
+const nutritionalFacts = [
   { name: 'Energy', value: 95, unit: 'kJ' },
   { name: 'Carbohydrates', value: 5.5, unit: 'kJ' },
   { name: 'Fats', value: 0, unit: 'g' },
@@ -58,8 +58,8 @@ export const Nutrition = () => (
         <Subheadline>Whats in it?</Subheadline>
 
         <FactsList>
-          {NutritionalFacts.map((fact, index) => (
-            <Fact key={index} delay={index * 0.4} {...fact} />
+          {nutritionalFacts.map((fact, i) => (
+            <Fact key={i} delay={i * 0.4} {...fact} />
           ))}
         </FactsList>
       </>

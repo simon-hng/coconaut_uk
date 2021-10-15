@@ -1,4 +1,4 @@
-import { Button, Typography } from '@components/Global';
+import { Button } from '@components/Global';
 import * as React from 'react';
 import styled from 'styled-components';
 
@@ -10,7 +10,7 @@ const QuantityStyle = styled.div`
   align-items: center;
 `;
 
-export const StyledButton = (props: any) => (
+const StyledButton = (props: any) => (
   <Button margin='0' padding='0.5rem 1rem' {...props}>
     {props.children}
   </Button>
@@ -30,12 +30,12 @@ const StyledInput = styled.input`
   -moz-appearance: textfield;
 `;
 
-export const Quantity = (props: {
+interface quantityProps {
   value: number;
   setValue: React.Dispatch<React.SetStateAction<number>>;
-}) => {
-  const { value, setValue } = props;
+}
 
+export const Quantity = ({ value, setValue }: quantityProps) => {
   const handleDecrease = () => setValue(Math.max(1, value - 1));
 
   const handleChange = (e) => {

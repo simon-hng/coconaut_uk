@@ -1,7 +1,11 @@
 import styled from 'styled-components';
 
+interface sectionWrapperProps {
+  cover?: boolean;
+}
+
 export const SectionWrapper = styled.div.attrs(
-  (props: { cover?: boolean }) => ({
+  (props: sectionWrapperProps) => ({
     cover: props.cover,
   })
 )`

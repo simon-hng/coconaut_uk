@@ -51,7 +51,11 @@ const lowBar = {
   },
 };
 
-export const MenuButton = ({ menuHandler }) => (
+interface menuButtonProps {
+  menuHandler: () => void;
+}
+
+export const MenuButton = ({ menuHandler }: menuButtonProps) => (
   <a onClick={menuHandler}>
     <svg
       xmlns='http://www.w3.org/2000/svg'

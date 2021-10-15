@@ -2,12 +2,6 @@ import { SectionWrapper } from './SectionWrapper';
 import * as React from 'react';
 import styled from 'styled-components';
 
-interface SectionProps {
-  id?: string;
-  left: React.ReactElement;
-  right: React.ReactElement;
-}
-
 const SectionTwoColStyle = styled.section`
   display: flex;
   flex-direction: column;
@@ -25,7 +19,13 @@ const Content = styled.div`
   }
 `;
 
-export const SectionTwoCol = (props: SectionProps) => (
+interface sectionTwoColProps {
+  id?: string;
+  left: React.ReactElement;
+  right: React.ReactElement;
+}
+
+export const SectionTwoCol = (props: sectionTwoColProps) => (
   <SectionWrapper id={props.id}>
     <SectionTwoColStyle>
       <Content>{props.left}</Content>

@@ -6,13 +6,13 @@ const CardStyle = styled.article`
   //TODO: appropiate styling when data is available
 `;
 
-interface CardProps {
+interface cardProps {
   image: IGatsbyImageData;
   alt: string;
   children: React.ReactNode;
 }
 
-export const Card = (props: CardProps) => (
+export const Card = (props: cardProps) => (
   <CardStyle>
     <GatsbyImage image={props.image} alt={props.alt} />
     {props.children}

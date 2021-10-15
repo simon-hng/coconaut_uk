@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import { Link } from 'gatsby';
-import { StaticImage } from 'gatsby-plugin-image';
 import * as React from 'react';
 
 const variants = {

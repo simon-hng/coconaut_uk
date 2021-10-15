@@ -1,4 +1,4 @@
-import { Subheadline, Typography } from '@components/Global';
+import { Typography } from '@components/Global';
 import { Buying } from '@components/ShopTeaser/Buying';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import * as React from 'react';
@@ -10,7 +10,11 @@ const ProductStyle = styled.div`
   align-items: center;
 `;
 
-export const Product = ({ product }) => {
+interface productProps {
+  product: any;
+}
+
+export const Product = ({ product }: productProps) => {
   const [quantity, setQuantity] = React.useState(1);
   const variant = product.variants[0];
 

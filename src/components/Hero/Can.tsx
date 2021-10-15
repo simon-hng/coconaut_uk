@@ -11,7 +11,7 @@ const CanImage = () => (
   />
 );
 
-const CanVariants = {
+const canVariants = {
   animation: {
     y: [0, 50, 0],
     transition: { repeat: Infinity, duration: 5 },
@@ -19,7 +19,7 @@ const CanVariants = {
 };
 
 export const Can = () => (
-  <motion.div variants={CanVariants}>
+  <motion.div variants={canVariants}>
     <CanImage />
   </motion.div>
 );
