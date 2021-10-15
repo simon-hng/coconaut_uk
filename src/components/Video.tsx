@@ -4,7 +4,7 @@ import { SectionWrapper } from './Global';
 
 const StyledVideo = styled.video`
   object-fit: fill;
-  width: 100vw;
+  width: 100%;
 `;
 
 export const Video = () => {
