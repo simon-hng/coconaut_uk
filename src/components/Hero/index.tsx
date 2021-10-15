@@ -6,7 +6,7 @@ import { Clouds } from './Clouds';
 import { Cans } from './Cans';
 
 const HeroStyle = styled.div`
-  height: 90vh;
+  height: 120vh;
   background-image: url(${BackgroundImage});
   background-repeat: no-repeat;
   background-position-y: bottom;
@@ -19,7 +19,7 @@ const HeroStyle = styled.div`
 `;
 
 const Caption = styled.h1`
-  margin-top: 15vh;
+  padding-top: 15vh;
   text-align: center;
   font-family: 'HermesBold';
   color: ${(props) => props.theme.accentLight};
