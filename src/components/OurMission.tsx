@@ -13,7 +13,7 @@ export const OurMission = () => (
   <SectionTwoCol
     left={
       <>
-        <Headline main='Our Mission' sub='Lorem Dolor sit Amet' />
+        <Headline sub='Lorem Dolor sit Amet'>Our Mission</Headline>
         <Typography bold>
           Coconauts mission: a new coconut water that is better than anything
           the big companies have to offer. No sooner said than done.
