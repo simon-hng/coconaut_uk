@@ -12,7 +12,7 @@ const SectionTwoColStyle = styled.section`
 `;
 
 const Content = styled.div`
-  padding: 0 3rem;
+  padding: 0 2rem;
 
   @media (min-width: 900px) {
     width: 50%;

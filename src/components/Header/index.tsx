@@ -16,9 +16,14 @@ const HeaderStyle = styled.header`
 `;
 
 const InnerHeader = styled.div`
-  padding: 2rem;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: 900px) {
+    padding: 3rem;
+  }
 `;
 
 const MenuButtons = styled(motion.div)`
@@ -28,7 +33,7 @@ const MenuButtons = styled(motion.div)`
 
   > a {
     cursor: pointer;
-    padding-left: 1.5rem;
+    padding: 1rem 0 1rem 1.5rem;
   }
 `;
 

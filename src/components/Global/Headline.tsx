@@ -10,7 +10,7 @@ const HeadlineStyle = styled.h2.attrs((props: headlineStyleProps) => ({
   centered: props.centered,
   gutterBottom: props.gutterBottom,
 }))`
-  padding-bottom: ${(props) => props.gutterBottom && '0.8em'};
+  padding-bottom: ${(props) => (props.gutterBottom ? '0.8em' : '0.2em')};
   text-align: ${(props) => (props.centered ? 'center' : 'left')};
   color: ${(props) => props.theme.accent};
 `;

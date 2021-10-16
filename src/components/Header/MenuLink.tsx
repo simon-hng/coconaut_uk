@@ -4,13 +4,13 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 const MenuLinkStyle = styled(motion.li)`
-  padding: 1.5rem 5rem;
+  padding: 1rem 5rem;
 `;
 
-const MenuLinkInner = styled(AnchorLink)`
+const MenuLinkWrapper = styled(AnchorLink)`
   color: ${(prop) => prop.theme.background};
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
 `;
 
@@ -35,12 +35,14 @@ interface menuLinkProps {
 }
 
 export const MenuLink = ({ to, name }: menuLinkProps) => (
-  <MenuLinkStyle
-    variants={menuLinkVariants}
-    whileHover={{ scale: 1.2 }}
-    transition={{ duration: 0.5 }}
-    style={{ originX: 0 }}
-  >
-    <MenuLinkInner to={to}>{name}</MenuLinkInner>
-  </MenuLinkStyle>
+  <MenuLinkWrapper to={to}>
+    <MenuLinkStyle
+      variants={menuLinkVariants}
+      whileHover={{ scale: 1.2 }}
+      transition={{ duration: 0.2 }}
+      style={{ originX: 0 }}
+    >
+      {name}
+    </MenuLinkStyle>
+  </MenuLinkWrapper>
 );

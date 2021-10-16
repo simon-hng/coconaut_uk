@@ -52,7 +52,7 @@ export const ShopTeaser = () => {
           <Subheadline gutterBottom>100% pure young coconaut Water</Subheadline>
           <Typography bold>{product.description}</Typography>
           <Typography fontSize={4} bold padding='3rem 0'>
-            {variant.price * quantity} £
+            {variant.price} £
           </Typography>
           <Typography bold>Quantity</Typography>
           <Buying

@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-export const WindowWidthContext = React.createContext(window.innerWidth);
+export const WindowWidthContext = React.createContext(0);
 
 export const WindowWidthProvider = (props: { children: React.ReactNode }) => {
   const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
