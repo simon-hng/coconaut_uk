@@ -14,6 +14,16 @@ import styled from 'styled-components';
 const ProductsStyle = styled.div`
   display: flex;
   justify-content: 'space-around';
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  @media (min-width: 900px) {
+    flex-direction: row;
+  }
+`;
+
+const ShopSection = styled(SectionWrapper)`
+  padding: 10rem 2rem;
 `;
 
 const Shop = ({ data }) => {
@@ -21,16 +31,18 @@ const Shop = ({ data }) => {
   return (
     <Layout>
       <Header />
-      <Headline centered>Shop Our Products</Headline>
-      <Subheadline centered>get yourself 100% young coconut water</Subheadline>
+      <ShopSection>
+        <Headline centered>Shop Our Products</Headline>
+        <Subheadline centered>
+          get yourself 100% young coconut water
+        </Subheadline>
 
-      <SectionWrapper>
         <ProductsStyle>
           {products.map((product) => (
             <Product key={product.node.id} product={product.node} />
           ))}
         </ProductsStyle>
-      </SectionWrapper>
+      </ShopSection>
     </Layout>
   );
 };

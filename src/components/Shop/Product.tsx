@@ -8,6 +8,11 @@ const ProductStyle = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 5rem 2rem;
+
+  @media (min-width: 900px) {
+    width: 33%;
+  }
 `;
 
 interface productProps {
@@ -28,10 +33,12 @@ export const Product = ({ product }: productProps) => {
         />
       )}
 
-      <Typography fontSize={4} bold padding='3rem 0'>
-        {variant.price * quantity} £
+      <Typography fontSize={4} bold padding='0.5rem 0'>
+        {variant.price} £
       </Typography>
-      <Typography bold>{product.description}</Typography>
+      <Typography gutterBottom bold>
+        {product.description}
+      </Typography>
       <Buying
         variantId={variant.storefrontId}
         quantity={quantity}
