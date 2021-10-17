@@ -1,4 +1,5 @@
 import { Events } from '@components/Events';
+import { Layout } from '@components/Global';
 import { Header } from '@components/Header';
 import { Hero } from '@components/Hero';
 import { Nutrition } from '@components/Nutrition';
@@ -9,7 +10,7 @@ import * as React from 'react';
 
 const Index = () => {
   return (
-    <main>
+    <Layout>
       <Header />
       <Hero />
       <Nutrition />
@@ -17,7 +18,7 @@ const Index = () => {
       <Events />
       <OurMission />
       <Video />
-    </main>
+    </Layout>
   );
 };
 

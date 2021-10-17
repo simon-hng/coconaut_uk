@@ -1,3 +1,4 @@
+import { Layout } from '@components/Global';
 import { Header } from '@components/Header';
 import { LineProduct } from '@components/Shop/LineProduct';
 import { StoreContext } from '@context/StoreContext';
@@ -6,7 +7,7 @@ import * as React from 'react';
 const Cart = () => {
   const { checkout } = React.useContext(StoreContext);
   return (
-    <main>
+    <Layout>
       <Header />
       {checkout && (
         <div>
@@ -15,7 +16,7 @@ const Cart = () => {
           ))}
         </div>
       )}
-    </main>
+    </Layout>
   );
 };
 

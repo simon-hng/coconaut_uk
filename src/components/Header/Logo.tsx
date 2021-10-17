@@ -1,30 +1,37 @@
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import * as React from 'react';
+import styled from 'styled-components';
 
-interface logoProps {
-  windowWidth: number;
-}
+const LogoMobile = styled.div`
+  @media (min-width: 900px) {
+    display: none;
+  }
+`;
 
-export const Logo = ({ windowWidth }: logoProps) => {
-  const InnerLogo = () =>
-    windowWidth < 900 ? (
-      <StaticImage
-        src='../../images/logoMobile.svg'
-        width={120}
-        layout='fixed'
-      />
-    ) : (
-      <StaticImage
-        src='../../images/logoDesktop.svg'
-        width={200}
-        layout='fixed'
-      />
-    );
+const LogoDesktop = styled.div`
+  @media (max-width: 900px) {
+    display: none;
+  }
+`;
 
+export const Logo = () => {
   return (
     <Link to='/'>
-      <InnerLogo />
+      <LogoMobile>
+        <StaticImage
+          src='../../images/logoMobile.svg'
+          width={120}
+          layout='fixed'
+        />
+      </LogoMobile>
+      <LogoDesktop>
+        <StaticImage
+          src='../../images/logoDesktop.svg'
+          width={200}
+          layout='fixed'
+        />
+      </LogoDesktop>
     </Link>
   );
 };

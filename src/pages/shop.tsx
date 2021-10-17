@@ -1,4 +1,10 @@
-import { Headline, SectionWrapper, Subheadline } from '@components/Global';
+/* eslint-disable react/prop-types */
+import {
+  Headline,
+  Layout,
+  SectionWrapper,
+  Subheadline,
+} from '@components/Global';
 import { Header } from '@components/Header';
 import { Product } from '@components/Shop/Product';
 import { graphql } from 'gatsby';
@@ -7,13 +13,13 @@ import styled from 'styled-components';
 
 const ProductsStyle = styled.div`
   display: flex;
-  justify-content:space-around;
+  justify-content: 'space-around';
 `;
 
 const Shop = ({ data }) => {
   const products = data.allShopifyProduct.edges;
   return (
-    <main>
+    <Layout>
       <Header />
       <Headline centered>Shop Our Products</Headline>
       <Subheadline centered>get yourself 100% young coconut water</Subheadline>
@@ -21,11 +27,11 @@ const Shop = ({ data }) => {
       <SectionWrapper>
         <ProductsStyle>
           {products.map((product) => (
-            <Product product={product.node} />
+            <Product key={product.node.id} product={product.node} />
           ))}
         </ProductsStyle>
       </SectionWrapper>
-    </main>
+    </Layout>
   );
 };
 

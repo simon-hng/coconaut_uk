@@ -2,7 +2,6 @@ import { Logo } from './Logo';
 import { Menu } from './Menu';
 import { MenuButton } from './MenuButton';
 import { ShopButton } from './ShopButton';
-import { WindowWidthContext } from '@context/WindowWidth';
 import { motion, useCycle } from 'framer-motion';
 import * as React from 'react';
 import styled from 'styled-components';
@@ -39,7 +38,6 @@ const MenuButtons = styled(motion.div)`
 
 export const Header = () => {
   const [menuIsOpen, toggleMenu] = useCycle(false, true);
-  const windowWidth = React.useContext(WindowWidthContext);
 
   const menuHandler = () => {
     toggleMenu();
@@ -48,7 +46,7 @@ export const Header = () => {
   return (
     <HeaderStyle>
       <InnerHeader>
-        <Logo windowWidth={windowWidth} />
+        <Logo />
 
         <MenuButtons animate={menuIsOpen ? 'open' : 'closed'}>
           <ShopButton />
