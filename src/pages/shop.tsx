@@ -22,16 +22,12 @@ const ProductsStyle = styled.div`
   }
 `;
 
-const ShopSection = styled(SectionWrapper)`
-  padding: 10rem 2rem;
-`;
-
 const Shop = ({ data }) => {
   const products = data.allShopifyProduct.edges;
   return (
     <Layout>
       <Header />
-      <ShopSection>
+      <SectionWrapper padded>
         <Headline centered>Shop Our Products</Headline>
         <Subheadline centered>
           get yourself 100% young coconut water
@@ -42,7 +38,7 @@ const Shop = ({ data }) => {
             <Product key={product.node.id} product={product.node} />
           ))}
         </ProductsStyle>
-      </ShopSection>
+      </SectionWrapper>
     </Layout>
   );
 };

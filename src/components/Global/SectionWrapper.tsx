@@ -5,16 +5,17 @@ import { motion } from 'framer-motion';
 
 interface sectionWrapperStyleProps {
   cover?: boolean;
+  padded?: boolean;
 }
 
 export const SectionWrapperStyle = styled(motion.div).attrs(
   (props: sectionWrapperStyleProps) => ({
     cover: props.cover,
+    padded: props.padded,
   })
 )`
   margin: auto;
-  padding: 5rem 0;
-
+  padding: ${(props) => (props.padded ? '10rem 2rem' : '5rem 0')};
   ${(props) => !props.cover && 'max-width: 1400px;'}
 `;
 
@@ -32,6 +33,7 @@ const sectionWrapperVariants = {
 
 interface sectionWrapperProps {
   children: React.ReactNode;
+  padded?: boolean;
   cover?: boolean;
   id?: string;
 }
