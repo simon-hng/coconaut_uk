@@ -18,7 +18,7 @@ export const LineProduct = ({ item }: lineItemProps) => {
       </td>
       <td> {item.price}</td>
       <td>
-        <Quantity value={quantity} setValue={setQuantity} />
+        <Quantity title={item.title} value={quantity} setValue={setQuantity} />
       </td>
       <td>
         {item.quantity} * {item.price}

@@ -16,6 +16,11 @@ const StyledButton = (props: any) => (
   </Button>
 );
 
+const Label = styled.label`
+  visibility: hidden;
+  display: none;
+`;
+
 const StyledInput = styled.input`
   border: none;
   width: 2rem;
@@ -31,11 +36,12 @@ const StyledInput = styled.input`
 `;
 
 interface quantityProps {
+  title: string;
   value: number;
   setValue: React.Dispatch<React.SetStateAction<number>>;
 }
 
-export const Quantity = ({ value, setValue }: quantityProps) => {
+export const Quantity = ({ title, value, setValue }: quantityProps) => {
   const handleDecrease = () => setValue(Math.max(1, value - 1));
 
   const handleChange = (e) => {
@@ -49,7 +55,9 @@ export const Quantity = ({ value, setValue }: quantityProps) => {
   return (
     <QuantityStyle>
       <StyledButton onClick={handleDecrease}>-</StyledButton>
+      <Label htmlFor={`${title} quantity`}>Quantity</Label>
       <StyledInput
+        id={`${title} quantity`}
         onChange={handleChange}
         type='number'
         min={1}

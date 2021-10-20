@@ -4,12 +4,14 @@
   src: url(../assets/HermesThin.ttf) format('truetype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: 'HermesBold';
   src: url(../assets/HermesBold.ttf) format('truetype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 body {

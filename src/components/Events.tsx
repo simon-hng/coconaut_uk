@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-import { Headline } from '@components/Global';
+import { Headline, SectionWrapper } from '@components/Global';
 import BackgroundImage from '@images/hero/Coconaut_Skyline@1694x-100.jpg';
 
 const Background = styled.section`
@@ -13,7 +13,7 @@ export const Events = () => {
   //TODO: get instagram data
   const data = {};
   return (
-    <>
+    <SectionWrapper cover>
       <Headline centered>Join Our Events</Headline>
       <Background>
         {data && (
@@ -29,6 +29,6 @@ export const Events = () => {
           </ul>
         )}
       </Background>
-    </>
+    </SectionWrapper>
   );
 };

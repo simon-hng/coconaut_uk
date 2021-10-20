@@ -23,6 +23,7 @@ export const Logo = () => {
           src='../../images/logoMobile.svg'
           width={120}
           layout='fixed'
+          alt='Go to start'
         />
       </LogoMobile>
       <LogoDesktop>
@@ -30,6 +31,7 @@ export const Logo = () => {
           src='../../images/logoDesktop.svg'
           width={200}
           layout='fixed'
+          alt='Go to start'
         />
       </LogoDesktop>
     </Link>

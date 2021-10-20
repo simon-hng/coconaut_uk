@@ -56,6 +56,7 @@ export const ShopTeaser = () => {
           </Typography>
           <Typography bold>Quantity</Typography>
           <Buying
+            title={product.title}
             variantId={variant.storefrontId}
             quantity={quantity}
             setQuantity={setQuantity}

@@ -11,6 +11,7 @@ const BuyingStyle = styled.div`
 `;
 
 interface buyingProps {
+  title: string;
   variantId: string;
   quantity: number;
   setQuantity: React.Dispatch<React.SetStateAction<number>>;
@@ -25,7 +26,11 @@ export const Buying = (props: buyingProps) => {
 
   return (
     <BuyingStyle>
-      <Quantity value={props.quantity} setValue={props.setQuantity} />
+      <Quantity
+        title={props.title}
+        value={props.quantity}
+        setValue={props.setQuantity}
+      />
       <Button padding='0.8rem 2rem' onClick={() => addHandler()}>
         Add
       </Button>
