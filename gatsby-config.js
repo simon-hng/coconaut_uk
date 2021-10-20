@@ -1,9 +1,11 @@
+/* eslint-disable no-undef */
 require('dotenv').config();
 
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://www.yourdomain.tld',
-    title: 'CoconautUK',
+    siteUrl: 'https://www.coconaut.co.uk',
+    title: 'Coconaut UK',
+    // TODO: provide additional meta data
   },
   plugins: [
     {
