@@ -20,6 +20,8 @@ export const Typography = styled.p.attrs((props: typographyProps) => ({
   padding: props.padding || 0,
 }))`
   ${(props) => props.bold && 'font-weight: bold'};
+  font-family: 'Montserrat', sans-serif;
+  line-height: 2.8rem;
   margin: ${(props) => props.margin};
   padding: ${(props) => props.padding};
   padding-bottom: ${(props) => (props.gutterBottom ? '1.5rem' : '0')};
