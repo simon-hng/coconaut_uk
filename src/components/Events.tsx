@@ -13,7 +13,7 @@ export const Events = () => {
   //TODO: get instagram data
   const data = {};
   return (
-    <SectionWrapper cover>
+    <SectionWrapper cover id='events'>
       <Headline centered>Join Our Events</Headline>
       <Background>
         {data && (

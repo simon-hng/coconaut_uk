@@ -41,7 +41,7 @@ export const ShopTeaser = () => {
       left={
         <CenteredOnMobile>
           <GatsbyImage
-            alt={product.featuredImage.altText}
+            alt={product.featuredImage.altText || product.title}
             image={product.featuredImage.gatsbyImageData}
           />
         </CenteredOnMobile>

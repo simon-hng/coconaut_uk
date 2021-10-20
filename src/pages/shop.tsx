@@ -25,7 +25,7 @@ const ProductsStyle = styled.div`
 const Shop = ({ data }) => {
   const products = data.allShopifyProduct.edges;
   return (
-    <Layout>
+    <Layout title='Coconaut home' description={'Buy coconut water'} image={''}>
       <Header />
       <SectionWrapper padded>
         <Headline centered>Shop Our Products</Headline>

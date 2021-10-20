@@ -2,6 +2,7 @@ import * as React from 'react';
 import { ThemeProvider } from 'styled-components';
 import '@styles/reset.css';
 import '@styles/global.css';
+import { SEO, seoProps } from '@components/SEO';
 
 const mainTheme = {
   background: '#fff',
@@ -11,10 +12,18 @@ const mainTheme = {
   accentDark: '#195200',
 };
 
-interface layoutProps {
+interface layoutProps extends seoProps {
   children: React.ReactNode;
 }
 
-export const Layout = ({ children: element }: layoutProps) => (
-  <ThemeProvider theme={mainTheme}>{element}</ThemeProvider>
+export const Layout = ({
+  children,
+  title,
+  description,
+  image,
+}: layoutProps) => (
+  <ThemeProvider theme={mainTheme}>
+    <SEO title={title} description={description} image={image} />
+    {children}
+  </ThemeProvider>
 );

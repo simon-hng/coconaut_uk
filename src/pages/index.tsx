@@ -11,7 +11,7 @@ import * as React from 'react';
 
 const Index = () => {
   return (
-    <Layout>
+    <Layout title='Coconaut home' description={'Buy coconut water'} image={''}>
       <Header />
       <Hero />
       <Nutrition />

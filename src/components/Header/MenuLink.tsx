@@ -3,15 +3,18 @@ import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-const MenuLinkStyle = styled(motion.li)`
-  padding: 1rem 5rem;
-`;
-
-const MenuLinkWrapper = styled(AnchorLink)`
+const MenuLinkStyle = styled(AnchorLink)`
+  display: inline-block;
+  width: 100%;
+  height: 100%;
   color: ${(prop) => prop.theme.background};
   text-decoration: none;
   font-size: 2.5rem;
   font-weight: bold;
+`;
+
+const MenuLinkWrapper = styled(motion.li)`
+  padding: 1rem 5rem;
 `;
 
 const menuLinkVariants = {
@@ -35,14 +38,12 @@ interface menuLinkProps {
 }
 
 export const MenuLink = ({ to, name }: menuLinkProps) => (
-  <MenuLinkWrapper to={to}>
-    <MenuLinkStyle
-      variants={menuLinkVariants}
-      whileHover={{ scale: 1.2 }}
-      transition={{ duration: 0.2 }}
-      style={{ originX: 0 }}
-    >
-      {name}
-    </MenuLinkStyle>
+  <MenuLinkWrapper
+    variants={menuLinkVariants}
+    whileHover={{ scale: 1.2 }}
+    transition={{ duration: 0.2 }}
+    style={{ originX: 0 }}
+  >
+    <MenuLinkStyle to={to}>{name}</MenuLinkStyle>
   </MenuLinkWrapper>
 );

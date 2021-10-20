@@ -1,9 +1,9 @@
-import { StaticImage } from 'gatsby-plugin-image';
 import * as React from 'react';
 import { Headline, SectionTwoCol, Typography } from './Global';
 
 export const Sustainability = () => (
   <SectionTwoCol
+    id='sustainability'
     left={
       <>
         <Headline sub='Commitment'>Sustainability</Headline>

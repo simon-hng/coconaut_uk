@@ -58,12 +58,12 @@ const backgroundVariants = {
 };
 
 const menuLinks = [
-  { name: 'About', to: '' },
+  { name: 'About', to: '/#about' },
   { name: 'Nutrition facts', to: '/#nutrition' },
   { name: 'Shop', to: '/shop' },
-  { name: 'Events', to: '' },
-  { name: 'Business', to: '' },
-  { name: 'Sustainability', to: '' },
+  { name: 'Events', to: '/#events' },
+  { name: 'Business', to: '/#business' },
+  { name: 'Sustainability', to: '/#sustainability' },
 ];
 
 export const Menu = (prop: { isOpen: boolean }) => {

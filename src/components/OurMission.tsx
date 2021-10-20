@@ -11,6 +11,7 @@ import {
 
 export const OurMission = () => (
   <SectionTwoCol
+    id='business'
     left={
       <>
         <Headline sub='Lorem Dolor sit Amet' gutterBottom>

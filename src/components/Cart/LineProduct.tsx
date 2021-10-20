@@ -9,7 +9,6 @@ interface lineItemProps {
 
 export const LineProduct = ({ item }: lineItemProps) => {
   const [quantity, setQuantity] = React.useState(item.quantity);
-  console.log(item);
 
   return (
     <tr>
