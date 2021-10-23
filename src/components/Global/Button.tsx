@@ -17,10 +17,12 @@ interface buttonStyleProps {
   padding: string;
 }
 
-const ButtonStyle = styled(motion.button).attrs((props: buttonStyleProps) => ({
-  margin: props.margin || '0',
-  padding: props.padding || '1.4rem 2rem',
-}))`
+const ButtonStyle = styled(motion.button).attrs((props: buttonStyleProps) => {
+  return {
+    margin: props.margin || '0',
+    padding: props.padding || '1.4rem 2rem',
+  };
+})`
   margin: ${(props) => props.margin};
   padding: ${(props) => props.padding};
   background: none;
@@ -35,12 +37,26 @@ const ButtonStyle = styled(motion.button).attrs((props: buttonStyleProps) => ({
   cursor: pointer;
 `;
 
+const buttonVariants = {
+  hover: {
+    scale: 1.2,
+    transition: {
+      duration: 0.2,
+    },
+  },
+  tap: {
+    rotate: [0, -20, 20, 0],
+    transition: {
+      duration: 0.3,
+    },
+  },
+};
+
 const Content = (props: buttonProps) => (
   <ButtonStyle
-    whileHover={{
-      scale: 1.2,
-    }}
-    transition={{ duration: 0.2 }}
+    variants={buttonVariants}
+    whileHover='hover'
+    whileTap='tap'
     {...props}
   >
     {props.children}
