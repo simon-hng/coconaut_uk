@@ -6,7 +6,9 @@ export const Sustainability = () => (
     id='sustainability'
     left={
       <>
-        <Headline sub='Commitment'>Sustainability</Headline>
+        <Headline gutterBottom sub='Commitment'>
+          Sustainability
+        </Headline>
         <Typography bold>
           Our ambition is to be a sustainable company.
         </Typography>
