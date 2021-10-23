@@ -65,15 +65,25 @@ const menuLinks = [
   { name: 'Sustainability', to: '/#sustainability' },
 ];
 
-export const Menu = (prop: { isOpen: boolean }) => {
+interface menuProps {
+  isOpen: boolean;
+  toggleMenu: () => void;
+}
+
+export const Menu = ({ isOpen, toggleMenu: toggleMenu }: menuProps) => {
   const WindowWidth = React.useContext(WindowWidthContext);
 
   return (
-    <motion.div animate={prop.isOpen ? 'open' : 'closed'}>
+    <motion.div animate={isOpen ? 'open' : 'closed'}>
       <MenuStyle variants={menuVariants(WindowWidth)} initial={false}>
         <ul>
           {menuLinks.map((link, i) => (
-            <MenuLink key={i} to={link.to} name={link.name} />
+            <MenuLink
+              key={i}
+              hideMenu={toggleMenu}
+              to={link.to}
+              name={link.name}
+            />
           ))}
         </ul>
       </MenuStyle>

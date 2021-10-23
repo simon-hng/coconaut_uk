@@ -54,7 +54,7 @@ export const Header = () => {
         </MenuButtons>
       </InnerHeader>
 
-      <Menu isOpen={menuIsOpen} />
+      <Menu toggleMenu={toggleMenu} isOpen={menuIsOpen} />
     </HeaderStyle>
   );
 };

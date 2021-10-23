@@ -35,14 +35,16 @@ const menuLinkVariants = {
 interface menuLinkProps {
   to: string;
   name: string;
+  hideMenu: () => void;
 }
 
-export const MenuLink = ({ to, name }: menuLinkProps) => (
+export const MenuLink = ({ to, name, hideMenu }: menuLinkProps) => (
   <MenuLinkWrapper
     variants={menuLinkVariants}
     whileHover={{ scale: 1.2 }}
     transition={{ duration: 0.2 }}
     style={{ originX: 0 }}
+    onClick={hideMenu}
   >
     <MenuLinkStyle to={to}>{name}</MenuLinkStyle>
   </MenuLinkWrapper>
