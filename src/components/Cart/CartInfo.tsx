@@ -7,6 +7,11 @@ import styled from 'styled-components';
 const StyledCartInfo = styled.section`
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
+
+  @media (min-width: 900px) {
+    flex-direction: row;
+  }
 `;
 
 const StyledTable = styled.table`
@@ -26,6 +31,10 @@ const StyledTotal = styled.div`
   padding: 2rem 0;
   display: flex;
   justify-content: space-between;
+
+  p {
+    padding: 0 1rem;
+  }
 `;
 
 const StyledTh = (props: { children: React.ReactNode }) => (
