@@ -3,7 +3,7 @@ import {
   SectionTwoCol,
   Headline,
   Subheadline,
-  CenteredOnMobile,
+  Centered,
   Typography,
 } from '@components/Global';
 import { useStaticQuery, graphql } from 'gatsby';
@@ -44,12 +44,12 @@ export const ShopTeaser = () => {
     <SectionTwoCol
       id='shop'
       left={
-        <CenteredOnMobile>
+        <Centered onMobile>
           <GatsbyImage
             alt={product.featuredImage.altText || product.title}
             image={product.featuredImage.gatsbyImageData}
           />
-        </CenteredOnMobile>
+        </Centered>
       }
       right={
         <>

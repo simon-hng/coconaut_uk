@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {
-  CenteredOnMobile,
+  Centered,
   Headline,
   SectionTwoCol,
   Typography,
@@ -9,7 +9,7 @@ import {
 export const Contact = () => (
   <SectionTwoCol
     id='contact'
-    left={<CenteredOnMobile></CenteredOnMobile>}
+    left={<Centered></Centered>}
     right={
       <>
         <Headline gutterBottom>Contact us</Headline>

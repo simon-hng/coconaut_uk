@@ -1,6 +1,6 @@
 export * from './Button';
 export * from './Card';
-export * from './CenteredOnMobile';
+export * from './Centered';
 export * from './Headline';
 export * from './Layout';
 export * from './SectionWrapper';

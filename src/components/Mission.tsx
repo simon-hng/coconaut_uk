@@ -6,7 +6,7 @@ import {
   SectionTwoCol,
   Headline,
   Typography,
-  CenteredOnMobile,
+  Centered,
 } from '@components/Global';
 
 export const Mission = () => (
@@ -31,12 +31,12 @@ export const Mission = () => (
       </>
     }
     right={
-      <CenteredOnMobile>
+      <Centered>
         <StaticImage
           src='../images/Coconaut_Illu_Still.png'
           alt='Coconaut illustration'
         />
-      </CenteredOnMobile>
+      </Centered>
     }
   />
 );

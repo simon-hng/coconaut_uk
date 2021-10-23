@@ -5,7 +5,7 @@ import {
   Button,
   Subheadline,
   Typography,
-  CenteredOnMobile,
+  Centered,
 } from '@components/Global';
 import { StaticImage } from 'gatsby-plugin-image';
 import * as React from 'react';
@@ -50,12 +50,12 @@ export const Nutrition = () => (
     }
     right={
       <>
-        <CenteredOnMobile>
+        <Centered onMobile>
           <StaticImage
             src='../../images/Coconut_and_can_01.png'
             alt='coconut and can'
           />
-        </CenteredOnMobile>
+        </Centered>
 
         <Subheadline gutterBottom>Whats in it?</Subheadline>
 
