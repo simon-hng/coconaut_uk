@@ -43,6 +43,7 @@ export const ShopTeaser = () => {
 
   return (
     <SectionTwoCol
+      id='shop'
       left={
         <CenteredOnMobile>
           <GatsbyImage

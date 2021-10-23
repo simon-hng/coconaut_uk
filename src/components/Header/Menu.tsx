@@ -58,11 +58,10 @@ const backgroundVariants = {
 };
 
 const menuLinks = [
-  { name: 'About', to: '/#about' },
   { name: 'Nutrition facts', to: '/#nutrition' },
-  { name: 'Shop', to: '/shop' },
-  { name: 'Events', to: '/#events' },
-  { name: 'Business', to: '/#business' },
+  { name: 'Shop', to: '/#shop' },
+  { name: 'Discover', to: '/#discover' },
+  { name: 'Our Mission', to: '/#mission' },
   { name: 'Sustainability', to: '/#sustainability' },
 ];
 

@@ -1,9 +1,9 @@
-import { Events } from '@components/Events';
+import { Discover } from '@components/Discover';
 import { Layout } from '@components/Global';
 import { Header } from '@components/Header';
 import { Hero } from '@components/Hero';
 import { Nutrition } from '@components/Nutrition';
-import { OurMission } from '@components/OurMission';
+import { Mission } from '@components/Mission';
 import { ShopTeaser } from '@components/ShopTeaser';
 import { Sustainability } from '@components/Sustainability';
 import { Video } from '@components/Video';
@@ -16,8 +16,8 @@ const Index = () => {
       <Hero />
       <Nutrition />
       <ShopTeaser />
-      <Events />
-      <OurMission />
+      <Discover />
+      <Mission />
       <Video />
       <Sustainability />
     </Layout>

@@ -9,9 +9,9 @@ import {
   CenteredOnMobile,
 } from '@components/Global';
 
-export const OurMission = () => (
+export const Mission = () => (
   <SectionTwoCol
-    id='business'
+    id='mission'
     left={
       <>
         <Headline sub='Lorem Dolor sit Amet' gutterBottom>
