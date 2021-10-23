@@ -31,6 +31,7 @@
     "gatsby-plugin-sharp": "^3.14.0",
     "gatsby-plugin-styled-components": "^4.14.0",
     "gatsby-plugin-tsconfig-paths": "^1.0.3",
+    "gatsby-source-contentful": "^6.0.0",
     "gatsby-source-filesystem": "^3.14.0",
     "gatsby-source-shopify": "^5.6.0",
     "gatsby-transformer-sharp": "^3.14.0",

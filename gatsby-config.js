@@ -15,6 +15,13 @@ module.exports = {
         storeUrl: process.env.GATSBY_SHOPIFY_STORE_URL,
       },
     },
+    {
+      resolve: 'gatsby-source-contentful',
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
+    },
     'gatsby-plugin-styled-components',
     'gatsby-plugin-react-helmet',
     `gatsby-plugin-image`,
