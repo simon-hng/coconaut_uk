@@ -8,6 +8,7 @@ const EmptyCart = () => <Headline>Your cart is empty</Headline>;
 
 const Cart = () => {
   const { checkout } = React.useContext(StoreContext);
+  console.log(checkout);
   return (
     <Layout
       title='Shopping cart'
@@ -16,7 +17,11 @@ const Cart = () => {
     >
       <Header />
       <SectionWrapper padded>
-        {checkout ? <CartInfo checkout={checkout} /> : <EmptyCart />}
+        {checkout && checkout.lineItems.length > 0 ? (
+          <CartInfo checkout={checkout} />
+        ) : (
+          <EmptyCart />
+        )}
       </SectionWrapper>
     </Layout>
   );
