@@ -1,10 +1,14 @@
-import { Headline, Layout, SectionWrapper } from '@components/Global';
+import { Centered, Headline, Layout, SectionWrapper } from '@components/Global';
 import { Header } from '@components/Header';
 import { CartInfo } from '@components/Cart/CartInfo';
 import { StoreContext } from '@context/StoreContext';
 import * as React from 'react';
 
-const EmptyCart = () => <Headline>Your cart is empty</Headline>;
+const EmptyCart = () => (
+  <Centered>
+    <Headline>Your cart is empty</Headline>;
+  </Centered>
+);
 
 const Cart = () => {
   const { checkout } = React.useContext(StoreContext);
