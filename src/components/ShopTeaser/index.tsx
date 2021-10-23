@@ -3,7 +3,6 @@ import {
   SectionTwoCol,
   Headline,
   Subheadline,
-  Button,
   CenteredOnMobile,
   Typography,
 } from '@components/Global';
@@ -74,10 +73,6 @@ export const ShopTeaser = () => {
               setQuantity={setQuantity}
             />
           </div>
-
-          <Button margin='4rem 0 0 0' to='/shop'>
-            Go to shop!
-          </Button>
         </>
       }
     />

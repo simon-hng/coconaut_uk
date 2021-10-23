@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import BackgroundImage from '@images/ButtonBackground.svg';
 import { motion } from 'framer-motion';
 
@@ -49,9 +49,9 @@ const Content = (props: buttonProps) => (
 
 export const Button = (props: buttonProps) => {
   return props.to ? (
-    <Link to={props.to}>
+    <AnchorLink to={props.to}>
       <Content {...props} />
-    </Link>
+    </AnchorLink>
   ) : (
     <Content {...props} />
   );

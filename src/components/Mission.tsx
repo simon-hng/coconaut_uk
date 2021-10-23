@@ -14,9 +14,7 @@ export const Mission = () => (
     id='mission'
     left={
       <>
-        <Headline sub='Lorem Dolor sit Amet' gutterBottom>
-          Our Mission
-        </Headline>
+        <Headline gutterBottom>Our Mission</Headline>
         <Typography bold>
           Coconauts mission: a new coconut water that is better than anything
           the big companies have to offer. No sooner said than done.

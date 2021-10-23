@@ -43,7 +43,7 @@ export const Nutrition = () => (
           just the full load of coconut power. Want to know more?​
         </Typography>
 
-        <Button margin='5rem 0 0 0' to='/shop'>
+        <Button margin='5rem 0 0 0' to='/#shop'>
           Shop now!
         </Button>
       </>
