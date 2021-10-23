@@ -23,7 +23,7 @@ const Label = styled.label`
 
 const StyledInput = styled.input`
   border: none;
-  width: 2rem;
+  width: 4rem;
   text-align: center;
   font-size: 1.4rem;
 
