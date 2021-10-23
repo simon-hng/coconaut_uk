@@ -1,14 +1,6 @@
-/* TODO: no licence for commencial use yet */
 @font-face {
-  font-family: 'HermesThin';
-  src: url(../assets/HermesThin.ttf) format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'HermesBold';
-  src: url(../assets/HermesBold.ttf) format('truetype');
+  font-family: 'Hermes';
+  src: url(../assets/Hermes.otf) format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -16,14 +8,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 body {
   font-size: 62.5%; /* =10px */
-  font-family: 'HermesThin';
+  font-family: 'Hermes';
 }
 h1,
 h2,
 h3,
 h4,
 h5 {
-  font-family: 'HermesThin';
+  font-family: 'Hermes';
   font-weight: bold;
 }
 h1 {

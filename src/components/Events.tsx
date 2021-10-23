@@ -14,7 +14,7 @@ export const Events = () => {
   const data = {};
   return (
     <SectionWrapper cover id='events'>
-      <Headline centered>Join Our Events</Headline>
+      <Headline centered>Discover the world of Coconaut</Headline>
       <Background>
         {data && (
           <ul>

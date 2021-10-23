@@ -10,6 +10,6 @@ export const Subheadline = styled.h3.attrs((props: subheadlineProps) => ({
   gutterBottom: props.gutterBottom,
 }))`
   text-align: ${(props) => (props.centered ? 'center' : 'left')};
-  padding-bottom: ${(props) => (props.gutterBottom ? '1.25rem' : '0.5rem')};
+  padding-bottom: ${(props) => (props.gutterBottom ? '3rem' : '0.5rem')};
   color: ${(props) => props.theme.accentDark};
 `;

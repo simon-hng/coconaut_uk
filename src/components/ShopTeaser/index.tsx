@@ -10,6 +10,11 @@ import {
 import { useStaticQuery, graphql } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import * as React from 'react';
+import styled from 'styled-components';
+
+const Price = styled.div`
+  padding: 3rem 0;
+`;
 
 export const ShopTeaser = () => {
   const data = useStaticQuery(
@@ -49,19 +54,27 @@ export const ShopTeaser = () => {
       right={
         <>
           <Headline>Coconaut</Headline>
-          <Subheadline gutterBottom>100% pure young coconaut Water</Subheadline>
-          <Typography bold>{product.description}</Typography>
-          <Typography fontSize={4} bold padding='3rem 0'>
-            {variant.price} £
-          </Typography>
-          <Typography bold>Quantity</Typography>
-          <Buying
-            title={product.title}
-            variantId={variant.storefrontId}
-            quantity={quantity}
-            setQuantity={setQuantity}
-          />
-          <Button margin='5rem 0 0 0' to='/shop'>
+          <Subheadline>100% pure young coconaut Water</Subheadline>
+          <Typography>{product.description}</Typography>
+
+          <Price>
+            <Typography fontSize={4}>{variant.price} £</Typography>
+            <Typography>
+              {`${(variant.price / 12).toFixed(2)} per can inc. VAT & shipping`}
+            </Typography>
+          </Price>
+
+          <div>
+            <Typography bold>Quantity</Typography>
+            <Buying
+              title={product.title}
+              variantId={variant.storefrontId}
+              quantity={quantity}
+              setQuantity={setQuantity}
+            />
+          </div>
+
+          <Button margin='4rem 0 0 0' to='/shop'>
             Go to shop!
           </Button>
         </>

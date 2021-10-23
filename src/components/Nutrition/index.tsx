@@ -57,7 +57,7 @@ export const Nutrition = () => (
           />
         </CenteredOnMobile>
 
-        <Subheadline>Whats in it?</Subheadline>
+        <Subheadline gutterBottom>Whats in it?</Subheadline>
 
         <FactsList>
           {nutritionalFacts.map((fact, i) => (
