@@ -6,7 +6,7 @@ import * as React from 'react';
 
 const EmptyCart = () => (
   <Centered>
-    <Headline>Your cart is empty</Headline>;
+    <Headline>Your cart is empty</Headline>
   </Centered>
 );
 

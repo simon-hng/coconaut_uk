@@ -24,8 +24,8 @@ export const Mission = () => (
           Inspired by the functional drink from Vietnam, Coconaut was created.
           As a natural isotonic drink, it is now enjoyed by consumers in over 5
           countries to keep them refreshed and active throughout the day.​
-          Coconaut empowers and inspires people to do their beswork. To unlock
-          everyones full potential we beliefe in collaboration and communication
+          Coconaut empowers and inspires people to do their best work. To unlock
+          everyones full potential we believe in collaboration and communication
           with our consumers, stakeholders, workforce and suppliers. ​
         </Typography>
       </>
