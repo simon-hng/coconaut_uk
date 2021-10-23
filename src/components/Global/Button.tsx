@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 interface buttonProps {
   onClick?: () => void;
   to?: string;
+  href?: string;
   children: React.ReactNode;
   margin?: string;
   padding?: string;
@@ -64,11 +65,19 @@ const Content = (props: buttonProps) => (
 );
 
 export const Button = (props: buttonProps) => {
-  return props.to ? (
-    <AnchorLink to={props.to}>
-      <Content {...props} />
-    </AnchorLink>
-  ) : (
-    <Content {...props} />
-  );
+  if (props.to) {
+    return (
+      <AnchorLink to={props.to}>
+        <Content {...props} />
+      </AnchorLink>
+    );
+  } else if (props.href) {
+    return (
+      <a href={props.href}>
+        <Content {...props} />
+      </a>
+    );
+  } else {
+    return <Content {...props} />;
+  }
 };
