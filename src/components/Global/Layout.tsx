@@ -7,6 +7,7 @@ import { SEO, seoProps } from '@components/SEO';
 const mainTheme = {
   background: '#fff',
   foreground: '#000',
+  grey: '#747474',
   accentLight: '#53C1A6',
   accent: '#39B54A',
   accentDark: '#195200',
