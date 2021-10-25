@@ -4,14 +4,14 @@ import { Link } from 'gatsby';
 import * as React from 'react';
 import styled, { useTheme } from 'styled-components';
 
-const buttonVariants = {
+const buttonVariants = (theme) => ({
   open: {
-    fill: '#fff',
+    fill: theme.background,
   },
   closed: {
-    fill: '#747474',
+    fill: theme.grey,
   },
-};
+});
 
 // TODO pass prop.theme.accent instead of static coding
 const itemCountVariants = (theme) => ({
@@ -65,7 +65,7 @@ export const ShopButton = () => {
         height='40px'
         viewBox='0 0 24 24'
         width='40px'
-        variants={buttonVariants}
+        variants={buttonVariants(theme)}
         stroke='none'
       >
         <title>Go to cart</title>
