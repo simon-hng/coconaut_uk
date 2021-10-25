@@ -2,8 +2,7 @@ import { StoreContext } from '@context/StoreContext';
 import { motion } from 'framer-motion';
 import { Link } from 'gatsby';
 import * as React from 'react';
-import { useContext } from 'react';
-import styled from 'styled-components';
+import styled, { useTheme } from 'styled-components';
 
 const buttonVariants = {
   open: {
@@ -15,17 +14,17 @@ const buttonVariants = {
 };
 
 // TODO pass prop.theme.accent instead of static coding
-const itemCountVariants = {
+const itemCountVariants = (theme) => ({
   open: {
-    backgroundColor: '#fff',
-    color: `#39B54A`,
-    boxShadow: ` 0 0 0 4px #39B54A`,
+    backgroundColor: theme.background,
+    color: theme.accent,
+    boxShadow: ` 0 0 0 4px ${theme.accent}`,
   },
   closed: {
-    backgroundColor: `#39B54A`,
-    color: `#fff`,
+    backgroundColor: theme.accent,
+    color: theme.background,
   },
-};
+});
 
 const StyledLink = styled(Link)`
   position: relative;
@@ -54,10 +53,12 @@ export const ShopButton = () => {
       0
     );
 
+  const theme = useTheme();
+
   return (
     <StyledLink to='/cart'>
       {quantity > 0 && (
-        <ItemCount variants={itemCountVariants}>{quantity} </ItemCount>
+        <ItemCount variants={itemCountVariants(theme)}>{quantity} </ItemCount>
       )}
       <motion.svg
         xmlns='http://www.w3.org/2000/svg'
