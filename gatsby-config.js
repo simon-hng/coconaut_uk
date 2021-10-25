@@ -22,9 +22,6 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
-    'gatsby-plugin-styled-components',
-    'gatsby-plugin-react-helmet',
-    `gatsby-plugin-image`,
     {
       resolve: `gatsby-plugin-sharp`,
       options: {
@@ -33,6 +30,21 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-plugin-cookiebot`,
+      options: {
+        cookiebotId: process.env.COOKIEBOT_ID,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.GOOGLE_ANALYTICS_ID,
+      },
+    },
+    'gatsby-plugin-styled-components',
+    'gatsby-plugin-react-helmet',
+    `gatsby-plugin-image`,
     `gatsby-transformer-sharp`, // Needed for dynamic images
     `gatsby-plugin-tsconfig-paths`,
     `gatsby-plugin-anchor-links`,
