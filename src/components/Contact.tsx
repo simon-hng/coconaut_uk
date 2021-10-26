@@ -1,5 +1,6 @@
 import * as React from 'react';
 import {
+  Button,
   Centered,
   Headline,
   SectionTwoCol,
@@ -21,6 +22,9 @@ export const Contact = () => (
           works great as a healthy refreshment drink or a mixer for cocktails.
           Coconaut® is simply delicious and refreshing.
         </Typography>
+        <Button href='mailto: Info@coconaut.co.uk' margin='3rem 0 0 0'>
+          Contact us!
+        </Button>
       </>
     }
   />
