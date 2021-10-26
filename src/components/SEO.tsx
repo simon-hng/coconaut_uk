@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { Helmet } from 'react-helmet';
+import { useTheme } from 'styled-components';
 
 export interface seoProps {
   title: string;
@@ -18,8 +19,11 @@ export const SEO = ({ title, description }: seoProps) => {
     description: description || defaultDescription,
   };
 
+  const theme = useTheme();
+
   return (
     <Helmet title={seo.title} htmlAttributes={{ lang: 'en' }}>
+      <meta name='theme-color' content={theme.accent} />
       <meta
         name='google-site-verification'
         content='K0caT65lEcyRs9VG5wHK_O1lrQRsMG0mFRw_mXy4l2E'
