@@ -35,7 +35,6 @@ const TextPage = ({ data }) => {
 
   return (
     <Layout title={page.title} description={''} image={''}>
-      <Header />
       <SectionWrapper padded>
         <StyledMarkdownContent
           className='textPage'

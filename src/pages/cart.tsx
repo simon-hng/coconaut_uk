@@ -19,7 +19,6 @@ const Cart = () => {
       description='Manage your shopping cart'
       image={''}
     >
-      <Header />
       <SectionWrapper padded>
         {checkout && checkout.lineItems.length > 0 ? (
           <CartInfo checkout={checkout} />
