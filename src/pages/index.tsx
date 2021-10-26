@@ -11,7 +11,7 @@ import { Contact } from '@components/Contact';
 import * as React from 'react';
 
 const Index = () => (
-  <Layout title='Coconaut home' description={'Buy coconut water'} image={''}>
+  <Layout title='Coconaut home' description={'Buy coconut water'}>
     <Hero />
     <Nutrition />
     <ShopTeaser />

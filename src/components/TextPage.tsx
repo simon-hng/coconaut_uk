@@ -34,7 +34,7 @@ const TextPage = ({ data }) => {
   console.log(page);
 
   return (
-    <Layout title={page.title} description={''} image={''}>
+    <Layout title={page.title} description={''}>
       <SectionWrapper padded>
         <StyledMarkdownContent
           className='textPage'
