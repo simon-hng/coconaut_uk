@@ -13,7 +13,7 @@
       "modules": true
     }
   },
-  "plugins": ["prettier", "react"],
+  "plugins": ["prettier", "react", "jsx", "typescript"],
   "extends": ["prettier", "eslint:recommended", "plugin:react/recommended"],
   "rules": {
     "prettier/prettier": "error"
