@@ -2,7 +2,7 @@ import { StoreContext } from '@context/StoreContext';
 import { motion } from 'framer-motion';
 import { Link } from 'gatsby';
 import * as React from 'react';
-import styled, { useTheme } from 'styled-components';
+import styled, { DefaultTheme, useTheme } from 'styled-components';
 
 const buttonVariants = (theme) => ({
   open: {
@@ -14,7 +14,7 @@ const buttonVariants = (theme) => ({
 });
 
 // TODO pass prop.theme.accent instead of static coding
-const itemCountVariants = (theme) => ({
+const itemCountVariants = (theme: DefaultTheme) => ({
   open: {
     backgroundColor: theme.background,
     color: theme.accent,

@@ -6,7 +6,6 @@ import { useTheme } from 'styled-components';
 export interface seoProps {
   title: string;
   description: string;
-  image: string;
 }
 
 export const SEO = ({ title, description }: seoProps) => {
