@@ -2,6 +2,7 @@ import * as React from 'react';
 import { ThemeProvider } from 'styled-components';
 import '@styles/reset.css';
 import '@styles/global.css';
+import 'swiper/css';
 import { SEO, seoProps } from '@components/SEO';
 
 const mainTheme = {
@@ -11,6 +12,7 @@ const mainTheme = {
   accentLight: '#53C1A6',
   accent: '#39B54A',
   accentDark: '#195200',
+  maxWidth: '1400px',
 };
 
 interface layoutProps extends seoProps {

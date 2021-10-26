@@ -2,18 +2,26 @@ import * as React from 'react';
 import styled from 'styled-components';
 
 import { Card, Headline, SectionWrapper } from '@components/Global';
-import BackgroundImage from '@images/hero/Coconaut_Skyline@1694x-100.jpg';
+import BackgroundImage from '@images/coconaut_4833@2x.jpg';
 import { graphql, useStaticQuery } from 'gatsby';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 const Background = styled.section`
-  width: 100vh;
+  margin-bottom: 10rem;
+  width: 100%;
   background-image: url(${BackgroundImage});
 `;
 
-const Events = styled.ul`
+const StyledHeadline = styled(Headline)`
+  padding-left: 2rem;
+  padding-right: 2rem;
+`;
+
+const Events = styled(Swiper)`
+  max-width: ${(props) => props.theme.maxWidth};
+  overflow: hidden;
   width: 100%;
-  display: flex;
-  overflow-x: scroll;
+  bottom: -10rem;
 `;
 
 export const Discover = () => {
@@ -42,19 +50,33 @@ export const Discover = () => {
 
   return (
     <SectionWrapper cover id='discover'>
-      <Headline centered>Discover the world of Coconaut</Headline>
+      <StyledHeadline centered gutterBottom>
+        Discover the world of Coconaut
+      </StyledHeadline>
       <Background>
         {data && (
-          <Events>
+          <Events
+            breakpoints={{
+              0: {
+                slidesPerView: 1.2,
+              },
+              900: {
+                slidesPerView: 2.4,
+              },
+              1200: {
+                slidesPerView: 4,
+              },
+            }}
+          >
             {events.map(({ node: event }) => (
-              <li>
+              <SwiperSlide>
                 <Card
                   image={event.thumbnail.gatsbyImageData}
                   alt={event.thumbnail.title}
                 >
                   {event.description.description}
                 </Card>
-              </li>
+              </SwiperSlide>
             ))}
           </Events>
         )}
