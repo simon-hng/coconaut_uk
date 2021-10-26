@@ -3,7 +3,12 @@ import * as React from 'react';
 import styled from 'styled-components';
 
 const CardStyle = styled.article`
-  //TODO: appropiate styling when data is available
+  border-radius: 10px;
+  background: ${(props) => props.theme.background};
+`;
+
+const Text = styled.div`
+  padding: 1rem;
 `;
 
 interface cardProps {
@@ -15,6 +20,6 @@ interface cardProps {
 export const Card = (props: cardProps) => (
   <CardStyle>
     <GatsbyImage image={props.image} alt={props.alt} />
-    {props.children}
+    <Text>{props.children}</Text>
   </CardStyle>
 );
