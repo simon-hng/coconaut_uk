@@ -5,6 +5,7 @@ import '@styles/global.css';
 import 'swiper/css';
 import { SEO, seoProps } from '@components/SEO';
 import { Header } from '@components/Header';
+import { Footer } from '@components/Footer';
 
 const mainTheme = {
   background: '#fff',
@@ -30,5 +31,6 @@ export const Layout = ({
     <SEO title={title} description={description} image={image} />
     <Header />
     {children}
+    <Footer />
   </ThemeProvider>
 );
