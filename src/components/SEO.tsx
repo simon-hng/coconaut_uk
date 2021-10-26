@@ -20,6 +20,10 @@ export const SEO = ({ title, description }: seoProps) => {
 
   return (
     <Helmet title={seo.title} htmlAttributes={{ lang: 'en' }}>
+      <meta
+        name='google-site-verification'
+        content='K0caT65lEcyRs9VG5wHK_O1lrQRsMG0mFRw_mXy4l2E'
+      />
       <meta name='description' content={seo.description} />
       {seo.title && <meta property='og:title' content={seo.title} />}
       {seo.description && (
