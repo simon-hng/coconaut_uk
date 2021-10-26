@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ThemeProvider } from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
 import '@styles/reset.css';
 import '@styles/global.css';
 import 'swiper/css';
@@ -17,6 +17,10 @@ const mainTheme = {
   maxWidth: '1400px',
 };
 
+const StyledChildren = styled.div`
+  min-height: 100vh;
+`;
+
 interface layoutProps extends seoProps {
   children: React.ReactNode;
 }
@@ -30,7 +34,7 @@ export const Layout = ({
   <ThemeProvider theme={mainTheme}>
     <SEO title={title} description={description} image={image} />
     <Header />
-    {children}
+    <StyledChildren>{children}</StyledChildren>
     <Footer />
   </ThemeProvider>
 );
