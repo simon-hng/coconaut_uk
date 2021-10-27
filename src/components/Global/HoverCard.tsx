@@ -2,21 +2,24 @@ import * as React from 'react';
 import styled from 'styled-components';
 import { motion, useCycle } from 'framer-motion';
 
-const HoverCardStyle = styled.article`
+const HoverCardStyle = styled(motion.article)`
   position: relative;
   border-radius: 15px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   overflow: hidden;
   margin-bottom: 2rem;
+
+  .gatsby-image-wrapper {
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+  }
 `;
+
 const HoverCardContent = styled(motion.div)`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  min-height: 22rem;
   color: white;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.7);
 
   > div {
     padding: 2rem;
@@ -38,14 +41,13 @@ export const HoverCard = ({ image, children }: hoverCardProps) => {
   const [isShown, toggleIsShown] = useCycle(false, true);
 
   return (
-    <HoverCardStyle>
+    <HoverCardStyle
+      whileHover='shown'
+      animate={isShown ? 'shown' : 'hidden'}
+      onTap={() => toggleIsShown()}
+    >
       {image}
-      <HoverCardContent
-        variants={hoverCardContentVariants}
-        whileHover='shown'
-        animate={isShown ? 'shown' : 'hidden'}
-        onTap={() => toggleIsShown()}
-      >
+      <HoverCardContent variants={hoverCardContentVariants}>
         <div>{children}</div>
       </HoverCardContent>
     </HoverCardStyle>
