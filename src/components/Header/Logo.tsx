@@ -1,4 +1,5 @@
 import { Link } from 'gatsby';
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import { StaticImage } from 'gatsby-plugin-image';
 import * as React from 'react';
 import styled from 'styled-components';
@@ -17,7 +18,7 @@ const LogoDesktop = styled.div`
 
 export const Logo = () => {
   return (
-    <Link to='/'>
+    <AnchorLink to='/#hero'>
       <LogoMobile>
         <StaticImage
           src='../../images/logoMobile.svg'
@@ -34,6 +35,6 @@ export const Logo = () => {
           alt='Go to start'
         />
       </LogoDesktop>
-    </Link>
+    </AnchorLink>
   );
 };

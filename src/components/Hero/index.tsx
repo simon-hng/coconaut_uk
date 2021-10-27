@@ -27,7 +27,7 @@ const Caption = styled.h1`
 `;
 
 export const Hero = () => (
-  <HeroStyle>
+  <HeroStyle id='hero'>
     <Caption>GoHigher!</Caption>
     <Clouds />
     <Cans />
