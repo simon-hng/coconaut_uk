@@ -27,7 +27,7 @@ export const Buying = (props: buyingProps) => {
   return (
     <BuyingStyle>
       <Quantity
-        title={props.title}
+        id={props.variantId}
         value={props.quantity}
         setValue={props.setQuantity}
       />
