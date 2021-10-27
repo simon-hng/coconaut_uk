@@ -7,7 +7,7 @@ const CanImage = () => (
     src='../../images/hero/Can.png'
     alt='Coconaut can'
     layout='fixed'
-    width={260}
+    width={200}
   />
 );
 

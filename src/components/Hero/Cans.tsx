@@ -23,12 +23,12 @@ const AnimationContainer = styled(motion.div)`
 
 const CanMain = styled.div`
   position: absolute;
-  left: -110px;
-  transform: rotate(-7deg);
+  left: -70px;
+  transform: rotate(8deg);
 
   @media (min-width: 900px) {
-    left: -30px;
-    transform: rotate(0);
+    left: 0;
+    transform: rotate(12deg);
     z-index: 10;
   }
 `;
@@ -38,7 +38,7 @@ const CanSub = styled(CanMain)`
 
   @media (min-width: 900px) {
     display: inline;
-    transform: rotate(-35deg) translate(-150px, -50px);
+    transform: rotate(-23deg) translate(-150px, -50px);
   }
 `;
 
