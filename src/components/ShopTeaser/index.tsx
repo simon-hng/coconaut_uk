@@ -48,6 +48,7 @@ export const ShopTeaser = () => {
           <GatsbyImage
             alt={product.featuredImage.altText || product.title}
             image={product.featuredImage.gatsbyImageData}
+            width={500}
           />
         </Centered>
       }

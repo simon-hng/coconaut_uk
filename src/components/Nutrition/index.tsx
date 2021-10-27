@@ -50,9 +50,10 @@ export const Nutrition = () => (
     }
     right={
       <>
-        <Centered onMobile>
+        <Centered>
           <StaticImage
-            src='../../images/Coconut_and_can_01.png'
+            width={350}
+            src='../../images/CoconutAndCan.png'
             alt='coconut and can'
           />
         </Centered>

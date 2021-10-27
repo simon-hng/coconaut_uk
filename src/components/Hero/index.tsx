@@ -1,12 +1,13 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-import BackgroundImage from '@images/hero/Coconaut_Skyline@1694x-100.jpg';
+import BackgroundImage from '@images/hero/skyline.svg';
 import { Clouds } from './Clouds';
 import { Cans } from './Cans';
 
 const HeroStyle = styled.div`
   height: 120vh;
+  background-size: 2000px;
   background-image: url(${BackgroundImage});
   background-repeat: no-repeat;
   background-position-y: bottom;

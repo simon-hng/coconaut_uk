@@ -2,7 +2,7 @@ import * as React from 'react';
 import styled from 'styled-components';
 
 import { Card, Headline, SectionWrapper } from '@components/Global';
-import BackgroundImage from '@images/coconaut_4833@2x.jpg';
+import BackgroundImage from '@images/DiscoverBG.jpg';
 import { graphql, useStaticQuery } from 'gatsby';
 import { Swiper, SwiperSlide } from 'swiper/react';
 

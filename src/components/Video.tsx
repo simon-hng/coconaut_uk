@@ -10,7 +10,7 @@ const StyledVideo = styled.video`
 export const Video = () => {
   return (
     <SectionWrapper cover>
-      <StyledVideo poster='https://topparks.com.au/files/24234_dji_0166_003.jpg'>
+      <StyledVideo poster='https://dummyimage.com/1900x1250/000/fff'>
         <source src='https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4' />
       </StyledVideo>
     </SectionWrapper>
