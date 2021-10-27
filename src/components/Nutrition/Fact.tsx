@@ -52,7 +52,7 @@ export const Fact = ({ name, delay, value, unit }: FactProps) => {
         delay={delay}
         decimals={countDecimals(value)}
         end={value}
-        duration={2}
+        duration={0.8}
       />
       <Unit>{unit}</Unit>
     </FactStyle>

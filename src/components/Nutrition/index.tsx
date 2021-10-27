@@ -10,6 +10,7 @@ import {
 import { StaticImage } from 'gatsby-plugin-image';
 import * as React from 'react';
 import styled from 'styled-components';
+import { useInView } from 'react-intersection-observer';
 
 const nutritionalFacts = [
   { name: 'Energy', value: 95, unit: 'kJ' },
@@ -28,44 +29,53 @@ const FactsList = styled.ul`
   flex-wrap: wrap;
 `;
 
-export const Nutrition = () => (
-  <SectionTwoCol
-    id='nutrition'
-    left={
-      <>
-        <Headline sub='young coconuts' gutterBottom>
-          100 percent
-        </Headline>
-        <Typography>
-          Coconaut is an energising drink with a rare combination. It refreshes,
-          activates and regenerates. It contains 100% pure young coconut water
-          from premium young vietnamese coconuts. No additives. No extra sugar,
-          just the full load of coconut power. Want to know more?​
-        </Typography>
+export const Nutrition = () => {
+  const { ref, inView } = useInView();
 
-        <Button margin='3rem 0 0 0' to='/#shop'>
-          Shop now!
-        </Button>
-      </>
-    }
-    right={
-      <>
-        <Centered>
-          <StaticImage
-            width={350}
-            src='../../images/CoconutAndCan.png'
-            alt='coconut and can'
-          />
-        </Centered>
+  return (
+    <SectionTwoCol
+      id='nutrition'
+      left={
+        <>
+          <Headline sub='young coconuts' gutterBottom>
+            100 percent
+          </Headline>
+          <Typography>
+            Coconaut is an energising drink with a rare combination. It
+            refreshes, activates and regenerates. It contains 100% pure young
+            coconut water from premium young vietnamese coconuts. No additives.
+            No extra sugar, just the full load of coconut power.Want to know
+            more?
+          </Typography>
 
-        <Subheadline gutterBottom>Whats in it?</Subheadline>
+          <Button margin='3rem 0 0 0' to='/#shop'>
+            Shop now!
+          </Button>
+        </>
+      }
+      right={
+        <>
+          <Centered>
+            <StaticImage
+              width={350}
+              src='../../images/CoconutAndCan.png'
+              alt='coconut and can'
+            />
+          </Centered>
 
-        <FactsList>
-          {nutritionalFacts.map((fact, i) => (
-            <Fact key={i} delay={i * 0.4} {...fact} />
-          ))}
-        </FactsList>
-      </>
-    }
-  />
-);
+          <Subheadline gutterBottom>Whats in it?</Subheadline>
+
+          <div ref={ref}>
+            {inView && (
+              <FactsList>
+                {nutritionalFacts.map((fact, i) => (
+                  <Fact key={i} delay={i * 0.15} {...fact} />
+                ))}
+              </FactsList>
+            )}
+          </div>
+        </>
+      }
+    />
+  );
+};
