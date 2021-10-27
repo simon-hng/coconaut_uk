@@ -2,6 +2,7 @@ export * from './Button';
 export * from './Card';
 export * from './Centered';
 export * from './Headline';
+export * from './HoverCard';
 export * from './Layout';
 export * from './SectionWrapper';
 export * from './SectionTwoCol';

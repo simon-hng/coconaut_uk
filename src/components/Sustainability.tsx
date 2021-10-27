@@ -1,5 +1,5 @@
 import { StaticImage } from 'gatsby-plugin-image';
-import { Headline, SectionTwoCol, Typography } from './Global';
+import { Headline, HoverCard, SectionTwoCol, Typography } from './Global';
 import * as React from 'react';
 
 export const Sustainability = () => (
@@ -28,9 +28,24 @@ export const Sustainability = () => (
     }
     right={
       <>
-        <StaticImage src='../images/sustainability/kuehneNagel.jpg' />
+        <HoverCard
+          image={<StaticImage src='../images/sustainability/kuehneNagel.jpg' />}
+        >
+          <Typography>
+            We work together with Kuehne+Nagel who as pioneers in the industry
+            proactively addresses the CO2 footprint of their sea logistics
+            services.
+          </Typography>
+        </HoverCard>
 
-        <StaticImage src='../images/sustainability/costura.jpg' />
+        <HoverCard
+          image={<StaticImage src='../images/sustainability/costura.jpg' />}
+        >
+          <Typography>
+            We work together with Costura EV to recycle old cans and create
+            beautiful new accessorys. Take a look at the new collection.
+          </Typography>
+        </HoverCard>
       </>
     }
   />
