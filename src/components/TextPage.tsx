@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
-import { Header } from './Header';
 import { Layout, SectionWrapper } from '@components/Global';
 import styled from 'styled-components';
 

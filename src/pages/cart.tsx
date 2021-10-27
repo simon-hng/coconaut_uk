@@ -1,5 +1,4 @@
 import { Centered, Headline, Layout, SectionWrapper } from '@components/Global';
-import { Header } from '@components/Header';
 import { CartInfo } from '@components/Cart/CartInfo';
 import { StoreContext } from '@context/StoreContext';
 import * as React from 'react';

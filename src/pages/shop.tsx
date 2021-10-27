@@ -5,7 +5,6 @@ import {
   SectionWrapper,
   Subheadline,
 } from '@components/Global';
-import { Header } from '@components/Header';
 import { Product } from '@components/Shop/Product';
 import { graphql } from 'gatsby';
 import * as React from 'react';
