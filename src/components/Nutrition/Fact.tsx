@@ -1,10 +1,11 @@
 import * as React from 'react';
-import CountUp from 'react-countup';
+import CountUp, { useCountUp } from 'react-countup';
 import styled from 'styled-components';
 
 const FactStyle = styled.li`
   margin: 0 1.5rem 1.5rem 0;
   min-width: 5.5rem;
+  min-height: 7rem;
 `;
 
 const Name = styled.p`
@@ -42,18 +43,21 @@ interface FactProps {
   value: number;
   unit: String;
   delay: number;
+  inView: boolean;
 }
 
-export const Fact = ({ name, delay, value, unit }: FactProps) => {
+export const Fact = ({ name, delay, value, unit, inView }: FactProps) => {
   return (
     <FactStyle>
       <Name>{name}</Name>
-      <Value
-        delay={delay}
-        decimals={countDecimals(value)}
-        end={value}
-        duration={0.8}
-      />
+      {inView && (
+        <Value
+          delay={delay}
+          decimals={countDecimals(value)}
+          end={value}
+          duration={0.8}
+        />
+      )}
       <Unit>{unit}</Unit>
     </FactStyle>
   );

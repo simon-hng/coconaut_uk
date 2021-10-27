@@ -65,15 +65,11 @@ export const Nutrition = () => {
 
           <Subheadline gutterBottom>Whats in it?</Subheadline>
 
-          <div ref={ref}>
-            {inView && (
-              <FactsList>
-                {nutritionalFacts.map((fact, i) => (
-                  <Fact key={i} delay={i * 0.15} {...fact} />
-                ))}
-              </FactsList>
-            )}
-          </div>
+          <FactsList ref={ref}>
+            {nutritionalFacts.map((fact, i) => (
+              <Fact key={i} delay={i * 0.15} {...fact} inView={inView} />
+            ))}
+          </FactsList>
         </>
       }
     />
