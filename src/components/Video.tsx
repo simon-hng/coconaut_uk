@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useInView } from 'react-intersection-observer';
 import styled from 'styled-components';
 import { SectionWrapper } from './Global';
 
@@ -8,11 +9,20 @@ const StyledVideo = styled.video`
 `;
 
 export const Video = () => {
+  const videoRef = React.useRef(null);
+  const { ref, inView } = useInView();
+
+  React.useEffect(() => {
+    inView ? videoRef.current.play() : videoRef.current.pause();
+  }, [inView]);
+
   return (
     <SectionWrapper cover>
-      <StyledVideo id='video' controls poster='/video/poster.jpg'>
-        <source src='/video/video.mp4' />
-      </StyledVideo>
+      <div ref={ref}>
+        <StyledVideo ref={videoRef} id='video' controls>
+          <source src='/video/video.mp4' />
+        </StyledVideo>
+      </div>
     </SectionWrapper>
   );
 };
