@@ -6,11 +6,16 @@ import {
   SectionTwoCol,
   Typography,
 } from '@components/Global';
+import { StaticImage } from 'gatsby-plugin-image';
 
 export const Contact = () => (
   <SectionTwoCol
     id='contact'
-    left={<Centered></Centered>}
+    left={
+      <Centered>
+        <StaticImage src='../images/contact.jpg' />
+      </Centered>
+    }
     right={
       <>
         <Headline gutterBottom>Contact us</Headline>
