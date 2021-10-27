@@ -28,6 +28,8 @@ export const SEO = ({ title, description }: seoProps) => {
         content='K0caT65lEcyRs9VG5wHK_O1lrQRsMG0mFRw_mXy4l2E'
       />
       <meta name='description' content={seo.description} />
+      <link rel='icon' type='image/png' sizes='32x32' href='/favicon/32.png' />
+      <link rel='icon' type='image/png' sizes='16x16' href='/favicon/16.png' />
       {seo.title && <meta property='og:title' content={seo.title} />}
       {seo.description && (
         <meta property='og:description' content={seo.description} />
