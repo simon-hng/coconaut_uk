@@ -1,5 +1,6 @@
-import * as React from 'react';
+import { StaticImage } from 'gatsby-plugin-image';
 import { Headline, SectionTwoCol, Typography } from './Global';
+import * as React from 'react';
 
 export const Sustainability = () => (
   <SectionTwoCol
@@ -25,6 +26,12 @@ export const Sustainability = () => (
         </Typography>
       </>
     }
-    right={<></>}
+    right={
+      <>
+        <StaticImage src='../images/sustainability/kuehneNagel.jpg' />
+
+        <StaticImage src='../images/sustainability/costura.jpg' />
+      </>
+    }
   />
 );
