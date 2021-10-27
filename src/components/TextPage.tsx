@@ -6,7 +6,12 @@ import styled from 'styled-components';
 
 const StyledMarkdownContent = styled.div`
   h1 {
-    padding-bottom: 2rem;
+    padding: 2rem 0;
+  }
+  h2 {
+    padding: 2rem 0;
+    font-size: 2.4rem;
+    line-height: 3rem;
   }
   li,
   p {
@@ -15,17 +20,9 @@ const StyledMarkdownContent = styled.div`
     line-height: 2rem;
     padding: 1rem 0;
   }
-  ol {
-    margin: 2rem 0;
-    font-weight: bold;
-    list-style: decimal;
-  }
-  ol li {
-    font-size: 2.4rem;
-    line-height: 3rem;
-  }
   ul {
-    list-style: circle;
+    padding-left: 2rem;
+    list-style: disc;
   }
 `;
 
