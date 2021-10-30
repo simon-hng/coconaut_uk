@@ -6,6 +6,7 @@ import 'swiper/css';
 import { SEO, seoProps } from '@components/SEO';
 import { Header } from '@components/Header';
 import { Footer } from '@components/Footer';
+import CookieBot from 'react-cookiebot/lib/CookieBot';
 
 const mainTheme = {
   background: '#fff',
@@ -21,11 +22,14 @@ const StyledChildren = styled.div`
   min-height: 100vh;
 `;
 
+const domainGroupId = '8fa35052-f00c-4eba-92df-627d4fe66ba2';
+
 interface layoutProps extends seoProps {
   children: React.ReactNode;
 }
 export const Layout = ({ children, title, description }: layoutProps) => (
   <ThemeProvider theme={mainTheme}>
+    <CookieBot domainGroupId={domainGroupId} />
     <SEO title={title} description={description} />
     <Header />
     <StyledChildren>{children}</StyledChildren>
