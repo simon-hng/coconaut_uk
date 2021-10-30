@@ -1,6 +1,18 @@
 /* eslint-disable no-undef */
 require(`dotenv`).config();
 
+const contentfulConfig = {
+  spaceId: process.env.CONTENTFUL_SPACE_ID,
+  accessToken:
+    process.env.CONTENTFUL_ACCESS_TOKEN ||
+    process.env.CONTENTFUL_DELIVERY_TOKEN,
+};
+
+if (process.env.CONTENTFUL_HOST) {
+  contentfulConfig.host = process.env.CONTENTFUL_HOST;
+  contentfulConfig.accessToken = process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN;
+}
+
 module.exports = {
   siteMetadata: {
     siteUrl: `https://www.coconaut.co.uk`,
@@ -17,10 +29,7 @@ module.exports = {
     },
     {
       resolve: `gatsby-source-contentful`,
-      options: {
-        spaceId: process.env.CONTENTFUL_SPACE_ID,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-      },
+      options: contentfulConfig,
     },
     {
       resolve: `gatsby-plugin-sharp`,
