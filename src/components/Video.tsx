@@ -19,8 +19,8 @@ export const Video = () => {
   return (
     <SectionWrapper cover>
       <div ref={ref}>
-        <StyledVideo ref={videoRef} id='video' controls>
-          <source src='/video/video.mp4' />
+        <StyledVideo ref={videoRef} id='video' playsInline muted controls>
+          <source src='/video/video.mp4#t=0.001' type='video/mp4' />
         </StyledVideo>
       </div>
     </SectionWrapper>
