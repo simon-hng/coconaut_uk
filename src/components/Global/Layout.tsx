@@ -6,7 +6,6 @@ import 'swiper/css';
 import { SEO, seoProps } from '@components/SEO';
 import { Header } from '@components/Header';
 import { Footer } from '@components/Footer';
-import { useScript } from 'hooks';
 
 const mainTheme = {
   background: '#fff',
@@ -25,17 +24,11 @@ const StyledChildren = styled.div`
 interface layoutProps extends seoProps {
   children: React.ReactNode;
 }
-export const Layout = ({ children, title, description }: layoutProps) => {
-  useScript(
-    'https://consent.cookiebot.com/8fa35052-f00c-4eba-92df-627d4fe66ba2/cd.js'
-  );
-
-  return (
-    <ThemeProvider theme={mainTheme}>
-      <SEO title={title} description={description} />
-      <Header />
-      <StyledChildren>{children}</StyledChildren>
-      <Footer />
-    </ThemeProvider>
-  );
-};
+export const Layout = ({ children, title, description }: layoutProps) => (
+  <ThemeProvider theme={mainTheme}>
+    <SEO title={title} description={description} />
+    <Header />
+    <StyledChildren>{children}</StyledChildren>
+    <Footer />
+  </ThemeProvider>
+);

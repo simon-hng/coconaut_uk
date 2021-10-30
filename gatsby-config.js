@@ -40,12 +40,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-cookiebot`,
-      options: {
-        cookiebotId: process.env.COOKIEBOT_ID,
-      },
-    },
-    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: process.env.GOOGLE_ANALYTICS_ID,
