@@ -22,10 +22,10 @@ export const Contact = () => (
         <Typography>
           We encourage you to contact us and add Coconaut® products to your
           offering. Consumers are choosing coconut water more and more often
-          because it&apos;s a hydrating beverage which provides a delicious
-          source of natural electrolytes. With it&apos;s natural sweetness it
-          works great as a healthy refreshment drink or a mixer for cocktails.
-          Coconaut® is simply delicious and refreshing.
+          because it's a hydrating beverage which provides a delicious source of
+          natural electrolytes. With its natural sweetness it works great as a
+          healthy refreshment drink or a mixer for cocktails. Coconaut® is
+          simply delicious and refreshing.
         </Typography>
         <Button href='mailto: Info@coconaut.co.uk' margin='3rem 0 0 0'>
           Contact us!

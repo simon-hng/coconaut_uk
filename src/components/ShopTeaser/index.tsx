@@ -54,13 +54,15 @@ export const ShopTeaser = () => {
       right={
         <>
           <Headline>Coconaut</Headline>
-          <Subheadline>100% pure young coconaut Water</Subheadline>
+          <Subheadline>Pure Young Coconut Water</Subheadline>
           <Typography>{product.description}</Typography>
 
           <Price>
-            <Typography fontSize={4}>{variant.price} £</Typography>
+            <Typography fontSize={4}>&pound;&nbsp;{variant.price}</Typography>
             <Typography>
-              {`${(variant.price / 12).toFixed(2)} per can inc. VAT & shipping`}
+              &pound;&nbsp;
+              {(variant.price / 12).toFixed(2)}
+              &nbsp;per can incl. VAT & shipping
             </Typography>
           </Price>
 

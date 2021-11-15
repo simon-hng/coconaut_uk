@@ -37,14 +37,14 @@ export const Nutrition = () => {
       id='nutrition'
       left={
         <>
-          <Headline sub='young coconuts' gutterBottom>
-            100 percent
+          <Headline sub='Coconut Water' gutterBottom>
+            Pure Young
           </Headline>
           <Typography>
             Coconaut is an energising drink with a rare combination. It
-            refreshes, activates and regenerates. It contains 100% pure young
-            coconut water from premium young vietnamese coconuts. No additives.
-            No extra sugar, just the full load of coconut power.Want to know
+            refreshes, activates and regenerates. It only contains pure young
+            coconut water from premium young Vietnamese coconuts. No additives.
+            No extra sugar. Just the full load of coconut power. Want to know
             more?
           </Typography>
 
@@ -63,7 +63,7 @@ export const Nutrition = () => {
             />
           </Centered>
 
-          <Subheadline gutterBottom>Whats in it?</Subheadline>
+          <Subheadline gutterBottom>What's in it?</Subheadline>
 
           <FactsList ref={ref}>
             {nutritionalFacts.map((fact, i) => (

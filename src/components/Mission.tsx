@@ -16,8 +16,8 @@ export const Mission = () => (
       <>
         <Headline gutterBottom>Our Mission</Headline>
         <Typography bold>
-          Coconauts mission: a new coconut water that is better than anything
-          the big companies have to offer. No sooner said than done.
+          Coconaut's mission: a new coconut water that is better than anything
+          the big companies have to offer.
         </Typography>
         <br />
         <Typography>
@@ -25,8 +25,9 @@ export const Mission = () => (
           As a natural isotonic drink, it is now enjoyed by consumers in over 5
           countries to keep them refreshed and active throughout the day.​
           Coconaut empowers and inspires people to do their best work. To unlock
-          everyones full potential we believe in collaboration and communication
-          with our consumers, stakeholders, workforce and suppliers. ​
+          everyone's full potential we believe in collaboration and
+          communication with our consumers, stakeholders, workforce and
+          suppliers. ​
         </Typography>
       </>
     }
