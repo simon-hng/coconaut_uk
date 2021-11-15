@@ -16,7 +16,7 @@ export const SectionWrapperStyle = styled(motion.div).attrs(
   })
 )`
   margin: auto;
-  padding: ${(props) => (props.padded ? '10rem 2rem' : '5rem 0')};
+  padding: ${(props) => (props.padded ? '10rem 2rem' : '3rem 0')};
   ${(props) => !props.cover && `max-width:${props.theme.maxWidth}`}
 `;
 

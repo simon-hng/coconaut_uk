@@ -24,7 +24,7 @@ export const ShopTeaser = () => {
           description
           featuredImage {
             altText
-            gatsbyImageData
+            gatsbyImageData(width: 400)
           }
           variants {
             availableForSale
