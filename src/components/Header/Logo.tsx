@@ -20,20 +20,10 @@ export const Logo = () => {
   return (
     <AnchorLink to='/#hero'>
       <LogoMobile>
-        <StaticImage
-          src='../../images/logoMobile.svg'
-          width={120}
-          layout='fixed'
-          alt='Go to start'
-        />
+        <img src='/logo/logoMobile.svg' width={120} alt='Go to start' />
       </LogoMobile>
       <LogoDesktop>
-        <StaticImage
-          src='../../images/logoDesktop.svg'
-          width={200}
-          layout='fixed'
-          alt='Go to start'
-        />
+        <img src='/logo/logoDesktop.svg' width={200} alt='Go to start' />
       </LogoDesktop>
     </AnchorLink>
   );
