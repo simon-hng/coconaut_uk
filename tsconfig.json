@@ -10,7 +10,8 @@
       "@components/*": ["components/*"],
       "@context/*": ["context/*"],
       "@images/*": ["images/*"],
-      "@styles/*": ["styles/*"]
+      "@styles/*": ["styles/*"],
+      "@hooks/*": ["hooks/*"]
     }
   },
   "include": ["src/**/*", "custom_typings/**/*"],
