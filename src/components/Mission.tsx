@@ -7,6 +7,7 @@ import {
   Headline,
   Typography,
   Centered,
+  Subheadline,
 } from '@components/Global';
 
 export const Mission = () => (
@@ -14,11 +15,8 @@ export const Mission = () => (
     id='mission'
     left={
       <>
-        <Headline gutterBottom>Our Mission</Headline>
-        <Typography bold>
-          Coconaut's mission: a new coconut water that is better than anything
-          the big companies have to offer.
-        </Typography>
+        <Headline>Our Mission</Headline>
+        <Subheadline gutterBottom>The Drink for your Everyday Adventures.</Subheadline>
         <br />
         <Typography>
           Inspired by the functional drink from Vietnam, Coconaut was created.

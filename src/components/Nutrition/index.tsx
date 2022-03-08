@@ -41,11 +41,11 @@ export const Nutrition = () => {
             Pure Young
           </Headline>
           <Typography>
-            Coconaut is an energising drink with a rare combination. It
-            refreshes, activates and regenerates. It only contains pure young
-            coconut water from premium young Vietnamese coconuts. No additives.
-            No extra sugar. Just the full load of coconut power. Want to know
-            more?
+            Coconaut is an isotonic drink with a stunning combination of
+            properties: it refreshes, activates and regenerates all at the same
+            time! Amazingly, it only contains pure coconut water from premium
+            young Vietnamese coconuts; no additives or extra sugar—just a full
+            charge of coconut power.
           </Typography>
 
           <Button margin='3rem 0 0 0' to='/#shop'>
