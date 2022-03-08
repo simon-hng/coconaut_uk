@@ -21,6 +21,8 @@ const mainTheme = {
 
 const StyledChildren = styled.div`
   min-height: 100vh;
+  color: ${mainTheme.foreground};
+  background-color: ${mainTheme.background};
 `;
 
 const domainGroupId = '8fa35052-f00c-4eba-92df-627d4fe66ba2';
