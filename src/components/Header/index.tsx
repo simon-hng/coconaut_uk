@@ -12,11 +12,7 @@ const HeaderStyle = styled.header`
   top: 0;
   left: 0;
   width: 100vw;
-  background-color: #fff;
-
-  @media (min-width: 900px) {
-    background-color: transparent;
-  }
+  background-color: ${props => props.theme.background};
 `;
 
 const InnerHeader = styled.div`

@@ -20,7 +20,7 @@ const HeroStyle = styled.div`
 `;
 
 const Caption = styled.h1`
-  padding-top: 15vh;
+  padding-top: 19vh;
   text-align: center;
   font-family: 'Hermes';
   color: ${(props) => props.theme.accentLight};
