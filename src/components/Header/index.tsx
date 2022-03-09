@@ -22,7 +22,7 @@ const InnerHeader = styled.div`
   align-items: center;
 
   @media (min-width: 900px) {
-    padding: 3rem;
+    padding: 1.5rem 3rem;
   }
 `;
 
