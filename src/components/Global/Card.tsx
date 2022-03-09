@@ -13,9 +13,13 @@ const CardStyle = styled.article`
 `;
 
 const Text = styled.div`
-  font-family: 'montserrat';
-  font-size: 1rem;
   padding: 1rem;
+
+  p, a {
+    font-family: 'montserrat';
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
 `;
 
 interface cardProps {

@@ -37,7 +37,9 @@ export const Discover = () => {
                 title
               }
               description {
-                description
+                childMarkdownRemark {
+                  html
+                }
               }
             }
           }
@@ -74,7 +76,11 @@ export const Discover = () => {
                   image={event.thumbnail.gatsbyImageData}
                   alt={event.thumbnail.title}
                 >
-                  {event.description.description}
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: event.description.childMarkdownRemark.html,
+                    }}
+                  />
                 </Card>
               </SwiperSlide>
             ))}
