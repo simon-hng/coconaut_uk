@@ -11,7 +11,6 @@ const HoverCardStyle = styled(motion.article)`
 
   .gatsby-image-wrapper {
     height: 100%;
-    z-index: -1;
     position: absolute;
   }
 `;
@@ -20,11 +19,14 @@ const HoverCardContent = styled(motion.div)`
   min-height: 22rem;
   color: white;
   background: rgba(0, 0, 0, 0.7);
+  position: relative;
+  z-index: 1;
 
   > div {
     padding: 2rem;
   }
 `;
+
 const hoverCardContentVariants = {
   hidden: {
     opacity: 0,
@@ -37,6 +39,7 @@ interface hoverCardProps {
   image: React.ReactNode;
   children: React.ReactNode;
 }
+
 export const HoverCard = ({ image, children }: hoverCardProps) => {
   const [isShown, toggleIsShown] = useCycle(false, true);
 
