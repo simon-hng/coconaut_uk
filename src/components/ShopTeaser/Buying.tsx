@@ -6,8 +6,11 @@ import styled from 'styled-components';
 
 const BuyingStyle = styled.div`
   display: flex;
-  width: 20rem;
   justify-content: space-between;
+
+  @media (min-width: 400px) {
+    width: 18rem;
+  }
 `;
 
 interface buyingProps {
@@ -31,7 +34,7 @@ export const Buying = (props: buyingProps) => {
         value={props.quantity}
         setValue={props.setQuantity}
       />
-      <Button padding='0.8rem 2rem' onClick={() => addHandler()}>
+      <Button padding='0.8rem 1.6rem' onClick={() => addHandler()}>
         Add
       </Button>
     </BuyingStyle>

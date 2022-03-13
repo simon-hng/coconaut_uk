@@ -3,9 +3,13 @@ import CountUp, { useCountUp } from 'react-countup';
 import styled from 'styled-components';
 
 const FactStyle = styled.li`
-  margin: 0 1.5rem 1.5rem 0;
+  margin: 0 0.8rem 0.8rem 0;
   min-width: 5.5rem;
   min-height: 7rem;
+
+  @media (min-width: 400px) {
+    margin: 0 1.5rem 1.5rem 0;
+  }
 `;
 
 const Name = styled.p`
