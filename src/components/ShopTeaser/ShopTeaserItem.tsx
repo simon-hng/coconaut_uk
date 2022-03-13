@@ -11,7 +11,11 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 
 const ShopTeaserItemStyle = styled.div`
-  padding: 0 4rem;
+  padding: 0 2rem;
+
+  @media (min-width: 900px) {
+    padding: 0 4rem;
+  }
 `;
 
 const Description = styled.div`
