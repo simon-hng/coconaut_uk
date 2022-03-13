@@ -31,6 +31,7 @@
 - [Framer Motion](https://www.framer.com/motion/)
 - [Contentful](https://www.contentful.com/)
 - [Shopify](https://www.shopify.com/)
+- [Swiper](https://swiperjs.com/)
 
 ## 🗄️ Hosting 
 This website is currently hosted on [Netlify]() under 
