@@ -9,8 +9,15 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 const StyledSwiper = styled(Swiper)`
+  max-width: 1550px;
+
   .swiper-button-prev,
   .swiper-button-next {
+    --swiper-navigation-size: 2.75rem;
+    @media (min-width: 900px) {
+      --swiper-navigation-size: 4rem;
+    }
+
     & ::after {
       content: '';
     }
