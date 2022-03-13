@@ -1,82 +1,65 @@
-import { Buying } from './Buying';
-import {
-  SectionTwoCol,
-  Headline,
-  Subheadline,
-  Centered,
-  Typography,
-} from '@components/Global';
-import { useStaticQuery, graphql } from 'gatsby';
-import { GatsbyImage } from 'gatsby-plugin-image';
 import * as React from 'react';
+import { ShopTeaserItem } from './ShopTeaserItem';
+import { useStaticQuery, graphql } from 'gatsby';
+import { Navigation } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import styled from 'styled-components';
 
-const Price = styled.div`
-  padding: 3rem 0;
+import 'swiper/css';
+import 'swiper/css/navigation';
+
+const StyledSwiper = styled(Swiper)`
+  .swiper-button-prev,
+  .swiper-button-next {
+    & ::after {
+      content: '';
+    }
+  }
+
+  .swiper-button-prev {
+    left: 2rem;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%2339B54A'%2F%3E%3C%2Fsvg%3E") !important;
+  }
+
+  .swiper-button-next {
+    right: 2rem;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%2339B54A'%2F%3E%3C%2Fsvg%3E") !important;
+  }
 `;
 
 export const ShopTeaser = () => {
   const data = useStaticQuery(
     graphql`
       {
-        shopifyProduct(id: { eq: "90bc0096-8909-5670-9165-e52a2cfaa015" }) {
-          title
-          description
-          featuredImage {
-            altText
-            gatsbyImageData(width: 400)
-          }
-          variants {
-            availableForSale
-            price
-            storefrontId
+        allShopifyProduct {
+          edges {
+            node {
+              id
+              title
+              descriptionHtml
+              featuredImage {
+                altText
+                gatsbyImageData(width: 400)
+              }
+              variants {
+                availableForSale
+                price
+                storefrontId
+              }
+            }
           }
         }
       }
     `
   );
 
-  const product = data.shopifyProduct;
-  const variant = product.variants[0];
-  const [quantity, setQuantity] = React.useState(1);
-
   return (
-    <SectionTwoCol
-      id='shop'
-      left={
-        <Centered onMobile>
-          <GatsbyImage
-            alt={product.featuredImage.altText || product.title}
-            image={product.featuredImage.gatsbyImageData}
-          />
-        </Centered>
-      }
-      right={
-        <>
-          <Headline>Coconaut</Headline>
-          <Subheadline>Pure Young Coconut Water</Subheadline>
-          <Typography>{product.description}</Typography>
-
-          <Price>
-            <Typography fontSize={4}>&pound;&nbsp;{variant.price}</Typography>
-            <Typography>
-              &pound;&nbsp;
-              {(variant.price / 12).toFixed(2)}
-              &nbsp;per can incl. VAT & shipping
-            </Typography>
-          </Price>
-
-          <div>
-            <Typography bold>Quantity</Typography>
-            <Buying
-              title={product.title}
-              variantId={variant.storefrontId}
-              quantity={quantity}
-              setQuantity={setQuantity}
-            />
-          </div>
-        </>
-      }
-    />
+    <StyledSwiper id='shop' modules={[Navigation]} navigation>
+      {data.allShopifyProduct.edges.map((item: any) => (
+        <SwiperSlide key={item.node.id}>
+          <ShopTeaserItem product={item.node} />
+        </SwiperSlide>
+      ))}
+    </StyledSwiper>
   );
 };
