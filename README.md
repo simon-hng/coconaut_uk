@@ -35,6 +35,6 @@
 
 ## 🗄️ Hosting 
 This website is currently hosted on [Netlify]() under 
-[coconaut.co.uk](coconaut.co.uk)
+[coconaut.co.uk](https://coconaut.co.uk)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/3ba11cfa-d413-4aaa-99ea-3056ecbce5c7/deploy-status)](https://app.netlify.com/sites/coconautuk/deploys)
