@@ -83,5 +83,6 @@ module.exports = {
     `gatsby-plugin-tsconfig-paths`,
     `gatsby-plugin-anchor-links`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-sitemap`,
   ],
 };
