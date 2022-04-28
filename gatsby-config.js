@@ -60,7 +60,11 @@ module.exports = {
         resolveEnv: () => NETLIFY_ENV,
         env: {
           production: {
-            policy: [{ userAgent: '*' }],
+            policy: [
+              { userAgent: '*' },
+              { userAgent: 'Googlebot', disallow: [] },
+              { userAgent: 'Googlebot-image', disallow: [] },
+            ],
           },
           'branch-deploy': {
             policy: [{ userAgent: '*', disallow: ['/'] }],
